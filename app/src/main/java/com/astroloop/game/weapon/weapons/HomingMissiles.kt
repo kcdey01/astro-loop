@@ -14,7 +14,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class HomingMissiles : Weapon(
     id = "homing_missiles",
-    name = "Homing Missiles"
+    name = "追踪导弹"
 ) {
     override val knobs = KnobsWeapons.homingMissiles
     override val beatPhaseOffsetMs: Long = 250L

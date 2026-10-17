@@ -27,7 +27,7 @@ object EnemyDefinitions {
         // ── Tier 1: Fodder (0-60s) ──────────────────────────────────
         EnemyDef(
             type = EnemyType.SCOUT,
-            name = "The Juke",
+            name = "闪避者",
             shipId = "ship_blue",
             tier = 1,
             unlockTime = 0f,
@@ -40,7 +40,7 @@ object EnemyDefinitions {
         ),
         EnemyDef(
             type = EnemyType.TRACER,
-            name = "The Hunter",
+            name = "猎手",
             shipId = "ship_green",
             tier = 1,
             unlockTime = 30f,
@@ -53,7 +53,7 @@ object EnemyDefinitions {
         ),
         EnemyDef(
             type = EnemyType.SHRAPNEL,
-            name = "The Shotgunner",
+            name = "霰弹手",
             shipId = "ship_orange",
             tier = 1,
             unlockTime = 60f,
@@ -68,7 +68,7 @@ object EnemyDefinitions {
         // ── Tier 2: Threat (120-240s) ───────────────────────────────
         EnemyDef(
             type = EnemyType.SENTINEL,
-            name = "The Guardian",
+            name = "守卫者",
             shipId = "ship_cyan",
             tier = 2,
             unlockTime = 120f,
@@ -81,7 +81,7 @@ object EnemyDefinitions {
         ),
         EnemyDef(
             type = EnemyType.TEMPEST,
-            name = "The Scorcher",
+            name = "焦土者",
             shipId = "ship_coral",
             tier = 2,
             unlockTime = 180f,
@@ -94,7 +94,7 @@ object EnemyDefinitions {
         ),
         EnemyDef(
             type = EnemyType.TRAP,
-            name = "The Weaver",
+            name = "织网者",
             shipId = "ship_yellow",
             tier = 2,
             unlockTime = 240f,
@@ -109,7 +109,7 @@ object EnemyDefinitions {
         // ── Tier 3: Danger (300-360s) ───────────────────────────────
         EnemyDef(
             type = EnemyType.DEVASTATOR,
-            name = "The Flakker",
+            name = "高射手",
             shipId = "ship_lime",
             tier = 3,
             unlockTime = 300f,
@@ -122,7 +122,7 @@ object EnemyDefinitions {
         ),
         EnemyDef(
             type = EnemyType.HEDGEHOG,
-            name = "The Stitcher",
+            name = "缝合者",
             shipId = "ship_purple",
             tier = 3,
             unlockTime = 330f,
@@ -135,7 +135,7 @@ object EnemyDefinitions {
         ),
         EnemyDef(
             type = EnemyType.QUASAR,
-            name = "The Bomber",
+            name = "轰炸者",
             shipId = "ship_red",
             tier = 3,
             unlockTime = 360f,
@@ -150,7 +150,7 @@ object EnemyDefinitions {
         // ── Tier 4: Elite (420-480s) ────────────────────────────────
         EnemyDef(
             type = EnemyType.DREADNOUGHT,
-            name = "The Juggernaut",
+            name = "主宰者",
             shipId = "ship_indigo",
             tier = 4,
             unlockTime = 420f,
@@ -163,7 +163,7 @@ object EnemyDefinitions {
         ),
         EnemyDef(
             type = EnemyType.RIPPER,
-            name = "The Rusher",
+            name = "突袭者",
             shipId = "ship_magenta",
             tier = 4,
             unlockTime = 450f,
@@ -176,7 +176,7 @@ object EnemyDefinitions {
         ),
         EnemyDef(
             type = EnemyType.SPECTER,
-            name = "The Phantom",
+            name = "幻影",
             shipId = "ship_white",
             tier = 4,
             unlockTime = 480f,

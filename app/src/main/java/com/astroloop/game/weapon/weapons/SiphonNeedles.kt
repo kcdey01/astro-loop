@@ -13,7 +13,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class SiphonNeedles : Weapon(
     id = "siphon_needles",
-    name = "Siphon Needles"
+    name = "虹吸针"
 ) {
     override val knobs = KnobsWeapons.siphonNeedles
 

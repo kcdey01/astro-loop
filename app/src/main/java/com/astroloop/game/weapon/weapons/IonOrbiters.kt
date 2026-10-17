@@ -16,7 +16,7 @@ import com.astroloop.game.tuning.forLevel
 
 class IonOrbiters : Weapon(
     id = "ion_orbiters",
-    name = "Ion Orbiters"
+    name = "离子环"
 ) {
     override val knobs = KnobsWeapons.ionOrbiters
 

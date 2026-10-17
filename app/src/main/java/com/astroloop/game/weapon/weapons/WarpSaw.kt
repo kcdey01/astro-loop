@@ -15,7 +15,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class WarpSaw : Weapon(
     id = "warp_saw",
-    name = "Warp Saw"
+    name = "曲率锯"
 ) {
     override val knobs = KnobsWeapons.warpSaw
 

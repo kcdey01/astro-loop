@@ -14,7 +14,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class ClusterBomb : Weapon(
     id = "cluster_bomb",
-    name = "Cluster Bomb"
+    name = "集束炸弹"
 ) {
     override val knobs = KnobsWeapons.clusterBomb
     override val beatPhaseOffsetMs: Long = 1000L

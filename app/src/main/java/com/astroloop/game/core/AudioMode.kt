@@ -58,10 +58,10 @@ enum class AudioMode {
      */
     val readoutLabel: String
         get() = when (this) {
-            ALL -> "ALL SOUND"
-            NONE -> "NO SOUND"
-            EFFECTS_MUTED -> "MUSIC ONLY"
-            MUSIC_MUTED -> "EFFECTS ONLY"
+            ALL -> "全部音效"
+            NONE -> "静音"
+            EFFECTS_MUTED -> "仅音乐"
+            MUSIC_MUTED -> "仅音效"
         }
 
     companion object {

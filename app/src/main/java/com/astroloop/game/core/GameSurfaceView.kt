@@ -647,27 +647,27 @@ class GameSurfaceView(
         // Corruption run chatter lines (<=36 chars each)
         private val CORRUPTION_CHATTER = listOf(
             // Phase 1: Determined
-            "I'm coming for you, TB-26.",
-            "Just hold on.",
-            "I'll fix this.",
+            "我来找你了，TB-26。",
+            "撑住。",
+            "我会修好它的。",
             // Phase 2: Unhinged
-            "They keep getting in the way.",
-            "None of them understand.",
-            "I have to keep going.",
-            "It has to work this time.",
+            "他们总在碍事。",
+            "他们都不明白。",
+            "我必须继续。",
+            "这次一定得成。",
             // Phase 3: Desperate
-            "WHERE ARE YOU?",
-            "Why won't it work?",
-            "Please. Just come back.",
-            "I can't stop now."
+            "你在哪儿？",
+            "为什么不行？",
+            "求你。回来吧。",
+            "我现在停不下来。"
         )
 
         private val CORRUPTION_KILL_LINES = listOf(
-            "Go home. Now.",
-            "You haven't seen him.",
-            "Stay safe. That's an order.",
-            "Please. Just stay away.",
-            "TB-26, where are you?"
+            "回家去。马上。",
+            "你没见过他。",
+            "注意安全。这是命令。",
+            "求你。别过来。",
+            "TB-26，你在哪儿？"
         )
 
         // Encounter timing: game-time thresholds (at 5x, 100 game-seconds ~ 20 real seconds)
@@ -1050,7 +1050,7 @@ class GameSurfaceView(
         if (withQuit) {
             val q = PauseTuneButton.quitRect(screenWidth, screenHeight)
             canvas.drawRoundRect(q, 16f, 16f, tuneBorderPaint)
-            canvas.drawText("QUIT", q.centerX(), q.top + 58f, tuneLabelPaint)
+            canvas.drawText("退出", q.centerX(), q.top + 58f, tuneLabelPaint)
             canvas.drawText("L1", q.centerX(), q.top + 98f, tuneHintPaint)
         }
     }
@@ -1239,7 +1239,7 @@ class GameSurfaceView(
         if (state.hasCrystalPowers && !state.corruptionSpeedUpTriggered && state.survivalTime >= 10f) {
             state.corruptionSpeedUpTriggered = true
             state.corruptionTimeMultiplier = 5f
-            radioSystem.showScriptedMessage(state, "ASTRO", "Let's speed things up.",
+            radioSystem.showScriptedMessage(state, "ASTRO", "让节奏快点。",
                 PilotDefinitions.getPilot("pilot_astro")!!.color, isBoss = true)
         }
         // Slow back to 1x at the 10-minute mark so the encounter plays at normal pace
@@ -3094,7 +3094,7 @@ class GameSurfaceView(
         // was wiped almost as it appeared. See FleetSystem.ENGINE_STRUGGLE_LINE_AT.
         if (!engineStruggleLineFired && engineRestartTimer >= FleetSystem.ENGINE_STRUGGLE_LINE_AT) {
             engineStruggleLineFired = true
-            radioSystem.showScriptedMessage(state, "ASTRO", "Come on...",
+            radioSystem.showScriptedMessage(state, "ASTRO", "拜托……",
                 PilotDefinitions.getPilot("pilot_astro")!!.color)
         }
 
@@ -3845,7 +3845,7 @@ class GameSurfaceView(
         // White flash
         visualEffects.addExplosion(ship.position.x, ship.position.y, 800f, 0xFFFFFFFF.toInt())
 
-        radioSystem.showScriptedMessage(state, "ASTRO", "Found him.",
+        radioSystem.showScriptedMessage(state, "ASTRO", "找到他了。",
             PilotDefinitions.getPilot("pilot_astro")!!.color, isBoss = true)
         state.bossFightPhase = PHASE_OTHER_SPAWN
         state.bossFightTimer = 0f
@@ -3932,7 +3932,7 @@ class GameSurfaceView(
                 if (state.bossFightTimer >= 5f && !state.droneDeparted) {
                     state.droneDeparted = true
                     radioSystem.showScriptedMessage(state, "ASTRO",
-                        "Get out of here, buddy.",
+                        "快走，兄弟。",
                         PilotDefinitions.getPilot("pilot_astro")!!.color)
                     // Start TB-26 flyout visual — capture drone position before removing passive
                     val dronePos = combatDroneSystem.drones.firstOrNull()?.position
@@ -3949,7 +3949,7 @@ class GameSurfaceView(
             PHASE_DRONE_SENT -> { // Post-drone departure
                 if (state.bossFightTimer >= 3f) {
                     radioSystem.showScriptedMessage(state, "ASTRO",
-                        "Alright, just you and me.",
+                        "好了，就剩你和我。",
                         PilotDefinitions.getPilot("pilot_astro")!!.color)
                     state.bossFightPhase = PHASE_WAITING_FLEET
                     state.bossFightTimer = 0f
@@ -3959,8 +3959,8 @@ class GameSurfaceView(
                 // Astro-only chatter: cycling survival lines and the TB-26 farewell line
                 if (startingPilotId == "pilot_astro") {
                     val cyclingLines = listOf(
-                        "Come on, hold together...",
-                        "Can't keep this up..."
+                        "撑住，别散架……",
+                        "撑不住了……"
                     )
                     val lineInterval = 15f
                     val lineIndex = ((state.bossFightTimer / lineInterval).toInt()) % cyclingLines.size
@@ -3973,7 +3973,7 @@ class GameSurfaceView(
                     // "At least TB-26 got out." fires once at 30s — not part of the cycle
                     if (state.bossFightTimer >= 30f && state.bossFightTimer - deltaTime < 30f) {
                         radioSystem.showScriptedMessage(state, "ASTRO",
-                            "At least TB-26 got out.",
+                            "至少 TB-26 出去了。",
                             PilotDefinitions.getPilot("pilot_astro")!!.color)
                     }
                 }
@@ -3983,7 +3983,7 @@ class GameSurfaceView(
                     state.bossRushPhase = 1
                     state.bossRushTimer = 0f
                     radioSystem.showScriptedMessage(state, "BOSS",
-                        "This ends now.",
+                        "到此为止。",
                         Boss.CORRUPTION_COLOR, isBoss = true)
                     val igniteDx = ship.position.x - boss.position.x
                     val igniteDy = ship.position.y - boss.position.y
@@ -4024,7 +4024,7 @@ class GameSurfaceView(
                             // the camera off the boss for the whole 62s charge.
                             FleetSystem.empFreeze(ship, boss.position.x, boss.position.y)
                             val emp1Def = PilotDefinitions.getPilot(startingPilotId)
-                            val emp1Line = LoopDefinitions.empReactionLines[startingPilotId] ?: "EMP... I can't move..."
+                            val emp1Line = LoopDefinitions.empReactionLines[startingPilotId] ?: "EMP……我动不了……"
                             radioSystem.showScriptedMessage(state, emp1Def?.callsign ?: "ASTRO", emp1Line,
                                 emp1Def?.color ?: PilotDefinitions.getPilot("pilot_astro")!!.color)
                             // Reset chatter steps so the sub-sequence starts clean
@@ -4040,22 +4040,22 @@ class GameSurfaceView(
                     when (state.fleetChatterStep) {
                         0 -> if (state.fleetChatterTimer >= 4f) {   // adrift — despair beat
                             radioSystem.showScriptedMessage(state, "ASTRO",
-                                "Not like this. Not alone.",
+                                "不能这样。不能一个人。",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             state.fleetChatterStep = 1; state.fleetChatterTimer = 0f
                         }
                         1 -> if (state.fleetChatterTimer >= 4f) {   // TB-26 sweeps back in at 8s
                             fleetSystem.startTb26Return(camera.getScreenWidth(), camera.getScreenHeight())
-                            radioSystem.showScriptedMessage(state, "TB-26", "Not today, Astro.", 0xFF6688AA.toInt())
+                            radioSystem.showScriptedMessage(state, "TB-26", "今天不行，阿星。", 0xFF6688AA.toInt())
                             state.fleetChatterStep = 2; state.fleetChatterTimer = 0f
                         }
                         2 -> if (state.fleetChatterTimer >= 2f) {
-                            radioSystem.showScriptedMessage(state, "ASTRO", "I told you to leave.",
+                            radioSystem.showScriptedMessage(state, "ASTRO", "我叫过你走。",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             state.fleetChatterStep = 3; state.fleetChatterTimer = 0f
                         }
                         3 -> if (state.fleetChatterTimer >= 2.5f) {
-                            radioSystem.showScriptedMessage(state, "TB-26", "Since when do I listen?", 0xFF6688AA.toInt())
+                            radioSystem.showScriptedMessage(state, "TB-26", "我什么时候听过话？", 0xFF6688AA.toInt())
                             startEngineRestart()   // sputter -> catch (flips bossEmpFired) -> ramp
                             state.fleetChatterStep = 4; state.fleetChatterTimer = 0f
                         }
@@ -4078,7 +4078,7 @@ class GameSurfaceView(
                     if (state.fleetChatterStep == 0 && state.fleetChatterTimer >= 1.5f
                             && state.extraLives > 0 && !state.phoenixUsed) {
                         radioSystem.showScriptedMessage(state, "BOSS",
-                            "The Phoenix can't save you.",
+                            "凤凰救不了你。",
                             Boss.CORRUPTION_COLOR, isBoss = true)
                         state.fleetChatterStep = 1   // taunt shown; still waiting to fire
                     }
@@ -4093,19 +4093,19 @@ class GameSurfaceView(
             PHASE_FLEET_CHATTER -> { // Fleet arriving + brief exchange + formation command
                 state.fleetChatterTimer += deltaTime
                 when (state.fleetChatterStep) {
-                    0 -> { // Rascal: "You think we'd miss this?"
+                    0 -> { // Rascal: "你觉得我们会错过这场？"
                         if (state.fleetChatterTimer >= 2f) {
                             radioSystem.showScriptedMessage(state, "RASCAL",
-                                "You think we'd miss this?",
+                                "你觉得我们会错过这场？",
                                 PilotDefinitions.getPilot("pilot_rascal")!!.color)
                             state.fleetChatterStep = 1
                             state.fleetChatterTimer = 0f
                         }
                     }
-                    1 -> { // Astro: "Don't let it complete!"
+                    1 -> { // Astro: "别让它完成！"
                         if (state.fleetChatterTimer >= 3f) {
                             radioSystem.showScriptedMessage(state, "ASTRO",
-                                "Don't let it complete!",
+                                "别让它完成！",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             state.bossFightPhase = PHASE_FORMATION
                             state.bossFightTimer = 0f
@@ -4130,7 +4130,7 @@ class GameSurfaceView(
                     0 -> {
                         if (state.fleetChatterTimer >= 3f) {
                             radioSystem.showScriptedMessage(state, "BRUTUS",
-                                "Shields are holding!",
+                                "护盾还撑着！",
                                 PilotDefinitions.getPilot("pilot_brutus")!!.color)
                             state.fleetChatterStep = 1
                             state.fleetChatterTimer = 0f
@@ -4139,7 +4139,7 @@ class GameSurfaceView(
                     1 -> {
                         if (state.fleetChatterTimer >= 4f) {
                             radioSystem.showScriptedMessage(state, "DASH",
-                                "Nothing's getting through!",
+                                "什么都过不去！",
                                 PilotDefinitions.getPilot("pilot_dash")!!.color)
                             state.fleetChatterStep = 2
                             state.fleetChatterTimer = 0f
@@ -4148,7 +4148,7 @@ class GameSurfaceView(
                     2 -> { // Fang + EMP #2 fires simultaneously (fleet-wide freeze, no knockback)
                         if (state.fleetChatterTimer >= 3f) {
                             radioSystem.showScriptedMessage(state, "FANG",
-                                "We can't break through!",
+                                "我们打不穿！",
                                 PilotDefinitions.getPilot("pilot_fang")!!.color)
                             if (!state.bossEmpFired && state.bossChargeProgress >= GameConfig.BOSS_EMP_CHARGE_THRESHOLD) {
                                 state.bossEmpFired = true
@@ -4171,7 +4171,7 @@ class GameSurfaceView(
                     3 -> {
                         if (state.fleetChatterTimer >= 2f) {
                             radioSystem.showScriptedMessage(state, "KRAKEN",
-                                "EMP hit... losing control...",
+                                "中 EMP 了……控制不住了……",
                                 PilotDefinitions.getPilot("pilot_kraken")!!.color)
                             state.fleetChatterStep = 4
                             state.fleetChatterTimer = 0f
@@ -4180,7 +4180,7 @@ class GameSurfaceView(
                     4 -> {
                         if (state.fleetChatterTimer >= 2f) {
                             radioSystem.showScriptedMessage(state, "UNIT-7",
-                                "Systems offline. Rerouting.",
+                                "系统离线。正在改接。",
                                 PilotDefinitions.getPilot("pilot_unit7")!!.color)
                             state.fleetChatterStep = 5
                             state.fleetChatterTimer = 0f
@@ -4189,7 +4189,7 @@ class GameSurfaceView(
                     5 -> {
                         if (state.fleetChatterTimer >= 2f) {
                             radioSystem.showScriptedMessage(state, "WHISKERS",
-                                "Can't steer... get through!",
+                                "转不了向……穿过去！",
                                 PilotDefinitions.getPilot("pilot_whiskers")!!.color)
                             state.fleetChatterStep = 6
                             state.fleetChatterTimer = 0f
@@ -4198,7 +4198,7 @@ class GameSurfaceView(
                     6 -> {
                         if (state.fleetChatterTimer >= 2f) {
                             radioSystem.showScriptedMessage(state, "HAVOC",
-                                "NEARLY CHARGED... SOMEONE...",
+                                "快充能完了……谁来……",
                                 PilotDefinitions.getPilot("pilot_havoc")!!.color)
                             state.fleetChatterStep = 7
                             state.fleetChatterTimer = 0f
@@ -4207,7 +4207,7 @@ class GameSurfaceView(
                     7 -> {
                         if (state.fleetChatterTimer >= 4f) {
                             radioSystem.showScriptedMessage(state, "TB-26",
-                                "Leave this one to me.",
+                                "这个交给我。",
                                 0xFF6688AA.toInt())
                             fleetSystem.startTb26Charge()
                             state.fleetChatterStep = 8
@@ -4217,7 +4217,7 @@ class GameSurfaceView(
                     8 -> {
                         if (state.fleetChatterTimer >= 4f) {
                             radioSystem.showScriptedMessage(state, "TB-26",
-                                "I'll see you at the bar, Astro.",
+                                "酒吧见，阿星。",
                                 0xFF6688AA.toInt())
                             state.fleetChatterStep = 9
                             state.fleetChatterTimer = 0f
@@ -4357,10 +4357,10 @@ class GameSurfaceView(
 
                 state.fleetChatterTimer += deltaTime
                 when (state.fleetChatterStep) {
-                    0 -> { // 5s: "Get out of here, buddy." + TB-26 flyout
+                    0 -> { // 5s: "快走，兄弟。" + TB-26 flyout
                         if (state.fleetChatterTimer >= 5f) {
                             radioSystem.showScriptedMessage(state, "ASTRO",
-                                "Get out of here, buddy.",
+                                "快走，兄弟。",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             if (pastAstro != null) {
                                 fleetSystem.startTb26Flyout(
@@ -4372,37 +4372,37 @@ class GameSurfaceView(
                             state.fleetChatterTimer = 0f
                         }
                     }
-                    1 -> { // 3s: "Alright, just you and me."
+                    1 -> { // 3s: "好了，就剩你和我。"
                         if (state.fleetChatterTimer >= 3f) {
                             radioSystem.showScriptedMessage(state, "ASTRO",
-                                "Alright, just you and me.",
+                                "好了，就剩你和我。",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             state.fleetChatterStep = 2
                             state.fleetChatterTimer = 0f
                         }
                     }
-                    2 -> { // 15s: "Come on, hold together..."
+                    2 -> { // 15s: "撑住，别散架……"
                         if (state.fleetChatterTimer >= 15f) {
                             radioSystem.showScriptedMessage(state, "ASTRO",
-                                "Come on, hold together...",
+                                "撑住，别散架……",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             state.fleetChatterStep = 3
                             state.fleetChatterTimer = 0f
                         }
                     }
-                    3 -> { // 15s: "Can't keep this up..."
+                    3 -> { // 15s: "撑不住了……"
                         if (state.fleetChatterTimer >= 15f) {
                             radioSystem.showScriptedMessage(state, "ASTRO",
-                                "Can't keep this up...",
+                                "撑不住了……",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             state.fleetChatterStep = 4
                             state.fleetChatterTimer = 0f
                         }
                     }
-                    4 -> { // 15s: "At least TB-26 got out."
+                    4 -> { // 15s: "至少 TB-26 出去了。"
                         if (state.fleetChatterTimer >= 15f) {
                             radioSystem.showScriptedMessage(state, "ASTRO",
-                                "At least TB-26 got out.",
+                                "至少 TB-26 出去了。",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             state.fleetChatterStep = 5
                             state.fleetChatterTimer = 0f
@@ -4414,7 +4414,7 @@ class GameSurfaceView(
                             state.corruptionRushTimer = 0f
                             fadeAllProjectiles()  // weapons go quiet as the burn ignites
                             radioSystem.showScriptedMessage(state, "ASTRO",
-                                "This ends now.",
+                                "到此为止。",
                                 Boss.CORRUPTION_COLOR, isBoss = true)
                             crewmateEncounter.straightFlee = true
                             val pa = crewmateEncounter.crewmateShip
@@ -4451,7 +4451,7 @@ class GameSurfaceView(
                             // Past Astro's reaction — same frame as the EMP, mirroring the
                             // lone player's reaction in the normal fight
                             radioSystem.showScriptedMessage(state, "ASTRO",
-                                LoopDefinitions.empReactionLines["pilot_astro"] ?: "EMP... I can't move...",
+                                LoopDefinitions.empReactionLines["pilot_astro"] ?: "EMP……我动不了……",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             state.fleetChatterStep = 7
                             state.fleetChatterTimer = 0f
@@ -4460,7 +4460,7 @@ class GameSurfaceView(
                     7 -> { // 4s adrift — Past Astro's despair beat (mirrors the normal run)
                         if (state.fleetChatterTimer >= 4f) {
                             radioSystem.showScriptedMessage(state, "ASTRO",
-                                "Not like this. Not alone.",
+                                "不能这样。不能一个人。",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             state.fleetChatterStep = 8
                             state.fleetChatterTimer = 0f
@@ -4471,22 +4471,22 @@ class GameSurfaceView(
                             fleetSystem.startTb26Return(
                                 camera.getScreenWidth(), camera.getScreenHeight(),
                                 crewmateEncounter.crewmateShip?.position)
-                            radioSystem.showScriptedMessage(state, "TB-26", "Not today, Astro.", 0xFF6688AA.toInt())
+                            radioSystem.showScriptedMessage(state, "TB-26", "今天不行，阿星。", 0xFF6688AA.toInt())
                             state.fleetChatterStep = 9
                             state.fleetChatterTimer = 0f
                         }
                     }
                     9 -> { // mirrors the normal run's exchange, same 2s beat
                         if (state.fleetChatterTimer >= 2f) {
-                            radioSystem.showScriptedMessage(state, "ASTRO", "I told you to leave.",
+                            radioSystem.showScriptedMessage(state, "ASTRO", "我叫过你走。",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             state.fleetChatterStep = 10
                             state.fleetChatterTimer = 0f
                         }
                     }
-                    10 -> { // 2.5s: "Since when do I listen?" + Past Astro's engines sputter back
+                    10 -> { // 2.5s: "我什么时候听过话？" + Past Astro's engines sputter back
                         if (state.fleetChatterTimer >= 2.5f) {
-                            radioSystem.showScriptedMessage(state, "TB-26", "Since when do I listen?", 0xFF6688AA.toInt())
+                            radioSystem.showScriptedMessage(state, "TB-26", "我什么时候听过话？", 0xFF6688AA.toInt())
                             startEngineRestart()   // sputter -> catch -> ramp, mirroring the normal run
                             state.fleetChatterStep = 11
                             state.fleetChatterTimer = 0f
@@ -4539,19 +4539,19 @@ class GameSurfaceView(
                 boss.position.set(ship.position.x, ship.position.y)
                 state.fleetChatterTimer += deltaTime
                 when (state.fleetChatterStep) {
-                    0 -> { // Rascal: "You think we'd miss this?"
+                    0 -> { // Rascal: "你觉得我们会错过这场？"
                         if (state.fleetChatterTimer >= 2f) {
                             radioSystem.showScriptedMessage(state, "RASCAL",
-                                "You think we'd miss this?",
+                                "你觉得我们会错过这场？",
                                 PilotDefinitions.getPilot("pilot_rascal")!!.color)
                             state.fleetChatterStep = 1
                             state.fleetChatterTimer = 0f
                         }
                     }
-                    1 -> { // Past Astro: "Don't let it complete!"
+                    1 -> { // Past Astro: "别让它完成！"
                         if (state.fleetChatterTimer >= 3f) {
                             radioSystem.showScriptedMessage(state, "ASTRO",
-                                "Don't let it complete!",
+                                "别让它完成！",
                                 PilotDefinitions.getPilot("pilot_astro")!!.color)
                             state.bossFightPhase = PHASE_OTHER_FORMATION
                             state.bossFightTimer = 0f
@@ -4578,7 +4578,7 @@ class GameSurfaceView(
                     0 -> {
                         if (state.fleetChatterTimer >= 3f) {
                             radioSystem.showScriptedMessage(state, "BRUTUS",
-                                "Shields are holding!",
+                                "护盾还撑着！",
                                 PilotDefinitions.getPilot("pilot_brutus")!!.color)
                             state.fleetChatterStep = 1
                             state.fleetChatterTimer = 0f
@@ -4587,7 +4587,7 @@ class GameSurfaceView(
                     1 -> {
                         if (state.fleetChatterTimer >= 4f) {
                             radioSystem.showScriptedMessage(state, "DASH",
-                                "Nothing's getting through!",
+                                "什么都过不去！",
                                 PilotDefinitions.getPilot("pilot_dash")!!.color)
                             state.fleetChatterStep = 2
                             state.fleetChatterTimer = 0f
@@ -4596,7 +4596,7 @@ class GameSurfaceView(
                     2 -> { // Fang + EMP fires simultaneously
                         if (state.fleetChatterTimer >= 3f) {
                             radioSystem.showScriptedMessage(state, "FANG",
-                                "We can't break through!",
+                                "我们打不穿！",
                                 PilotDefinitions.getPilot("pilot_fang")!!.color)
                             if (!state.bossEmpFired && state.bossChargeProgress >= GameConfig.BOSS_EMP_CHARGE_THRESHOLD) {
                                 state.bossEmpFired = true
@@ -4621,7 +4621,7 @@ class GameSurfaceView(
                     3 -> {
                         if (state.fleetChatterTimer >= 2f) {
                             radioSystem.showScriptedMessage(state, "KRAKEN",
-                                "EMP hit... losing control...",
+                                "中 EMP 了……控制不住了……",
                                 PilotDefinitions.getPilot("pilot_kraken")!!.color)
                             state.fleetChatterStep = 4
                             state.fleetChatterTimer = 0f
@@ -4630,7 +4630,7 @@ class GameSurfaceView(
                     4 -> {
                         if (state.fleetChatterTimer >= 2f) {
                             radioSystem.showScriptedMessage(state, "UNIT-7",
-                                "Systems offline. Rerouting.",
+                                "系统离线。正在改接。",
                                 PilotDefinitions.getPilot("pilot_unit7")!!.color)
                             state.fleetChatterStep = 5
                             state.fleetChatterTimer = 0f
@@ -4639,7 +4639,7 @@ class GameSurfaceView(
                     5 -> {
                         if (state.fleetChatterTimer >= 2f) {
                             radioSystem.showScriptedMessage(state, "WHISKERS",
-                                "Can't steer... get through!",
+                                "转不了向……穿过去！",
                                 PilotDefinitions.getPilot("pilot_whiskers")!!.color)
                             state.fleetChatterStep = 6
                             state.fleetChatterTimer = 0f
@@ -4648,7 +4648,7 @@ class GameSurfaceView(
                     6 -> {
                         if (state.fleetChatterTimer >= 2f) {
                             radioSystem.showScriptedMessage(state, "HAVOC",
-                                "NEARLY CHARGED... SOMEONE...",
+                                "快充能完了……谁来……",
                                 PilotDefinitions.getPilot("pilot_havoc")!!.color)
                             state.fleetChatterStep = 7
                             state.fleetChatterTimer = 0f
@@ -4657,7 +4657,7 @@ class GameSurfaceView(
                     7 -> {
                         if (state.fleetChatterTimer >= 4f) {
                             radioSystem.showScriptedMessage(state, "TB-26",
-                                "Leave this one to me.",
+                                "这个交给我。",
                                 0xFF6688AA.toInt())
                             fleetSystem.startTb26Charge()
                             state.fleetChatterStep = 8
@@ -4667,7 +4667,7 @@ class GameSurfaceView(
                     8 -> {
                         if (state.fleetChatterTimer >= 4f) {
                             radioSystem.showScriptedMessage(state, "TB-26",
-                                "I'll see you at the bar, Astro.",
+                                "酒吧见，阿星。",
                                 0xFF6688AA.toInt())
                             state.fleetChatterStep = 9
                             state.fleetChatterTimer = 0f
@@ -4758,21 +4758,21 @@ class GameSurfaceView(
             // --- Celebration (fast, building energy) ---
             0 -> { // Medic
                 if (state.fleetChatterTimer >= 1f) {
-                    radioSystem.showScriptedMessage(state, "MEDIC", "We did it!",
+                    radioSystem.showScriptedMessage(state, "MEDIC", "我们赢了！",
                         PilotDefinitions.getPilot("pilot_medic")!!.color)
                     state.fleetChatterStep = 1; state.fleetChatterTimer = 0f
                 }
             }
             1 -> { // Rascal
                 if (state.fleetChatterTimer >= 1.5f) {
-                    radioSystem.showScriptedMessage(state, "RASCAL", "Take that!",
+                    radioSystem.showScriptedMessage(state, "RASCAL", "接招吧！",
                         PilotDefinitions.getPilot("pilot_rascal")!!.color)
                     state.fleetChatterStep = 2; state.fleetChatterTimer = 0f
                 }
             }
             2 -> { // Havoc
                 if (state.fleetChatterTimer >= 1.5f) {
-                    radioSystem.showScriptedMessage(state, "HAVOC", "WHAT A RUSH!",
+                    radioSystem.showScriptedMessage(state, "HAVOC", "太爽了！",
                         PilotDefinitions.getPilot("pilot_havoc")!!.color)
                     state.fleetChatterStep = 3; state.fleetChatterTimer = 0f
                 }
@@ -4787,7 +4787,7 @@ class GameSurfaceView(
             // --- Transition (the turn) ---
             4 -> { // Ember — realization
                 if (state.fleetChatterTimer >= 4f) {
-                    radioSystem.showScriptedMessage(state, "EMBER", "Wait... where's TB-26?",
+                    radioSystem.showScriptedMessage(state, "EMBER", "等等……TB-26 呢？",
                         PilotDefinitions.getPilot("pilot_ember")!!.color)
                     state.fleetChatterStep = 5; state.fleetChatterTimer = 0f
                 }
@@ -4807,9 +4807,9 @@ class GameSurfaceView(
                     state.fleetChatterStep = 7; state.fleetChatterTimer = 0f
                 }
             }
-            7 -> { // "Respond. RESPOND."
+            7 -> { // "回答。回答我。"
                 if (state.fleetChatterTimer >= 3.5f) {
-                    radioSystem.showScriptedMessage(state, "ASTRO", "Respond. RESPOND.",
+                    radioSystem.showScriptedMessage(state, "ASTRO", "回答。回答我。",
                         PilotDefinitions.getPilot("pilot_astro")!!.color)
                     state.fleetChatterStep = 9; state.fleetChatterTimer = 0f
                 }
@@ -6167,7 +6167,7 @@ class GameSurfaceView(
      * pass, where that warning never comes — as soon as the escalation dialogue runs out.
      */
     private fun enterDesertHorrorPath() {
-        radioSystem.showScriptedMessage(state, "ASTRO", "...Orders are orders.", DesertDefinitions.ASTRO_COLOR)
+        radioSystem.showScriptedMessage(state, "ASTRO", "……命令就是命令。", DesertDefinitions.ASTRO_COLOR)
         state.desertPhase = 2
         state.desertDialogueStep = 0
         state.desertDialogueTimer = 0f
@@ -6509,7 +6509,7 @@ class GameSurfaceView(
                 typeface = FontManager.getDisplayBold()
                 isAntiAlias = true
             }
-            canvas.drawText("PAUSED", screenWidth / 2f, screenHeight * CrystalRenderer.PAUSE_TEXT_THRESHOLD, textPaint)
+            canvas.drawText("已暂停", screenWidth / 2f, screenHeight * CrystalRenderer.PAUSE_TEXT_THRESHOLD, textPaint)
             drawTuneButton(canvas)
         }
     }
@@ -8790,7 +8790,7 @@ class GameSurfaceView(
                 typeface = FontManager.getDisplayBold()
                 isAntiAlias = true
             }
-            canvas.drawText("PAUSED", screenWidth / 2f, screenHeight * CrystalRenderer.PAUSE_TEXT_THRESHOLD, textPaint)
+            canvas.drawText("已暂停", screenWidth / 2f, screenHeight * CrystalRenderer.PAUSE_TEXT_THRESHOLD, textPaint)
             drawTuneButton(canvas)
         } else {
             crystalRenderer.render(canvas, screenWidth, screenHeight)

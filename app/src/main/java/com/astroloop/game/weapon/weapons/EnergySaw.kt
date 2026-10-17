@@ -14,7 +14,7 @@ import com.astroloop.game.tuning.forLevel
 
 class EnergySaw : Weapon(
     id = "energy_saw",
-    name = "Energy Saw"
+    name = "能量锯"
 ) {
     override val knobs = KnobsWeapons.energySaw
 

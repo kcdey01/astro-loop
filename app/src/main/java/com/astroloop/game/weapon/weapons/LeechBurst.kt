@@ -14,7 +14,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class LeechBurst : Weapon(
     id = "leech_burst",
-    name = "Leech Burst"
+    name = "汲取爆"
 ) {
     companion object {
         /**

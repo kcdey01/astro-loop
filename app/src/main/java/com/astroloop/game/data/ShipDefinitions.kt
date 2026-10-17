@@ -12,18 +12,18 @@ object ShipDefinitions {
     // Note: Some ship IDs don't match their current colors due to a color redistribution
     // (2026-02-10). IDs kept unchanged to preserve save data compatibility.
     val ships = listOf(
-        ShipDef("ship_blue", "Scout", 0xFF3388FF.toInt(), "pulse_cannon", 0),
-        ShipDef("ship_green", "Tracer", 0xFF33FF77.toInt(), "homing_missiles", 3000),
-        ShipDef("ship_orange", "Shrapnel", 0xFFFF8833.toInt(), "scatter_shot", 5000),
-        ShipDef("ship_cyan", "Sentinel", 0xFF33FFEE.toInt(), "ion_orbiters", 8000),
-        ShipDef("ship_lime", "Devastator", 0xFF6644FF.toInt(), "flak_cannon", 12000),
-        ShipDef("ship_yellow", "Trap", 0xFFFFFF33.toInt(), "space_mines", 20000),
-        ShipDef("ship_red", "Nova", 0xFFFF77AA.toInt(), "nova_blast", 30000),
-        ShipDef("ship_magenta", "Ripper", 0xFF9933FF.toInt(), "energy_saw", 40000),
-        ShipDef("ship_coral", "Tempest", 0xFFFFAA33.toInt(), "solar_storm", 55000),
-        ShipDef("ship_indigo", "Dreadnought", 0xFFAAFF33.toInt(), "cluster_bomb", 70000),
-        ShipDef("ship_purple", "Hedgehog", 0xFFFF33BB.toInt(), "needle_gun", 85000),
-        ShipDef("ship_white", "Specter", 0xFFFFFFFF.toInt(), "railgun", 100000)
+        ShipDef("ship_blue", "侦察者", 0xFF3388FF.toInt(), "pulse_cannon", 0),
+        ShipDef("ship_green", "追踪者", 0xFF33FF77.toInt(), "homing_missiles", 3000),
+        ShipDef("ship_orange", "破片", 0xFFFF8833.toInt(), "scatter_shot", 5000),
+        ShipDef("ship_cyan", "哨兵", 0xFF33FFEE.toInt(), "ion_orbiters", 8000),
+        ShipDef("ship_lime", "毁灭者", 0xFF6644FF.toInt(), "flak_cannon", 12000),
+        ShipDef("ship_yellow", "陷阱", 0xFFFFFF33.toInt(), "space_mines", 20000),
+        ShipDef("ship_red", "新星", 0xFFFF77AA.toInt(), "nova_blast", 30000),
+        ShipDef("ship_magenta", "撕裂者", 0xFF9933FF.toInt(), "energy_saw", 40000),
+        ShipDef("ship_coral", "风暴", 0xFFFFAA33.toInt(), "solar_storm", 55000),
+        ShipDef("ship_indigo", "无畏舰", 0xFFAAFF33.toInt(), "cluster_bomb", 70000),
+        ShipDef("ship_purple", "刺猬", 0xFFFF33BB.toInt(), "needle_gun", 85000),
+        ShipDef("ship_white", "幽灵", 0xFFFFFFFF.toInt(), "railgun", 100000)
     )
 
     fun getShip(id: String): ShipDef? = ships.find { it.id == id }
@@ -31,7 +31,7 @@ object ShipDefinitions {
     fun getShipCount(): Int = ships.size
 
     fun getShipName(index: Int): String {
-        return ships.getOrNull(index)?.name ?: "Unknown"
+        return ships.getOrNull(index)?.name ?: "未知"
     }
 
     /** Get the color of the ship that starts with this weapon. Returns corruption red during corruption runs. */

@@ -14,7 +14,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class AutonomousAce : Weapon(
     id = "autonomous_ace",
-    name = "Autonomous Ace"
+    name = "自主王牌"
 ) {
     override val knobs = KnobsWeapons.autonomousAce
     override fun getProjectileCount(state: GameState): Int = baseProjectileCount + state.extraProjectiles

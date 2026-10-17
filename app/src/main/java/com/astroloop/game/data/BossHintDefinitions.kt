@@ -39,16 +39,16 @@ object BossHintDefinitions {
      * costs him the authority the hints depend on.
      */
     private val soloHints = listOf(
-        "Ten minutes in. Nobody gets that far alone.",
-        "Still going out on your own, I see.",
-        "There's one who doesn't fly alone. Find him."
+        "撑到十分钟了。没人能独自走到这一步。",
+        "还是一个人出任务，我看得出来。",
+        "有个人从不单飞。去找他。"
     )
 
     /** For a pilot who has the answer and is still dying: stop trading, start lasting. */
     private val astroHints = listOf(
-        "Close. You only have to still be there.",
-        "Don't try to win it. Outlast it.",
-        "It ends on its own. Stay alive that long."
+        "很接近了。你只要还留在那儿就行。",
+        "别想着打赢它。活得比它久。",
+        "它自己会结束。撑到那时候。"
     )
 
     /**
@@ -65,23 +65,23 @@ object BossHintDefinitions {
      * "TB-26" is safe to say here: hints only fire in normal mode, where he is not yet Tobar.
      */
     val crewReactions = mapOf(
-        "MEDIC" to "TB-26, there's nobody there. Do you need a scan?",
-        "RASCAL" to "Who's he talking to? Is there loot in it?",
-        "FROST" to "He does that. I stopped calculating why.",
-        "UNIT-7" to "No recipient detected. TB-26 may be faulty.",
-        "DASH" to "Talking to the air again? Great. Can we go?",
-        "BRUTUS" to "...Nobody's there.",
-        "EMBER" to "He's talking to a ghost. I respect the drama.",
-        "FANG" to "No second heartbeat in here. He's alone.",
-        "KRAKEN" to "He's addressing the deep. The deep isn't listening.",
-        "WHISKERS" to "Boring. Talk to me or don't talk.",
-        "HAVOC" to "Who are you TALKING to?! Is it me? It's me, right?",
-        "ASTRO" to "Careful, TB-26. You'll worry the others."
+        "MEDIC" to "TB-26，那儿没人。要不要给你做个扫描？",
+        "RASCAL" to "他在跟谁说话？有钱可赚吗？",
+        "FROST" to "他常这样。我已经不算这是为什么了。",
+        "UNIT-7" to "未检测到接收方。TB-26 可能存在故障。",
+        "DASH" to "又在跟空气说话？行吧。能走了吗？",
+        "BRUTUS" to "……那儿没人。",
+        "EMBER" to "他在跟鬼说话。这股戏我尊重。",
+        "FANG" to "这屋里没有第二个心跳。就他一个。",
+        "KRAKEN" to "他在对深渊说话。深渊没在听。",
+        "WHISKERS" to "无聊。要么跟我说话，要么别说。",
+        "HAVOC" to "你到底在跟谁说话？！是我吗？是我吧？",
+        "ASTRO" to "小心点，TB-26。你会让其他人担心的。"
     )
 
     /** The returning pilot's reaction, falling back so the wiring can never end in silence. */
     fun reactionFor(callsign: String): String =
-        crewReactions[callsign] ?: "...Who is he talking to?"
+        crewReactions[callsign] ?: "……他在跟谁说话？"
 
     fun linesFor(track: Track): List<String> = when (track) {
         Track.SOLO -> soloHints

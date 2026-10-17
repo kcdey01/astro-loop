@@ -125,7 +125,7 @@ object BlackMarketDesigns {
         // crooked neon sign
         canvas.save(); canvas.rotate(-2f, cx, roomTop(b) + 38f)
         text.textSize = 16f; text.color = 0xFFCC4422.toInt(); text.alpha = (flick * 255).toInt()
-        canvas.drawText("BLACK MARKET", cx, roomTop(b) + 42f, text); text.alpha = 255
+        canvas.drawText("黑市", cx, roomTop(b) + 42f, text); text.alpha = 255
         canvas.restore()
         // floor scuffs
         stroke.color = 0xFF252535.toInt(); stroke.strokeWidth = 2f
@@ -158,7 +158,7 @@ object BlackMarketDesigns {
         stroke.color = 0xFF444455.toInt(); stroke.strokeWidth = 2f
         canvas.drawLine(b.left, roomTop(b) + 6f, b.right, roomTop(b) + 6f, stroke)
         text.textSize = 15f; text.color = 0xFFCCAA66.toInt()
-        canvas.drawText("BLACK MARKET", b.centerX(), roomTop(b) + 24f, text)
+        canvas.drawText("黑市", b.centerX(), roomTop(b) + 24f, text)
     }
 
     // ===== designs 03..10 =====
@@ -188,7 +188,7 @@ object BlackMarketDesigns {
         stroke.color = 0xFF555544.toInt(); stroke.strokeWidth = 1.5f; canvas.drawRect(crate, stroke)
         // stencil label near roomTop
         text.textSize = 14f; text.color = 0xFFCCCCCC.toInt(); text.alpha = 160
-        canvas.drawText("BLACK MARKET", b.centerX(), roomTop(b) + 14f, text); text.alpha = 255
+        canvas.drawText("黑市", b.centerX(), roomTop(b) + 14f, text); text.alpha = 255
         drawWalkway(canvas, b)
     }
 
@@ -279,7 +279,7 @@ object BlackMarketDesigns {
         canvas.drawLine(cx, hatchMidY - 14f, cx, hatchMidY + 14f, stroke)
         // engraved label
         text.textSize = 13f; text.color = 0xFF666677.toInt()
-        canvas.drawText("BLACK MARKET", cx, wallTop + 14f, text)
+        canvas.drawText("黑市", cx, wallTop + 14f, text)
         drawWalkway(canvas, b)
     }
 
@@ -348,7 +348,7 @@ object BlackMarketDesigns {
         glow.color = 0xFFCC4422.toInt(); glow.alpha = (flick * 160).toInt()
         canvas.drawCircle(b.centerX(), roomTop(b) + 22f, 28f, glow); glow.alpha = 255
         text.textSize = 13f; text.color = 0xFFCC4422.toInt(); text.alpha = (flick * 220).toInt()
-        canvas.drawText("BLACK MARKET", b.centerX(), roomTop(b) + 26f, text); text.alpha = 255
+        canvas.drawText("黑市", b.centerX(), roomTop(b) + 26f, text); text.alpha = 255
         drawWalkway(canvas, b)
     }
 
@@ -458,7 +458,7 @@ object BlackMarketDesigns {
         // crooked "BLACK MARKET" sign near roomTop
         canvas.save(); canvas.rotate(-3f, b.centerX(), roomTop(b) + 14f)
         text.textSize = 15f; text.color = 0xFFCC4422.toInt()
-        canvas.drawText("BLACK MARKET", b.centerX(), roomTop(b) + 18f, text)
+        canvas.drawText("黑市", b.centerX(), roomTop(b) + 18f, text)
         canvas.restore()
         drawWalkway(canvas, b)
     }
@@ -501,7 +501,7 @@ object BlackMarketDesigns {
         canvas.drawRect(b.left, walkwayY(b) - drumH - 8f, b.right, walkwayY(b), glow); glow.alpha = 255
         // label
         text.textSize = 13f; text.color = 0xFFCCCCCC.toInt(); text.alpha = 150
-        canvas.drawText("BLACK MARKET", b.centerX(), roomTop(b) + 14f, text); text.alpha = 255
+        canvas.drawText("黑市", b.centerX(), roomTop(b) + 14f, text); text.alpha = 255
     }
 
     private fun design13_brokenArcade(canvas: Canvas, b: RectF) {
@@ -574,7 +574,7 @@ object BlackMarketDesigns {
         glow.color = 0xFFDDBB66.toInt(); glow.alpha = (pulse * 200).toInt()
         canvas.drawCircle(ridgeX, ridgeY + 22f, 5f, glow); glow.alpha = 255
         text.textSize = 13f; text.color = 0xFFBBAA88.toInt(); text.alpha = 180
-        canvas.drawText("BLACK MARKET", b.centerX(), roomTop(b) + 18f, text); text.alpha = 255
+        canvas.drawText("黑市", b.centerX(), roomTop(b) + 18f, text); text.alpha = 255
     }
 
     private fun design15_vaultDoor(canvas: Canvas, b: RectF) {
@@ -799,7 +799,7 @@ object BlackMarketDesigns {
         fill.color = 0xFF003344.toInt(); fill.alpha = 160
         canvas.drawRect(b.centerX() - 66f, labelY - 14f, b.centerX() + 66f, labelY + 4f, fill); fill.alpha = 255
         text.textSize = 14f; text.color = 0xFF44CCFF.toInt()
-        canvas.drawText("BLACK MARKET", b.centerX(), labelY, text)
+        canvas.drawText("黑市", b.centerX(), labelY, text)
         drawWalkway(canvas, b)
     }
 

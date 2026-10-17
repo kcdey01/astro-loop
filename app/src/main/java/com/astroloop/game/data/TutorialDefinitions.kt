@@ -39,19 +39,19 @@ object TutorialDefinitions {
     val beats: List<TutorialBeat> = listOf(
         TutorialBeat(
             tbLines = listOf(
-                "Green is health, blue is shields.",
-                "Star dust is yen. Don't leave it.",
-                "Double-tap to pause. I never do."
+                "绿条是生命，蓝条是护盾。",
+                "星尘就是円币。别丢下它。",
+                "双击暂停。我从来不暂停。"
             ),
-            reaction = "...Who are you talking to?"
+            reaction = "……你在跟谁说话？"
         ),
         TutorialBeat(
             tbLines = listOf(
-                "You don't hire pilots. You earn them.",
-                "Yen buys upgrades and new ships.",
-                "In the store: tap to read, hold to buy."
+                "机师不是雇来的。是赢来的。",
+                "円币能买强化和新飞船。",
+                "商店里：点一下看说明，按住才购买。"
             ),
-            reaction = "You're doing it again."
+            reaction = "你又来了。"
         )
     )
 

@@ -11,38 +11,38 @@ import kotlin.math.PI
 object KnobsWeapons {
 
     // ── Base weapons ────────────────────────────────────────────────────────────────────────────
-    val pulseCannon = WeaponKnobs.base("pulse_cannon", "Pulse Cannon", damage = 15f, sixteenths = 4, count = 1, speed = 600f)
-    val energySaw = WeaponKnobs.ticking("energy_saw", "Energy Saw", damage = 8f, tickMs = 100)
-    val scatterShot = WeaponKnobs.base("scatter_shot", "Scatter Shot", damage = 10f, sixteenths = 8, count = 5, speed = 500f, hasArea = true)
-    val homingMissiles = WeaponKnobs.base("homing_missiles", "Homing Missiles", damage = 35f, sixteenths = 8, count = 1, speed = 350f)
+    val pulseCannon = WeaponKnobs.base("pulse_cannon", "脉冲炮", damage = 15f, sixteenths = 4, count = 1, speed = 600f)
+    val energySaw = WeaponKnobs.ticking("energy_saw", "能量锯", damage = 8f, tickMs = 100)
+    val scatterShot = WeaponKnobs.base("scatter_shot", "散射弹", damage = 10f, sixteenths = 8, count = 5, speed = 500f, hasArea = true)
+    val homingMissiles = WeaponKnobs.base("homing_missiles", "追踪导弹", damage = 35f, sixteenths = 8, count = 1, speed = 350f)
     val ionOrbiters = WeaponKnobs.base(
-        "ion_orbiters", "Ion Orbiters", damage = 19f, sixteenths = 32, count = 2, hasArea = true,
+        "ion_orbiters", "离子环", damage = 19f, sixteenths = 32, count = 2, hasArea = true,
         countApplies = Applies.ON_EDITOR_CLOSE,
     )
-    val railgun = WeaponKnobs.base("railgun", "Railgun", damage = 80f, sixteenths = 12, count = 1, speed = 2000f)
-    val spaceMines = WeaponKnobs.base("space_mines", "Space Mines", damage = 60f, sixteenths = 16, count = 1, hasArea = true)
-    val solarStorm = WeaponKnobs.base("solar_storm", "Solar Storm", damage = 29f, sixteenths = 16, count = 1, countLabel = "Targets at L1")
-    val novaBlast = WeaponKnobs.base("nova_blast", "Nova Blast", damage = 40f, sixteenths = 32, count = null, hasArea = true)
-    val needleGun = WeaponKnobs.base("needle_gun", "Needle Gun", damage = 5f, sixteenths = 2, count = 3, speed = 800f)
-    val clusterBomb = WeaponKnobs.base("cluster_bomb", "Cluster Bomb", damage = 60f, sixteenths = 16, count = 1, speed = 200f, hasArea = true)
-    val flakCannon = WeaponKnobs.base("flak_cannon", "Flak Cannon", damage = 44f, sixteenths = 8, count = 1, speed = 400f, hasArea = true)
+    val railgun = WeaponKnobs.base("railgun", "电磁炮", damage = 80f, sixteenths = 12, count = 1, speed = 2000f)
+    val spaceMines = WeaponKnobs.base("space_mines", "太空雷", damage = 60f, sixteenths = 16, count = 1, hasArea = true)
+    val solarStorm = WeaponKnobs.base("solar_storm", "太阳风暴", damage = 29f, sixteenths = 16, count = 1, countLabel = "Targets at L1")
+    val novaBlast = WeaponKnobs.base("nova_blast", "新星爆发", damage = 40f, sixteenths = 32, count = null, hasArea = true)
+    val needleGun = WeaponKnobs.base("needle_gun", "针枪", damage = 5f, sixteenths = 2, count = 3, speed = 800f)
+    val clusterBomb = WeaponKnobs.base("cluster_bomb", "集束炸弹", damage = 60f, sixteenths = 16, count = 1, speed = 200f, hasArea = true)
+    val flakCannon = WeaponKnobs.base("flak_cannon", "高射炮", damage = 44f, sixteenths = 8, count = 1, speed = 400f, hasArea = true)
 
     // ── Evolutions ──────────────────────────────────────────────────────────────────────────────
-    val stormCannon = WeaponKnobs.evolution("storm_cannon", "Storm Cannon", from = pulseCannon, rate = 0.5f, damage = 18f, count = 3, speed = 700f)
-    val warpSaw = WeaponKnobs.ticking("warp_saw", "Warp Saw", damage = 15f, tickMs = 100)
-    val leechBurst = WeaponKnobs.evolution("leech_burst", "Leech Burst", from = scatterShot, rate = 0.5f, damage = 12f, count = 13, speed = 550f, hasArea = true)
-    val autonomousAce = WeaponKnobs.evolution("autonomous_ace", "Autonomous Ace", from = homingMissiles, rate = 1f, damage = 45f, count = 5, speed = 500f)
+    val stormCannon = WeaponKnobs.evolution("storm_cannon", "风暴炮", from = pulseCannon, rate = 0.5f, damage = 18f, count = 3, speed = 700f)
+    val warpSaw = WeaponKnobs.ticking("warp_saw", "曲率锯", damage = 15f, tickMs = 100)
+    val leechBurst = WeaponKnobs.evolution("leech_burst", "汲取爆", from = scatterShot, rate = 0.5f, damage = 12f, count = 13, speed = 550f, hasArea = true)
+    val autonomousAce = WeaponKnobs.evolution("autonomous_ace", "自主王牌", from = homingMissiles, rate = 1f, damage = 45f, count = 5, speed = 500f)
     // No count knob: the rings use frost_ring.inner_count and frost_ring.outer_count.
-    val frostRing = WeaponKnobs.evolution("frost_ring", "Frost Ring", from = ionOrbiters, rate = 0.5f, damage = 20f, count = null, fixedCount = 18, hasArea = true)
+    val frostRing = WeaponKnobs.evolution("frost_ring", "霜环", from = ionOrbiters, rate = 0.5f, damage = 20f, count = null, fixedCount = 18, hasArea = true)
     // Damage is per tick (10 ticks/sec) and the tick is each entity's own interval; it was 50 before a heavy nerf.
-    val oblivionBeam = WeaponKnobs.ticking("oblivion_beam", "Oblivion Beam", damage = 18f, tickMs = 100)
-    val jackpotMines = WeaponKnobs.evolution("jackpot_mines", "Gambler's Mines", from = spaceMines, rate = 1f, damage = 90f, count = 3)
-    val phoenixFlare = WeaponKnobs.evolution("phoenix_flare", "Phoenix Flare", from = solarStorm, rate = 1f, damage = 50f, count = 8, hasArea = true, countLabel = "Projectiles per ring")
-    val lingeringNova = WeaponKnobs.evolution("lingering_nova", "Lingering Nova", from = novaBlast, rate = 1f, damage = 30f, count = null, hasArea = true)
-    val siphonNeedles = WeaponKnobs.evolution("siphon_needles", "Siphon Needles", from = needleGun, rate = 1f, damage = 9f, count = 7, speed = 900f)
+    val oblivionBeam = WeaponKnobs.ticking("oblivion_beam", "湮灭光矛", damage = 18f, tickMs = 100)
+    val jackpotMines = WeaponKnobs.evolution("jackpot_mines", "赌徒之雷", from = spaceMines, rate = 1f, damage = 90f, count = 3)
+    val phoenixFlare = WeaponKnobs.evolution("phoenix_flare", "凤凰耀斑", from = solarStorm, rate = 1f, damage = 50f, count = 8, hasArea = true, countLabel = "Projectiles per ring")
+    val lingeringNova = WeaponKnobs.evolution("lingering_nova", "余烬新星", from = novaBlast, rate = 1f, damage = 30f, count = null, hasArea = true)
+    val siphonNeedles = WeaponKnobs.evolution("siphon_needles", "虹吸针", from = needleGun, rate = 1f, damage = 9f, count = 7, speed = 900f)
     // Hunter-Killer fires at double the Cluster Bomb's rate: a clean beat-halving.
-    val hunterKiller = WeaponKnobs.evolution("hunter_killer", "Hunter-Killer", from = clusterBomb, rate = 0.5f, damage = 60f, count = 1, speed = 200f, hasArea = true)
-    val flakBarrage = WeaponKnobs.evolution("flak_barrage", "Flak Barrage", from = flakCannon, rate = 0.5f, damage = 25f, count = 5, speed = 450f, hasArea = true)
+    val hunterKiller = WeaponKnobs.evolution("hunter_killer", "猎杀者", from = clusterBomb, rate = 0.5f, damage = 60f, count = 1, speed = 200f, hasArea = true)
+    val flakBarrage = WeaponKnobs.evolution("flak_barrage", "高射弹幕", from = flakCannon, rate = 0.5f, damage = 25f, count = 5, speed = 450f, hasArea = true)
 
     // ── Specials: projectile weapons ────────────────────────────────────────────────────────────
     val pulseSpread = pulseCannon.g.float("spread", "Fan spread (rad)", PI.toFloat() / 12f)

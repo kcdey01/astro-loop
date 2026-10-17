@@ -15,7 +15,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class JackpotMines : Weapon(
     id = "jackpot_mines",
-    name = "Gambler's Mines"
+    name = "赌徒之雷"
 ) {
     override val knobs = KnobsWeapons.jackpotMines
     override fun getProjectileCount(state: GameState): Int = baseProjectileCount + state.extraProjectiles

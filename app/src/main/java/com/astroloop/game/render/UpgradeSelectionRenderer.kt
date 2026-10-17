@@ -240,7 +240,7 @@ class UpgradeSelectionRenderer {
         canvas.drawColor(0xAA000000.toInt())
 
         // Title
-        val title = if (state.luckyStarAnimating) "LUCKY STAR!" else "CHOOSE UPGRADE"
+        val title = if (state.luckyStarAnimating) "幸运星！" else "选择强化"
         canvas.drawText(title, content.centerX, content.top + content.height * 0.12f, titlePaint)
 
         // Calculate card layout - bigger cards with comfortable spacing
@@ -363,12 +363,12 @@ class UpgradeSelectionRenderer {
         levelPaint.textAlign = Paint.Align.CENTER
         if (currentLevel == 0) {
             newBadgePaint.textSize = 22f
-            canvas.drawText("NEW", centerX, y, newBadgePaint)
+            canvas.drawText("新", centerX, y, newBadgePaint)
         } else {
             val nextLevel = currentLevel + 1
             if (nextLevel > maxLevel) {
                 levelPaint.color = 0xFFFFD700.toInt() // Gold for MAX
-                canvas.drawText("MAX", centerX, y, levelPaint)
+                canvas.drawText("满级", centerX, y, levelPaint)
                 levelPaint.color = 0xFFFFFF00.toInt()
             } else {
                 canvas.drawText("Lv.$currentLevel > Lv.$nextLevel", centerX, y, levelPaint)
@@ -474,7 +474,7 @@ class UpgradeSelectionRenderer {
 
         // "EVOLUTION!" header with gold color
         evolutionHeaderPaint.textSize = 24f
-        canvas.drawText("EVOLUTION!", centerX, y, evolutionHeaderPaint)
+        canvas.drawText("进化！", centerX, y, evolutionHeaderPaint)
 
         y += 35f
 

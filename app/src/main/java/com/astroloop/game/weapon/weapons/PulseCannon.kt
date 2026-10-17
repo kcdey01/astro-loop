@@ -15,7 +15,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class PulseCannon : Weapon(
     id = "pulse_cannon",
-    name = "Pulse Cannon"
+    name = "脉冲炮"
 ) {
     override val knobs = KnobsWeapons.pulseCannon
 

@@ -17,7 +17,7 @@ import com.astroloop.game.tuning.forLevel
 
 class SpaceMines : Weapon(
     id = "space_mines",
-    name = "Space Mines"
+    name = "太空雷"
 ) {
     override val knobs = KnobsWeapons.spaceMines
     override val beatPhaseOffsetMs: Long = 1500L

@@ -15,7 +15,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class ScatterShot : Weapon(
     id = "scatter_shot",
-    name = "Scatter Shot"
+    name = "散射弹"
 ) {
     companion object {
         /**

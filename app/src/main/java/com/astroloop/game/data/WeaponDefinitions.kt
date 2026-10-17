@@ -22,15 +22,15 @@ data class WeaponDef(
     val evolutionPassive: String? = null,
     val evolutionWeaponId: String? = null,
     val levelBonuses: List<String> = listOf(
-        "Base weapon",
-        "+30% damage",
-        "+1 projectile",
-        "+25% damage, +1 projectile",
-        "+1 projectile, MAX LEVEL"
+        "基础武器",
+        "+30% 伤害",
+        "+1 发弹丸",
+        "+25% 伤害，+1 发弹丸",
+        "+1 发弹丸，满级"
     )
 ) {
     fun getLevelDescription(level: Int): String {
-        return levelBonuses.getOrElse(level - 1) { "MAX" }
+        return levelBonuses.getOrElse(level - 1) { "满级" }
     }
 }
 
@@ -39,170 +39,170 @@ object WeaponDefinitions {
     val weapons = listOf(
         WeaponDef(
             id = "pulse_cannon",
-            name = "Pulse Cannon",
-            description = "Auto-targeting energy bolts",
+            name = "脉冲炮",
+            description = "自动锁定目标的能量弹",
             evolutionPassive = "duplicator_core",
             evolutionWeaponId = "storm_cannon",
             levelBonuses = listOf(
-                "1 bolt",
-                "+1 bolt",
-                "+1 bolt",
-                "+1 bolt",
-                "+1 bolt"
+                "1 发能量弹",
+                "+1 发能量弹",
+                "+1 发能量弹",
+                "+1 发能量弹",
+                "+1 发能量弹"
             )
         ),
         WeaponDef(
             id = "energy_saw",
-            name = "Energy Saw",
-            description = "Spinning disc that shreds on contact",
+            name = "能量锯",
+            description = "旋转刀盘，接触即撕裂",
             evolutionPassive = "momentum_drive",
             evolutionWeaponId = "warp_saw",
             levelBonuses = listOf(
-                "1 blade",
-                "Bigger blade",
-                "Bigger blade",
-                "Bigger blade",
-                "Bigger blade, MAX"
+                "1 片刀刃",
+                "刀刃更大",
+                "刀刃更大",
+                "刀刃更大",
+                "刀刃更大，满级"
             )
         ),
         WeaponDef(
             id = "scatter_shot",
-            name = "Scatter Shot",
-            description = "Close spread of pellets",
+            name = "散射弹",
+            description = "近距扇形弹丸",
             evolutionPassive = "vampiric_core",
             evolutionWeaponId = "leech_burst",
             levelBonuses = listOf(
-                "5 pellets",
-                "+2 pellets",
-                "+2 pellets",
-                "+2 pellets",
-                "+2 pellets"
+                "5 发弹丸",
+                "+2 发弹丸",
+                "+2 发弹丸",
+                "+2 发弹丸",
+                "+2 发弹丸"
             )
         ),
         WeaponDef(
             id = "homing_missiles",
-            name = "Homing Missiles",
-            description = "Lock-on missiles",
+            name = "追踪导弹",
+            description = "锁定目标的导弹",
             evolutionPassive = "tb26",
             evolutionWeaponId = "autonomous_ace",
             levelBonuses = listOf(
-                "1 missile",
-                "+1 missile",
-                "+1 missile",
-                "+1 missile",
-                "+1 missile"
+                "1 枚导弹",
+                "+1 枚导弹",
+                "+1 枚导弹",
+                "+1 枚导弹",
+                "+1 枚导弹"
             )
         ),
         WeaponDef(
             id = "ion_orbiters",
-            name = "Ion Orbiters",
-            description = "Orbiting energy spheres",
+            name = "离子环",
+            description = "环绕飞船的能量球",
             evolutionPassive = "cryo_field",
             evolutionWeaponId = "frost_ring",
             levelBonuses = listOf(
-                "2 orbiters",
-                "+1 orbiter",
-                "+1 orbiter",
-                "+1 orbiter",
-                "+1 orbiter"
+                "2 个环绕球",
+                "+1 个环绕球",
+                "+1 个环绕球",
+                "+1 个环绕球",
+                "+1 个环绕球"
             )
         ),
         WeaponDef(
             id = "railgun",
-            name = "Railgun",
-            description = "Piercing sniper shot",
+            name = "电磁炮",
+            description = "穿透式狙击弹",
             evolutionPassive = "glass_cannon",
             evolutionWeaponId = "oblivion_beam",
             levelBonuses = listOf(
-                "Pierces 10",
-                "Wider shot",
-                "Wider shot",
-                "Wider shot",
-                "Beam-wide, MAX"
+                "穿透 10 个",
+                "弹道更宽",
+                "弹道更宽",
+                "弹道更宽",
+                "光束级宽度，满级"
             )
         ),
         WeaponDef(
             id = "space_mines",
-            name = "Space Mines",
-            description = "Dropped proximity mines",
+            name = "太空雷",
+            description = "投掷式近爆水雷",
             evolutionPassive = "lucky_star",
             evolutionWeaponId = "jackpot_mines",
             levelBonuses = listOf(
-                "1 mine",
-                "Bigger explosion",
-                "+1 mine",
-                "Bigger explosion",
-                "+1 mine"
+                "1 枚太空雷",
+                "爆炸范围更大",
+                "+1 枚太空雷",
+                "爆炸范围更大",
+                "+1 枚太空雷"
             )
         ),
         WeaponDef(
             id = "solar_storm",
-            name = "Solar Storm",
-            description = "Random lightning strikes",
+            name = "太阳风暴",
+            description = "随机落雷",
             evolutionPassive = "phoenix_core",
             evolutionWeaponId = "phoenix_flare",
             levelBonuses = listOf(
-                "1 target",
-                "+1 target",
-                "+1 target",
-                "+1 target",
-                "+1 target"
+                "1 个目标",
+                "+1 个目标",
+                "+1 个目标",
+                "+1 个目标",
+                "+1 个目标"
             )
         ),
         WeaponDef(
             id = "nova_blast",
-            name = "Nova Blast",
-            description = "Ring burst around your ship",
+            name = "新星爆发",
+            description = "以飞船为中心爆开冲击环",
             evolutionPassive = "revenge_protocol",
             evolutionWeaponId = "lingering_nova",
             levelBonuses = listOf(
-                "Base burst",
-                "Bigger radius",
-                "Bigger radius",
-                "Bigger radius",
-                "Bigger radius"
+                "基础爆发",
+                "半径更大",
+                "半径更大",
+                "半径更大",
+                "半径更大"
             )
         ),
         WeaponDef(
             id = "needle_gun",
-            name = "Needle Gun",
-            description = "Rapid piercing needles",
+            name = "针枪",
+            description = "高速穿透飞针",
             evolutionPassive = "nano_repair",
             evolutionWeaponId = "siphon_needles",
             levelBonuses = listOf(
-                "3 needles",
-                "+1 needle",
-                "+1 needle",
-                "+1 needle",
-                "+1 needle"
+                "3 根飞针",
+                "+1 根飞针",
+                "+1 根飞针",
+                "+1 根飞针",
+                "+1 根飞针"
             )
         ),
         WeaponDef(
             id = "cluster_bomb",
-            name = "Cluster Bomb",
-            description = "Bomb that scatters bomblets",
+            name = "集束炸弹",
+            description = "炸开后散出子弹药",
             evolutionPassive = "magnet_field",
             evolutionWeaponId = "hunter_killer",
             levelBonuses = listOf(
-                "2 bomblets",
-                "+1 bomblet",
-                "+1 bomblet",
-                "+1 bomblet",
-                "+1 bomblet"
+                "2 枚子弹药",
+                "+1 枚子弹药",
+                "+1 枚子弹药",
+                "+1 枚子弹药",
+                "+1 枚子弹药"
             )
         ),
         WeaponDef(
             id = "flak_cannon",
-            name = "Flak Cannon",
-            description = "Direct-fire exploding shells",
+            name = "高射炮",
+            description = "直射爆破弹",
             evolutionPassive = "extra_weapon_slot",
             evolutionWeaponId = "flak_barrage",
             levelBonuses = listOf(
-                "1 shell",
-                "+1 shell",
-                "+1 shell",
-                "+1 shell",
-                "+1 shell"
+                "1 发炮弹",
+                "+1 发炮弹",
+                "+1 发炮弹",
+                "+1 发炮弹",
+                "+1 发炮弹"
             )
         )
     )
@@ -211,63 +211,63 @@ object WeaponDefinitions {
     val evolutions = listOf(
         WeaponDef(
             id = "storm_cannon",
-            name = "Storm Cannon",
-            description = "A spiral of bolts that fills the field",
+            name = "风暴炮",
+            description = "螺旋弹流铺满全场",
         ),
         WeaponDef(
             id = "warp_saw",
-            name = "Warp Saw",
-            description = "The blade detaches and hunts alone",
+            name = "曲率锯",
+            description = "刀盘脱体，自行猎杀",
         ),
         WeaponDef(
             id = "leech_burst",
-            name = "Leech Burst",
-            description = "Pellets that heal you on hit",
+            name = "汲取爆",
+            description = "命中即回血的弹丸",
         ),
         WeaponDef(
             id = "autonomous_ace",
-            name = "Autonomous Ace",
-            description = "Missiles split and chase new targets",
+            name = "自主王牌",
+            description = "导弹分裂，追猎新目标",
         ),
         WeaponDef(
             id = "frost_ring",
-            name = "Frost Ring",
-            description = "Two rings of orbs, always turning",
+            name = "霜环",
+            description = "双环能量球，永不停转",
         ),
         WeaponDef(
             id = "oblivion_beam",
-            name = "Oblivion Beam",
-            description = "Always-on piercing lance",
+            name = "湮灭光矛",
+            description = "持续不断的穿透光矛",
         ),
         WeaponDef(
             id = "jackpot_mines",
-            name = "Gambler's Mines",
-            description = "Mines that sometimes hit the jackpot",
+            name = "赌徒之雷",
+            description = "偶尔中头奖的太空雷",
         ),
         WeaponDef(
             id = "phoenix_flare",
-            name = "Phoenix Flare",
-            description = "Three rings erupt where enemies stand",
+            name = "凤凰耀斑",
+            description = "在敌人脚下爆开三重火环",
         ),
         WeaponDef(
             id = "lingering_nova",
-            name = "Lingering Nova",
-            description = "Blasts, leaves a core, blasts again",
+            name = "余烬新星",
+            description = "爆开、留下核心、再次爆开",
         ),
         WeaponDef(
             id = "siphon_needles",
-            name = "Siphon Needles",
-            description = "Piercing needles that heal you on hit",
+            name = "虹吸针",
+            description = "穿透飞针，命中即回血",
         ),
         WeaponDef(
             id = "hunter_killer",
-            name = "Hunter-Killer",
-            description = "Homing torpedo, fired twice as often",
+            name = "猎杀者",
+            description = "追踪鱼雷，射速翻倍",
         ),
         WeaponDef(
             id = "flak_barrage",
-            name = "Flak Barrage",
-            description = "A burst of five exploding shells",
+            name = "高射弹幕",
+            description = "一次齐射五发爆破弹",
         )
     )
 
@@ -293,7 +293,7 @@ object WeaponDefinitions {
 
     fun getEvolutionDisplayName(evolutionId: String, activePilotId: String): String {
         if (evolutionId == "autonomous_ace") {
-            return if (activePilotId == "pilot_astro") "TB-26-X" else "Autonomous Ace"
+            return if (activePilotId == "pilot_astro") "TB-26-X" else "自主王牌"
         }
         return getWeaponDef(evolutionId)?.name ?: evolutionId
     }

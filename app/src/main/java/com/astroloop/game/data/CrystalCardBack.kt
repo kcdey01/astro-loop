@@ -14,7 +14,7 @@ package com.astroloop.game.data
  */
 object CrystalCardBack {
 
-    const val WORD = "AGAIN"
+    const val WORD = "再来"
 
     /** One row of the back: the word repeated and cut to exactly [columns] characters. */
     fun row(columns: Int): String {

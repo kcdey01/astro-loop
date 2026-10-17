@@ -26,14 +26,14 @@ class ShipEvolutionSystem {
 
     fun getEvolutionStageDescription(stage: Int): String {
         return when (stage) {
-            0 -> "Basic Fighter"
-            1 -> "Scout"
-            2 -> "Interceptor"
-            3 -> "Destroyer"
-            4 -> "Cruiser"
-            5 -> "Battlecruiser"
-            6 -> "Dreadnought"
-            else -> "Unknown"
+            0 -> "基础战机"
+            1 -> "侦察者"
+            2 -> "拦截者"
+            3 -> "驱逐舰"
+            4 -> "巡洋舰"
+            5 -> "战列巡洋舰"
+            6 -> "无畏舰"
+            else -> "未知"
         }
     }
 }

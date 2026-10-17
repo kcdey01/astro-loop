@@ -50,76 +50,76 @@ object DesertDefinitions {
     }
 
     val phase1Lines = listOf(
-        DesertLine(TB, "Eyes on the road, Lieutenant.", TB_COLOR, DesertTrigger.SCENE_START, 2f),
-        DesertLine(ASTRO, "You call this a road, Tobar?", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "Fair point.", TB_COLOR, DesertTrigger.TIMER, 3f),
-        DesertLine(TB, "Contact north. Light armor.", TB_COLOR, DesertTrigger.FIRST_ENEMIES, 1f),
-        DesertLine(ASTRO, "Copy that, Tobar.", ASTRO_COLOR, DesertTrigger.TIMER, 3f),
-        DesertLine(TB, "Nice shot.", TB_COLOR, DesertTrigger.FIRST_KILL, 1f),
-        DesertLine(TB, "Command: target, two clicks north.", TB_COLOR, DesertTrigger.TIMER, 11f),
-        DesertLine(ASTRO, "Command says a lot of things.", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "Can't argue that.", TB_COLOR, DesertTrigger.TIMER, 3f),
-        DesertLine(TB, "You ever think about after?", TB_COLOR, DesertTrigger.TIMER, 13f),
-        DesertLine(ASTRO, "After what?", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "The war. All of it.", TB_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(ASTRO, "Sometimes.", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "I keep thinking about after.", TB_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(ASTRO, "Yeah?", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "A bar. Somewhere quiet.", TB_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(ASTRO, "You? Running a bar, Tobar?", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "Know every name. Good drinks.", TB_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "No orders. No commands.", TB_COLOR, DesertTrigger.TIMER, 3f),
-        DesertLine(ASTRO, "...Yeah. Maybe.", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "More contacts. Twelve o'clock.", TB_COLOR, DesertTrigger.SECOND_WAVE, 1f),
-        DesertLine(ASTRO, "Getting busy out here.", ASTRO_COLOR, DesertTrigger.AFTER_KILLS, 1f),
-        DesertLine(TB, "Just like the old days.", TB_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(ASTRO, "These ARE the old days, Tobar.", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "Ha. Fair point, Lieutenant.", TB_COLOR, DesertTrigger.TIMER, 3f)
+        DesertLine(TB, "看好路，中尉。", TB_COLOR, DesertTrigger.SCENE_START, 2f),
+        DesertLine(ASTRO, "你管这叫路，托巴？", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "说得也对。", TB_COLOR, DesertTrigger.TIMER, 3f),
+        DesertLine(TB, "北面有接触。轻装甲。", TB_COLOR, DesertTrigger.FIRST_ENEMIES, 1f),
+        DesertLine(ASTRO, "收到，托巴。", ASTRO_COLOR, DesertTrigger.TIMER, 3f),
+        DesertLine(TB, "打得漂亮。", TB_COLOR, DesertTrigger.FIRST_KILL, 1f),
+        DesertLine(TB, "指挥部：目标，北面两格。", TB_COLOR, DesertTrigger.TIMER, 11f),
+        DesertLine(ASTRO, "指挥部什么都说。", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "这倒是没法反驳。", TB_COLOR, DesertTrigger.TIMER, 3f),
+        DesertLine(TB, "你想过之后的事吗？", TB_COLOR, DesertTrigger.TIMER, 13f),
+        DesertLine(ASTRO, "之后什么？", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "这场战争。所有这些。", TB_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(ASTRO, "有时候。", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "我总在想之后。", TB_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(ASTRO, "是吗？", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "一间酒吧。安静点的地方。", TB_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(ASTRO, "你？开酒吧，托巴？", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "记得每个人的名字。酒要好。", TB_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "没有命令。没有调度。", TB_COLOR, DesertTrigger.TIMER, 3f),
+        DesertLine(ASTRO, "……嗯。也许吧。", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "更多接触。正前方。", TB_COLOR, DesertTrigger.SECOND_WAVE, 1f),
+        DesertLine(ASTRO, "外面热闹起来了。", ASTRO_COLOR, DesertTrigger.AFTER_KILLS, 1f),
+        DesertLine(TB, "跟从前一样。", TB_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(ASTRO, "这就是从前，托巴。", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "哈。说得对，中尉。", TB_COLOR, DesertTrigger.TIMER, 3f)
     )
 
     val phase2Lines = listOf(
-        DesertLine(COMMAND, "Target located. Settlement center.", COMMAND_COLOR, DesertTrigger.PHASE2_START, 1f),
-        DesertLine(TB, "Copy, command.", TB_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "Lieutenant... these readings.", TB_COLOR, DesertTrigger.AMBIGUOUS_TARGET, 1f),
-        DesertLine(TB, "Signatures are light. Too light.", TB_COLOR, DesertTrigger.SIGNATURES_VISIBLE, 4f),
-        DesertLine(TB, "Those don't look like combatants.", TB_COLOR, DesertTrigger.CIVILIANS_VISIBLE, 1f),
-        DesertLine(TB, "Lieutenant.", TB_COLOR, DesertTrigger.TIMER, 6f),
-        DesertLine(TB, "They're running.", TB_COLOR, DesertTrigger.PLAYER_FIRES_AT_CIVILIANS, 1f),
-        DesertLine(TB, "We should stop.", TB_COLOR, DesertTrigger.STOP_CHECK, 4f)
+        DesertLine(COMMAND, "已定位目标。聚落中心。", COMMAND_COLOR, DesertTrigger.PHASE2_START, 1f),
+        DesertLine(TB, "收到，指挥部。", TB_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "中尉……这些读数。", TB_COLOR, DesertTrigger.AMBIGUOUS_TARGET, 1f),
+        DesertLine(TB, "信号很轻。太轻了。", TB_COLOR, DesertTrigger.SIGNATURES_VISIBLE, 4f),
+        DesertLine(TB, "那些不像战斗人员。", TB_COLOR, DesertTrigger.CIVILIANS_VISIBLE, 1f),
+        DesertLine(TB, "中尉。", TB_COLOR, DesertTrigger.TIMER, 6f),
+        DesertLine(TB, "他们在跑。", TB_COLOR, DesertTrigger.PLAYER_FIRES_AT_CIVILIANS, 1f),
+        DesertLine(TB, "我们该停手。", TB_COLOR, DesertTrigger.STOP_CHECK, 4f)
     )
 
     val goodEndingLines = listOf(
-        DesertLine(TB, "...You stopped.", TB_COLOR, DesertTrigger.AUTO, 6f),
-        DesertLine(ASTRO, "They weren't soldiers.", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "No. They weren't.", TB_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(ASTRO, "Command said\u2014", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "I know what command said.", TB_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "Let's go home, Lieutenant.", TB_COLOR, DesertTrigger.TIMER, 5f),
-        DesertLine(ASTRO, "The bar?", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "The bar.", TB_COLOR, DesertTrigger.TIMER, 4f)
+        DesertLine(TB, "……你停手了。", TB_COLOR, DesertTrigger.AUTO, 6f),
+        DesertLine(ASTRO, "他们不是士兵。", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "不。他们不是。", TB_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(ASTRO, "指挥部说——", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "我知道指挥部说了什么。", TB_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "回家吧，中尉。", TB_COLOR, DesertTrigger.TIMER, 5f),
+        DesertLine(ASTRO, "那间酒吧？", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "那间酒吧。", TB_COLOR, DesertTrigger.TIMER, 4f)
     )
 
     val horrorLines = listOf(
-        DesertLine(ASTRO, "Can't push through.", ASTRO_COLOR, DesertTrigger.PLAYER_HIT_WALL, 1f),
-        DesertLine(COMMAND, "Proceed with bombardment.", COMMAND_COLOR, DesertTrigger.NEAR_SETTLEMENT, 1f),
-        DesertLine(ASTRO, "Command, I'm not sure these are\u2014", ASTRO_COLOR, DesertTrigger.TIMER, 3f),
-        DesertLine(COMMAND, "You have your orders, Lieutenant.", COMMAND_COLOR, DesertTrigger.BOMBARDMENT_DELAY, 1.2f, interrupt = true),
-        DesertLine(TB, "...What did we do?", TB_COLOR, DesertTrigger.AFTERMATH, 6f),
-        DesertLine(ASTRO, "...What did I do?", ASTRO_COLOR, DesertTrigger.TIMER, 4f)
+        DesertLine(ASTRO, "冲不过去。", ASTRO_COLOR, DesertTrigger.PLAYER_HIT_WALL, 1f),
+        DesertLine(COMMAND, "按计划实施轰炸。", COMMAND_COLOR, DesertTrigger.NEAR_SETTLEMENT, 1f),
+        DesertLine(ASTRO, "指挥部，我不确定这些是——", ASTRO_COLOR, DesertTrigger.TIMER, 3f),
+        DesertLine(COMMAND, "你有你的命令，中尉。", COMMAND_COLOR, DesertTrigger.BOMBARDMENT_DELAY, 1.2f, interrupt = true),
+        DesertLine(TB, "……我们做了什么？", TB_COLOR, DesertTrigger.AFTERMATH, 6f),
+        DesertLine(ASTRO, "……我做了什么？", ASTRO_COLOR, DesertTrigger.TIMER, 4f)
     )
 
     val crystalLines = listOf(
-        DesertLine(CRYSTAL, "I can undo this.", CRYSTAL_COLOR, DesertTrigger.AUTO, 3f),
-        DesertLine(ASTRO, "I can't\u2014 just do it. Fix this.", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(TB, "Astro, get away from it!", TB_COLOR, DesertTrigger.TIMER, 3f),
-        DesertLine(CRYSTAL, "A price must be paid.", CRYSTAL_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(ASTRO, "No. NO!", ASTRO_COLOR, DesertTrigger.TIMER, 3f),
-        DesertLine(TB, "It hurts\u2014 it hurts, Astro.", TB_COLOR, DesertTrigger.TIMER, 5f),
+        DesertLine(CRYSTAL, "我可以撤销这一切。", CRYSTAL_COLOR, DesertTrigger.AUTO, 3f),
+        DesertLine(ASTRO, "我不能—— 动手吧。把它修好。", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(TB, "阿星，离它远点！", TB_COLOR, DesertTrigger.TIMER, 3f),
+        DesertLine(CRYSTAL, "代价必须有人付。", CRYSTAL_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(ASTRO, "不。不！", ASTRO_COLOR, DesertTrigger.TIMER, 3f),
+        DesertLine(TB, "好疼—— 好疼，阿星。", TB_COLOR, DesertTrigger.TIMER, 5f),
         // The reveal. The old name is reached for and the new one arrives in the same breath —
         // this is where the player learns that TOBAR is TB-26, rather than inferring it later
         // from a bartender's voice.
-        DesertLine(ASTRO, "...Tobar? TB?", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
-        DesertLine(CRYSTAL, "The price is paid.", CRYSTAL_COLOR, DesertTrigger.TIMER, 5f)
+        DesertLine(ASTRO, "……托巴？TB？", ASTRO_COLOR, DesertTrigger.TIMER, 4f),
+        DesertLine(CRYSTAL, "代价已付。", CRYSTAL_COLOR, DesertTrigger.TIMER, 5f)
     )
 
     val allLines: List<DesertLine> = phase1Lines + phase2Lines + goodEndingLines + horrorLines + crystalLines

@@ -794,7 +794,7 @@ class DebugMenuRenderer {
     // =======================================================================
 
     private fun renderBlackMarketPage(canvas: Canvas, state: GameState) {
-        canvas.drawText("BLACK MARKET", screenWidth / 2f, 55f, titlePaint)
+        canvas.drawText("黑市", screenWidth / 2f, 55f, titlePaint)
 
         // Starfield backdrop (designs are transparent, so stars show through them)
         drawDebugStarfield(canvas)

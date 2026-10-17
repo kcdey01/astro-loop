@@ -15,7 +15,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class PhoenixFlare : Weapon(
     id = "phoenix_flare",
-    name = "Phoenix Flare"
+    name = "凤凰耀斑"
 ) {
     override val knobs = KnobsWeapons.phoenixFlare
 

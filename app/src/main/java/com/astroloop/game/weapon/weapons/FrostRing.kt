@@ -14,7 +14,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class FrostRing : Weapon(
     id = "frost_ring",
-    name = "Frost Ring"
+    name = "霜环"
 ) {
     override val knobs = KnobsWeapons.frostRing
 

@@ -24,17 +24,17 @@ object PilotHintCards {
      * only condition a player can complete half of without noticing.
      */
     val notes: Map<String, String> = mapOf(
-        "pilot_rascal" to "\"Is looking for yen.\"",
-        "pilot_brutus" to "\"Respects scars.\"",
-        "pilot_frost" to "\"Wants a crew that lasts.\"",
-        "pilot_dash" to "\"Never stops moving.\"",
-        "pilot_ember" to "\"Counts your returns.\"",
-        "pilot_fang" to "\"Wants blood on the board.\"",
-        "pilot_kraken" to "\"Likes variety.\"",
-        "pilot_whiskers" to "\"Waits at the slot machine.\"",
-        "pilot_unit7" to "\"Wants big numbers.\"",
-        "pilot_havoc" to "\"Lives for the deep runs.\"",
-        "pilot_astro" to "\"Wants every pilot and ship.\""
+        "pilot_rascal" to "「在找円币。」",
+        "pilot_brutus" to "「敬重伤疤。」",
+        "pilot_frost" to "「想要一支能活下来的队伍。」",
+        "pilot_dash" to "「从不停下。」",
+        "pilot_ember" to "「数着你回来的次数。」",
+        "pilot_fang" to "「要在战绩板上见血。」",
+        "pilot_kraken" to "「喜欢花样。」",
+        "pilot_whiskers" to "「在老虎机旁等你。」",
+        "pilot_unit7" to "「想要大数字。」",
+        "pilot_havoc" to "「为深入长跑而活。」",
+        "pilot_astro" to "「要集齐所有机师和飞船。」"
     )
 
     private val astroIndex = PilotDefinitions.pilots.indexOfFirst { it.id == "pilot_astro" }

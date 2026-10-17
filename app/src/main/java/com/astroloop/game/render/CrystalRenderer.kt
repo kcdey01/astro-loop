@@ -252,7 +252,7 @@ class CrystalRenderer {
         // path via DEATH_TEXT_THRESHOLD, and isComplete already waits for it to reach 1 before the
         // hold begins. Only this guard was suppressing it.
         if (textAlpha > 0f) {
-            val text = if (isPause) "PAUSED" else "AGAIN"
+            val text = if (isPause) "已暂停" else "再来"
             val textX = screenWidth / 2f
             val textY = screenHeight * 0.25f
 

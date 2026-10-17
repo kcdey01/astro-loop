@@ -1452,7 +1452,7 @@ class HangarRenderer(private val persistence: PersistenceManager) {
             }
             widest = maxOf(widest, costPaint.measureText(GameConfig.formatYen(ship.cost)))
         }
-        widest = maxOf(widest, costPaint.measureText("LOCKED"))
+        widest = maxOf(widest, costPaint.measureText("未解锁"))
         textPaint.textSize = 24f // drawShips sets its own before every draw; restore the default
         return widest / 2f
     }
@@ -1573,7 +1573,7 @@ class HangarRenderer(private val persistence: PersistenceManager) {
                 } else {
                     costPaint.color = 0xFF666666.toInt()
                     costPaint.alpha = (peekAlpha * 255).toInt()
-                    canvas.drawText("LOCKED", shipX, shipY - 50f, costPaint)
+                    canvas.drawText("未解锁", shipX, shipY - 50f, costPaint)
                 }
             }
         }
@@ -1887,7 +1887,7 @@ class HangarRenderer(private val persistence: PersistenceManager) {
 
         introTitlePaint.textSize = (screenWidth * 0.11f).coerceIn(48f, 96f)
         introTitlePaint.alpha = alpha
-        canvas.drawText("ASTRO LOOP", screenWidth / 2f, screenHeight * 0.30f, introTitlePaint)
+        canvas.drawText("星际回环", screenWidth / 2f, screenHeight * 0.30f, introTitlePaint)
     }
 
     // =======================================================================
@@ -1895,7 +1895,7 @@ class HangarRenderer(private val persistence: PersistenceManager) {
     // =======================================================================
 
     private fun drawPageIndicator(canvas: Canvas, state: HangarState) {
-        val labels = listOf("CREW", "LAUNCH", "SHOP")
+        val labels = listOf("船员", "出击", "商店")
         val centerX = screenWidth / 2
         // The row the tap band in [HangarMetrics.navBandTop] is measured from — one definition,
         // so the labels and the band that catches them cannot drift apart.

@@ -8,6 +8,7 @@ import com.astroloop.game.data.BarConversations
 import com.astroloop.game.data.CrystalFightLines
 import com.astroloop.game.data.LoopDefinitions
 import com.astroloop.game.data.TutorialDefinitions
+import com.astroloop.game.data.Callsigns
 import com.astroloop.game.data.PilotDefinitions
 import kotlin.random.Random
 
@@ -24,8 +25,8 @@ class ChatSystem {
          * worst-case figure, so a longer line added here fails the suite rather than being
          * silently ellipsized by `truncateToFit`.
          */
-        val newBestYenReactions = listOf("Impressive.", "Busy day.", "Noted.")
-        val newBestTimeReactions = listOf("Not bad.", "Better.", "Noted.")
+        val newBestYenReactions = listOf("厉害。", "今天够忙。", "记下了。")
+        val newBestTimeReactions = listOf("还行。", "好点了。", "记下了。")
 
         const val CONVERSATION_COOLDOWN = 20f           // normal / Astro Loop
         const val LINE_PAUSE = 4.0f  // Pause between lines within a conversation
@@ -85,296 +86,296 @@ class ChatSystem {
     // authored with "TB-26" — the astro-loop display swap renders him as Tobar there.
     internal val idleLines = mapOf(
         "MEDIC" to listOf(
-            "Everyone's vitals look stable. For now.",
-            "I patched up the hull again. You're welcome.",
-            "Nano repair gel is running low. Try not to get shot.",
-            "Med school never mentioned asteroid fields.",
-            "I'm a doctor, not a mechanic. But here I am.",
-            "Blood pressure's fine. Mine isn't.",
-            "Please stop calling me when you stub your toe.",
-            "Applied a bandage to the fuselage. It helped. Somehow.",
-            "My prescription: fewer explosions.",
-            "Has anyone here heard of a physical? Anyone?"
+            "所有人的体征都稳。暂时。",
+            "船体我又补好了。不客气。",
+            "纳米修复胶快没了。少挨两枪。",
+            "医学院可没教过小行星带。",
+            "我是医生，不是机修。可我在这儿。",
+            "血压正常。我的不正常。",
+            "磕到脚趾别叫我。",
+            "给机身贴了创可贴。居然管用。",
+            "我的处方：少挨炸。",
+            "这儿有人做过体检吗？就一个？"
         ),
         "RASCAL" to listOf(
-            "Found some spare parts in the vents. Don't ask.",
-            "I wasn't stealing, I was... redistributing.",
-            "These magnet coils are surprisingly tasty. Kidding.",
-            "Five-second rule applies in zero gravity, right?",
-            "The vents here are spacious. Very livable.",
-            "Ooh, who left this wrench unattended?",
-            "I hid snacks in seven places. Only remember five.",
-            "Anyone missing a wallet? Unrelated question.",
-            "Dumpster behind the hangar? Gourmet.",
-            "I didn't take it. Prove it."
+            "通风管里捡了点零件。别问。",
+            "我没偷，我是在……重新分配。",
+            "这磁线圈还挺好吃。骗你的。",
+            "零重力下也算五秒定律吧？",
+            "这儿的通风管够宽。能住人。",
+            "哟，这扳手谁扔着的？",
+            "零食藏了七处。只记得五处。",
+            "有人丢钱包吗？随便问问。",
+            "机库后头那垃圾桶？米其林。",
+            "我没拿。你证明啊。"
         ),
         "FROST" to listOf(
-            "Temperature readings are nominal. I like nominal.",
-            "The cryo field needs recalibration. Again.",
-            "Cold never bothered me anyway.",
-            "Waddle waddle.",
-            "Ice forms patterns. I find them... soothing.",
-            "Statistically, we should be dead. Fascinating.",
-            "My feathers are aerodynamic. Your argument is not.",
-            "Sub-zero is a lifestyle, not a temperature.",
-            "I analyzed the odds. Then I had a fish.",
-            "Calm is just cold anger with better posture."
+            "温度读数正常。我喜欢正常。",
+            "低温场得重校。又得。",
+            "反正冷从不碍我事。",
+            "一摇一摆。",
+            "冰会结花纹。看着……安心。",
+            "按概率我们该死了。真有意思。",
+            "我的羽毛符合气动。你的论点不。",
+            "零下是活法，不是温度。",
+            "我算过胜率。然后吃了条鱼。",
+            "冷静只是姿势好看的冷怒。"
         ),
         "UNIT-7" to listOf(
-            "Running diagnostics. All systems nominal.",
-            "Probability of survival: calculating...",
-            "I do not understand humor. Please explain.",
-            "Duplicator core at optimal efficiency.",
-            "Why do organics consume liquid? Inefficient.",
-            "Error: emotion not found.",
-            "I have counted every rivet on this ship. There are 4,217.",
-            "Sleep mode is superior to 'napping.'",
-            "Query: what is 'vibes'?",
-            "I do not blink. This upsets the crew."
+            "运行诊断。全系统正常。",
+            "生存概率：计算中……",
+            "我不懂幽默。请解释。",
+            "复制核心效率最优。",
+            "有机物为何要喝液体？低效。",
+            "错误：未找到情绪。",
+            "我数过船上每颗铆钉。共 4,217 颗。",
+            "休眠模式优于『打盹』。",
+            "查询：『氛围』是什么？",
+            "我不眨眼。船员很不安。"
         ),
         "DASH" to listOf(
-            "Sitting still is physically painful.",
-            "I could outrun that asteroid. Probably.",
-            "Speed is life. Slowness is... not life.",
-            "My momentum drive readings are off the charts.",
-            "Bored. Bored. Bored. Can we go yet?",
-            "I already ran three laps around the hangar.",
-            "Slow people make me itchy.",
-            "If I'm not moving, I'm dying. Basically.",
-            "Just vibrating in place until launch.",
-            "I timed myself blinking. New record."
+            "坐着不动，生理性难受。",
+            "那颗小行星我跑得过。大概。",
+            "速度就是命。慢……就不算命。",
+            "动量引擎读数爆表。",
+            "无聊。无聊。无聊。能走了吗？",
+            "我已经绕机库跑了三圈。",
+            "磨蹭的人让我发痒。",
+            "不动就是在死。差不多吧。",
+            "原地抖着等起飞。",
+            "我给自己眨眼计时。破纪录了。"
         ),
         "BRUTUS" to listOf(
             "...",
-            "Hmph.",
-            "Hit me harder. I dare you.",
-            "Revenge is a dish best served immediately.",
-            "Walls break before I do.",
-            "Good.",
-            "Don't talk. Shoot.",
-            "Bear doesn't run. Bear doesn't hide.",
-            "Pain is just a suggestion.",
-            "Grunt."
+            "哼。",
+            "再打重点。你敢吗。",
+            "报仇要趁热。",
+            "墙先塌，我不塌。",
+            "好。",
+            "别说话。开火。",
+            "熊不跑。熊不躲。",
+            "疼只是个建议。",
+            "唔。"
         ),
         "EMBER" to listOf(
-            "These flames don't light themselves. Wait, they do.",
-            "Rise from the ashes, they said. So I did.",
-            "Is it hot in here or is it just me? It's me.",
-            "Phoenix protocol standing by.",
-            "Everything burns eventually. I just speed it up.",
-            "My soul is a furnace. Poetic, right?",
-            "Ashes to ashes. Then more fire.",
-            "I sneezed once. Singed the dashboard.",
-            "Burn bright or don't bother.",
-            "The flame is eternal. So is my patience. Just kidding."
+            "这火不是自己着的。等等，是。",
+            "他们叫我浴火重生。我照做了。",
+            "是这儿热还是我热？是我。",
+            "凤凰协议待命。",
+            "万物终会烧起来。我只是快点。",
+            "我的灵魂是座炉子。挺诗意吧？",
+            "尘归尘。然后再烧。",
+            "我打过一次喷嚏。烫了仪表盘。",
+            "要烧就烧亮点。不然别烧。",
+            "火焰永恒。我的耐心也是。骗你的。"
         ),
         "FANG" to listOf(
-            "I prefer the night shift.",
-            "Blood... er, fuel reserves are adequate.",
-            "Echolocation detects hostiles at range.",
-            "Hanging upside down helps me think.",
-            "Lights are too bright in here. As usual.",
-            "I can hear your heartbeat. It's fast.",
-            "Darkness isn't scary. I'm what's in it.",
-            "Sonar says someone's lying. I won't say who.",
-            "I sleep during the day. Don't wake me.",
-            "The shadows are perfectly comfortable."
+            "我上夜班。",
+            "血……呃，燃料储备充足。",
+            "回声定位能远距锁定敌意目标。",
+            "倒挂着想事更清楚。",
+            "这儿灯太亮。老样子。",
+            "我能听见你心跳。很快。",
+            "黑不可怕。里面那个才可怕。",
+            "声呐说有人在撒谎。我不说是谁。",
+            "我白天睡。别叫我。",
+            "阴影里挺舒服。"
         ),
         "WHISKERS" to listOf(
-            "I knocked a cup off the console. It was in my way.",
-            "Nap time was three minutes ago.",
-            "Feeling lucky today. More than usual.",
-            "If I fits, I sits. Even in a cockpit.",
-            "I was sitting on the keyboard. You're welcome.",
-            "Don't touch me. Unless I say so. Which I won't.",
-            "That chair is mine now. Find another.",
-            "I require attention. No, not that much.",
-            "Something moved. I stared at it for ten minutes.",
-            "I'm not ignoring you. You're just uninteresting."
+            "我把杯子从控制台拍下去了。它挡道。",
+            "打盹时间三分钟前就到了。",
+            "今天手气好。比平常好。",
+            "能塞进去就坐。驾驶舱也算。",
+            "我刚坐在键盘上。不客气。",
+            "别碰我。除非我同意。我不会同意。",
+            "那椅子归我了。另找一张。",
+            "我需要关注。不，没那么多。",
+            "有东西动了下。我盯了十分钟。",
+            "我不是无视你。是你没意思。"
         ),
         "KRAKEN" to listOf(
-            "I can hold eight weapons at once. Just saying.",
-            "The deep void reminds me of home.",
-            "Tentacles are more versatile than hands.",
-            "Extra arms, extra firepower. Simple math.",
-            "You have two hands? How do you cope?",
-            "The abyss gazes back. We're on good terms.",
-            "I can multitask. Eight times over.",
-            "Dry land is overrated. So is gravity.",
-            "I opened eight jars at once. No one clapped.",
-            "The deep teaches patience. And crushing grip."
+            "我能同时拿八件武器。随口一说。",
+            "虚空让我想起家。",
+            "触手比手好用。",
+            "多几只手，多几门火力。简单算术。",
+            "你只有两只手？怎么活的？",
+            "深渊也在看我。我们关系不错。",
+            "我能一心多用。八倍。",
+            "陆地被高估了。重力也是。",
+            "我一次开了八个罐子。没人鼓掌。",
+            "深渊教人耐心。还有捏碎东西的手劲。"
         ),
         "HAVOC" to listOf(
-            "Glass cannon? I prefer crystal howitzer.",
-            "Risk is just another word for fun.",
-            "Full power. No shields. No regrets.",
-            "They said I was reckless. I said I was efficient.",
-            "Shields are for people who plan to get hit.",
-            "LET'S GOOO!",
-            "I don't dodge. I just shoot faster.",
-            "Explosions are just aggressive confetti.",
-            "Safety briefing? I'll pass.",
-            "My exit strategy is more firepower."
+            "玻璃大炮？我更爱水晶榴弹炮。",
+            "风险就是好玩的另一个说法。",
+            "全功率。不开盾。不后悔。",
+            "他们说我莽。我说我高效。",
+            "护盾是给打算挨打的人用的。",
+            "冲啊——！",
+            "我不闪。我射得更快。",
+            "爆炸不过是暴躁的彩纸。",
+            "安全简报？跳过。",
+            "我的撤退方案是加大火力。"
         ),
         "ASTRO" to listOf(
-            "Another day, another asteroid field.",
-            "TB-26, get me a drink. On second thought, I'll fly sober.",
-            "I've got a bad feeling about this run.",
-            "Let's make this one count.",
-            "Good crew. Good ship. Can't ask for more.",
-            "I've seen worse odds. Probably.",
-            "First round's on me. TB-26's pouring.",
-            "Stars look different every run. I like that.",
-            "Stay sharp out there, people.",
-            "We didn't come this far to come this far."
+            "又一天，又一片小行星带。",
+            "TB-26，来一杯。算了，我清醒着飞。",
+            "这趟我有种不好的预感。",
+            "这趟得算数。",
+            "好船员。好船。不能再贪。",
+            "更差的局我见过。大概。",
+            "第一轮我请。TB-26 倒酒。",
+            "每趟星星都不一样。我喜欢。",
+            "都打起精神。",
+            "走到这儿，不是为了只走到这儿。"
         )
     )
 
     // TB-26 bartender lines (dry, deadpan)
     private val tb26Lines = listOf(
-        "Your drink is ready. I didn't make one.",
-        "The specials today are nothing. We have nothing.",
-        "I've seen things you wouldn't believe. They were boring.",
-        "Another successful mission. The bar remains intact.",
-        "Cleaning glasses. We don't have glasses.",
-        "Welcome back. Your tab is astronomical.",
-        "I've calculated the odds. They're not great.",
-        "The jukebox is broken. It was never fixed.",
-        "Happy hour ended three centuries ago.",
-        "Serving coolant since 2184.",
-        "Combat drone. Now I pour... coolant.",
-        "Try the house special: recycled atmosphere.",
-        "I polished the counter. There is no counter.",
-        "My therapist says I need purpose. I don't have a therapist.",
-        "The tip jar is empty. We don't have a tip jar.",
-        "I was built to destroy. Now I garnish.",
-        "Last call was before I was manufactured.",
-        "Someone left a review. One star. I agree.",
-        "The ice machine is broken. We never had ice.",
-        "I stare at the wall sometimes. The wall doesn't mind.",
-        "Today's special: existential dread. On tap.",
-        "A customer once asked for water. I respected the ambition."
+        "你的酒好了。我没做。",
+        "今日特供：没有。我们什么都没有。",
+        "我见过你不信的东西。挺无聊的。",
+        "任务又成功了。酒吧完好。",
+        "在擦杯子。我们没有杯子。",
+        "欢迎回来。你的账单体面得很。",
+        "我算过概率。不太妙。",
+        "点唱机坏了。从来没修过。",
+        "欢乐时光三百年前就结束了。",
+        "2184 年起供应冷却液。",
+        "战斗无人机。现在我倒……冷却液。",
+        "尝尝招牌：循环空气。",
+        "我擦亮了吧台。没有吧台。",
+        "心理医生说我要有目标。我没心理医生。",
+        "小费罐空了。我们没小费罐。",
+        "我生来是毁灭。现在做点缀。",
+        "打烊时间在我出厂之前。",
+        "有人留了评价。一星。我同意。",
+        "制冰机坏了。我们从来没有冰。",
+        "我有时盯着墙。墙不介意。",
+        "今日特供：存在焦虑。论桶。",
+        "有客人要过水。我敬佩他的野心。"
     )
 
     // Astro Loop TB lines — same deadpan vibe, no android references (TB is a person here)
     private val tbAstroLoopLines = listOf(
-        "Your drink is ready. I didn't make one.",
-        "The specials today are nothing. We have nothing.",
-        "I've seen things you wouldn't believe. They were boring.",
-        "Another successful mission. The bar remains intact.",
-        "Cleaning glasses. We don't have glasses.",
-        "Welcome back. Your tab is astronomical.",
-        "I've calculated the odds. They're not great.",
-        "The jukebox is broken. It was never fixed.",
-        "Happy hour ended three centuries ago.",
-        "Try the house special: recycled atmosphere.",
-        "I polished the counter. There is no counter.",
-        "My therapist says I need purpose. I don't have a therapist.",
-        "The tip jar is empty. We don't have a tip jar.",
-        "Someone left a review. One star. I agree.",
-        "The ice machine is broken. We never had ice.",
-        "I stare at the wall sometimes. The wall doesn't mind.",
-        "Today's special: existential dread. On tap.",
-        "A customer once asked for water. I respected the ambition.",
-        "Serving mystery drinks since the war ended.",
-        "Traded the battlefield for a bar tab.",
-        "Trained to fight. Now I pour. Weird life.",
-        "Been doing this longer than you'd think."
+        "你的酒好了。我没做。",
+        "今日特供：没有。我们什么都没有。",
+        "我见过你不信的东西。挺无聊的。",
+        "任务又成功了。酒吧完好。",
+        "在擦杯子。我们没有杯子。",
+        "欢迎回来。你的账单体面得很。",
+        "我算过概率。不太妙。",
+        "点唱机坏了。从来没修过。",
+        "欢乐时光三百年前就结束了。",
+        "尝尝招牌：循环空气。",
+        "我擦亮了吧台。没有吧台。",
+        "心理医生说我要有目标。我没心理医生。",
+        "小费罐空了。我们没小费罐。",
+        "有人留了评价。一星。我同意。",
+        "制冰机坏了。我们从来没有冰。",
+        "我有时盯着墙。墙不介意。",
+        "今日特供：存在焦虑。论桶。",
+        "有客人要过水。我敬佩他的野心。",
+        "战后一直供应神秘饮品。",
+        "拿战场换了张酒账。",
+        "受训打仗。现在倒酒。这日子怪。",
+        "干这行比你想的久。"
     )
 
     // Post-horror idle lines — mixed into pool after desert horror path (desertCompleted && !goodEnding)
     private val postHorrorIdleLines = mapOf(
-        "MEDIC"    to "I keep feeling like someone needs help.",
-        "RASCAL"   to "Had the weirdest dream. Lost something.",
-        "FROST"    to "The readings are... exactly the same.",
-        "UNIT-7"   to "Memory log: 3% unaccounted for.",
-        "DASH"     to "I feel like I've been here before.",
-        "BRUTUS"   to "Something happened.",
-        "EMBER"    to "Some fires aren't put out right.",
-        "FANG"     to "There's a shadow I don't recognize.",
-        "WHISKERS" to "Something slipped past me. Annoying.",
-        "KRAKEN"   to "The currents changed. I missed it.",
-        "HAVOC"    to "I feel like I missed something huge.",
-        "ASTRO"    to "TB-26... you ever think about after?"
+        "MEDIC"    to "总觉得有人需要帮忙。",
+        "RASCAL"   to "做了个怪梦。丢了点东西。",
+        "FROST"    to "读数……一模一样。",
+        "UNIT-7"   to "记忆日志：3% 对不上。",
+        "DASH"     to "我好像来过这儿。",
+        "BRUTUS"   to "出过事。",
+        "EMBER"    to "有些火没被真正扑灭。",
+        "FANG"     to "有道影子我不认识。",
+        "WHISKERS" to "有东西从我眼皮底下溜了。烦。",
+        "KRAKEN"   to "水流变了。我没抓住。",
+        "HAVOC"    to "我好像错过了什么大事。",
+        "ASTRO"    to "TB-26……你想过以后吗？"
     )
 
     // Pilot deja vu lines — shown after death, the pilot doesn't know they died
     private val dejaVuLines = mapOf(
-        "pilot_medic" to "Elevated stress readings... can't remember why.",
-        "pilot_rascal" to "Did something happen? I feel like I lost something... nah.",
-        "pilot_frost" to "...cold. Colder than usual.",
-        "pilot_unit7" to "Error: memory gap detected. Running diagnostics.",
-        "pilot_dash" to "Whoa... head rush. Was I going fast?",
+        "pilot_medic" to "压力读数偏高……想不起原因。",
+        "pilot_rascal" to "出过事吗？我好像丢了什么……算了。",
+        "pilot_frost" to "……冷。比平常冷。",
+        "pilot_unit7" to "错误：检测到记忆缺口。运行诊断。",
+        "pilot_dash" to "哇……一阵晕。我刚才是很快吗？",
         "pilot_brutus" to "...hmph.",
-        "pilot_ember" to "Ashes... I smell ashes. Was there a fire?",
-        "pilot_fang" to "The strangest feeling. As if time... skipped.",
-        "pilot_whiskers" to "Something is off. I can't place it. How annoying.",
-        "pilot_kraken" to "The deep stirs. Something was reset.",
-        "pilot_havoc" to "WHEW! I feel like I just did something AWESOME! ...did I?",
-        "pilot_astro" to "TB-26... did something happen? Never mind."
+        "pilot_ember" to "灰……我闻到灰。着过火吗？",
+        "pilot_fang" to "特别怪的感觉。像时间……跳了一下。",
+        "pilot_whiskers" to "不对劲。说不上来。真烦。",
+        "pilot_kraken" to "深渊动了。有什么被重置了。",
+        "pilot_havoc" to "呼！我感觉刚干了件超牛的事！……有吗？",
+        "pilot_astro" to "TB-26……出过事吗？算了。"
     )
 
     // Astro hint lines — TB-26 hints after all non-Astro pilots recruited
     private val astroHintLines = listOf(
-        "Someone's been asking about you.",
-        "Got a transmission last night. Encrypted. Familiar voice.",
-        "An old friend might be stopping by soon.",
-        "Don't ask me how, but... I think he's still out there.",
-        "One more thing. Keep an eye on the door."
+        "有人在打听你。",
+        "昨晚收到一段通讯。加密的。声音耳熟。",
+        "有个老朋友可能快来了。",
+        "别问怎么知道的……我觉得他还在外面。",
+        "还有件事。盯着门口。"
     )
 
     // Codex hint lines — TB-26 hints about the maintenance hatch
     private val codexHintLines = listOf(
-        "Someone was fiddling with the machine last night.",
-        "That machine has more panels than it needs.",
-        "I saw scratches on the left side of the machine."
+        "昨晚有人动过那台机器。",
+        "那机器的面板多得没必要。",
+        "机器左边有划痕。"
     )
 
     // Hint lines: each pilot hints about the NEXT pilot in the unlock sequence
     private val pilotHints = mapOf(
         "MEDIC" to listOf(
-            "Someone's eyeing our yen. Likes shiny things.",
-            "A raccoon type asked about openings. Mentioned yen."
+            "有人盯上咱们的円币了。喜欢亮东西。",
+            "有个浣熊样的问招不招人。提了円币。"
         ),
         "RASCAL" to listOf(
-            "Tough guy at the station. Respects tough crews.",
-            "Met a bear at the docks. Likes battle scars."
+            "站里有个狠角色。敬重硬的队伍。",
+            "码头遇到一头熊。喜欢战疤。"
         ),
         "BRUTUS" to listOf(
-            "A penguin pilot passed through. Cold as ice. Respects endurance.",
-            "A pilot only flies with crews that last."
+            "有个企鹅飞行员路过。冷得像冰。敬重耐力。",
+            "那飞行员只跟撑得住的队伍飞。"
         ),
         "FROST" to listOf(
-            "A cheetah pilot pacing outside. Never once stopped moving.",
-            "Something restless at the docks. Won't stand still for a second."
+            "外面有个猎豹飞行员在踱步。就没停过。",
+            "码头有个不安分的。一秒都站不住。"
         ),
         "DASH" to listOf(
-            "A phoenix showed up. Keeps mentioning cycles.",
-            "A pilot who respects persistence. Keeps returning."
+            "来了只凤凰。老提『循环』。",
+            "那飞行员看重坚持。总回来。"
         ),
         "EMBER" to listOf(
-            "Night hunter eyeing our combat logs. Wants blood on the board.",
-            "A bat circling the hangar. Watching every kill."
+            "夜猎手翻我们的战斗记录。想见血。",
+            "一只蝙蝠在机库上方盘旋。每个击杀都看。"
         ),
         "FANG" to listOf(
-            "An octopus asking about our arsenal. Likes variety.",
-            "Someone's impressed by weapon experimentation."
+            "一只章鱼问我们的军械。喜欢花样。",
+            "有人对我们的武器试验很欣赏。"
         ),
         "KRAKEN" to listOf(
-            "A cat's been lurking near the slot machine. Very patient.",
-            "Spotted a feline at the slot machine. Patient as the tide."
+            "有只猫在老虎机边上蹲着。很有耐心。",
+            "老虎机边上见着只猫科。耐心如潮。"
         ),
         "WHISKERS" to listOf(
-            "A robot analyzing our data. Wants big numbers.",
-            "Some machine keeps requesting our total kill statistics."
+            "有个机器人在分析我们的数据。要大数字。",
+            "有台机器一直要我们的总击杀数。"
         ),
         "UNIT-7" to listOf(
-            "A human pilot's been watching from the shadows. Lives for danger.",
-            "Someone's looking for a crew that can survive the deep runs."
+            "有人类飞行员在暗处看着。为危险而活。",
+            "有人在找能扛住深渊航线的队伍。"
         ),
         "HAVOC" to listOf(
-            "Somebody's been askin' around about us.",
-            "A pilot came by while you were out. Didn't leave a name."
+            "有人到处打听咱们。",
+            "你不在时来了个飞行员。没留名。"
         )
     )
 
@@ -383,7 +384,7 @@ class ChatSystem {
 
         // "Welcome back." — TB's first line after the desert farewell timeline shift
         if (state.pendingTbWelcome && state.activeConversation == null) {
-            state.addChatMessage("TOBAR","Welcome back.", 0xFF88AACC.toInt())
+            state.addChatMessage("TOBAR","欢迎回来。", 0xFF88AACC.toInt())
             state.pendingTbWelcome = false
             state.conversationCooldown = 10f  // Let it breathe before idle lines resume
             return
@@ -544,8 +545,8 @@ class ChatSystem {
         when {
             StoryStateManager.isAstroLoop(state.persistence) -> tbAstroLoopLines
             else -> tb26Lines.toMutableList().also { pool ->
-                if (postHorror) pool.add("I used to think about after. Don't know when I stopped.")
-                if (secondLoop) pool.add("Round two.")
+                if (postHorror) pool.add("我以前会想以后。不知什么时候不想了。")
+                if (secondLoop) pool.add("第二轮。")
             }
         }
 
@@ -592,7 +593,7 @@ class ChatSystem {
                 val allNonAstroRecruited = (0 until astroIndex).all { state.isPilotUnlocked(it) }
                 if (allNonAstroRecruited && !state.astroHinted && Random.nextFloat() < 0.25f) {
                     val hint = astroHintLines.random()
-                    state.addChatMessage(tbName, hint, 0xFF88AACC.toInt())
+                    state.addChatMessage(Callsigns.of(tbName), hint, 0xFF88AACC.toInt())
                     state.astroHintCount++
                     if (state.astroHintCount >= 3) {
                         state.astroHinted = true
@@ -605,7 +606,7 @@ class ChatSystem {
                 if (!state.allEvolutionsHinted && state.persistence.getDiscoveredEvolutions().size >= 12) {
                     state.allEvolutionsHinted = true
                     state.persistence.setAllEvolutionsHinted()
-                    state.addChatMessage(tbName, "Twelve for twelve. Not bad.", 0xFF88AACC.toInt())
+                    state.addChatMessage(Callsigns.of(tbName), "十二次，十二回。不赖。", 0xFF88AACC.toInt())
                     return
                 }
 
@@ -613,13 +614,13 @@ class ChatSystem {
                 if (!state.codexDiscovered && state.hasDiscoveredEvolutions) {
                     if (!state.codexHintGiven) {
                         val hint = codexHintLines.random()
-                        state.addChatMessage(tbName, hint, 0xFF88AACC.toInt())
+                        state.addChatMessage(Callsigns.of(tbName), hint, 0xFF88AACC.toInt())
                         state.codexHintGiven = true
                         state.persistence.setCodexHintGiven()
                         return
                     } else if (Random.nextFloat() < 0.15f) {
                         val hint = codexHintLines.random()
-                        state.addChatMessage(tbName, hint, 0xFF88AACC.toInt())
+                        state.addChatMessage(Callsigns.of(tbName), hint, 0xFF88AACC.toInt())
                         return
                     }
                 }
@@ -697,14 +698,14 @@ class ChatSystem {
         if (chosenIndex == null) return
         usedSet.add(chosenIndex)
         val text = lines[chosenIndex]
-        val displayName = if (speaker == "TB-26") tbName else speaker
+        val displayName = Callsigns.of(if (speaker == "TB-26") tbName else speaker)
         val color = if (speaker == "TB-26") {
             0xFF88AACC.toInt()  // TB-26's color: steel blue
         } else {
             val raw = PilotDefinitions.pilots.find { it.callsign == speaker }?.color ?: 0xFFCCCCCC.toInt()
             if (corrupted) StoryStateManager.corruptColor(raw) else raw
         }
-        val displayText = if (StoryStateManager.isAstroLoop(state.persistence)) text.replace("TB-26", "Tobar") else text
+        val displayText = if (StoryStateManager.isAstroLoop(state.persistence)) text.replace("TB-26", "托巴") else text
         state.addChatMessage(displayName, displayText, color)
     }
 
@@ -716,11 +717,11 @@ class ChatSystem {
         val tbName = if (StoryStateManager.isAstroLoop(state.persistence)) "TOBAR" else "TB-26"
         // TB-26 reacts
         val tb26Reactions = listOf(
-            "New hire. I'll prepare their... nothing.",
-            "Another crew member. The bar stays empty.",
-            "Welcome aboard. Don't break anything."
+            "新来的。我去准备他那份……没有。",
+            "又多了个船员。酒吧还是空的。",
+            "欢迎登船。别弄坏东西。"
         )
-        state.addChatMessage(tbName, tb26Reactions.random(), 0xFF88AACC.toInt())
+        state.addChatMessage(Callsigns.of(tbName), tb26Reactions.random(), 0xFF88AACC.toInt())
     }
 
     /**
@@ -748,60 +749,60 @@ class ChatSystem {
      */
     private val arrivalResponses: Map<String, Map<Int, String>> = mapOf(
         "RASCAL" to mapOf(
-            1 to "Rude. Accurate, but rude.",
-            2 to "Rude. And I'm not even offended. Huh.",
-            3 to "Rude. I keep almost laughing early."
+            1 to "无礼。但准确。就是无礼。",
+            2 to "无礼。我居然不生气。嗯。",
+            3 to "无礼。我差一点就提前笑了。"
         ),
         "BRUTUS" to mapOf(
-            1 to "Good.",
-            2 to "Good. ...hm.",
-            3 to "...Good. Feels worn in."
+            1 to "好。",
+            2 to "好。……嗯。",
+            3 to "……好。像用旧了的。"
         ),
         "FROST" to mapOf(
-            1 to "You'll adjust. Everyone does.",
-            2 to "You'll adjust. I said that too easily.",
-            3 to "You'll adjust. I never had to think about it."
+            1 to "你会习惯的。人人都习惯。",
+            2 to "你会习惯的。我说得太顺了。",
+            3 to "你会习惯的。这句我从没过脑子。"
         ),
         "DASH" to mapOf(
-            1 to "Three times! You missed one!",
-            2 to "Three! ...huh. That was fast, even for me.",
-            3 to "Three! Why do I know it's three?"
+            1 to "三次！你漏了一次！",
+            2 to "三次！……嗯。连我都觉得快。",
+            3 to "三次！我怎么知道是三次？"
         ),
         "EMBER" to mapOf(
-            1 to "That's just me arriving. It fades.",
-            2 to "That's just me arriving. It fades. It always does.",
-            3 to "Ashes remember the shape of the fire."
+            1 to "那只是我来了。会散的。",
+            2 to "那只是我来了。会散的。每次都散。",
+            3 to "灰记得火的形状。"
         ),
         "FANG" to mapOf(
-            1 to "You have. I read the logs.",
-            2 to "You have. Though I don't recall reading them.",
-            3 to "I know these rafters. I've never been here."
+            1 to "你有过。我看过日志。",
+            2 to "你有过。虽然我不记得看过。",
+            3 to "这些横梁我认得。可我没来过。"
         ),
         "KRAKEN" to mapOf(
-            1 to "The shelf is the problem. Not the arms.",
-            2 to "The shelf is the problem. It has always been.",
-            3 to "These are familiar waters. Somehow."
+            1 to "问题在架子。不在手。",
+            2 to "问题在架子。一直都是。",
+            3 to "这水我有印象。不知为何。"
         ),
         "WHISKERS" to mapOf(
-            1 to "Standards improved. Say it properly.",
-            2 to "Improved. You were always going to say that.",
-            3 to "Improved. I knew that before you did."
+            1 to "标准提高了。好好说。",
+            2 to "提高了。你反正都会这么说。",
+            3 to "提高了。我比你先知道。"
         ),
         "UNIT-7" to mapOf(
-            1 to "It was structurally a liquid. Adequate.",
-            2 to "Adequate. Response time faster than expected.",
-            3 to "Adequate. That assessment predates the sample."
+            1 to "结构上它算液体。凑合。",
+            2 to "凑合。反应比预期快。",
+            3 to "凑合。这评价比样品还早。"
         ),
         "HAVOC" to mapOf(
-            1 to "That stool was STRUCTURALLY WEAK!",
-            2 to "WEAK STOOL! ...huh. Felt good to say that.",
-            3 to "WEAK STOOL! ...why am I not surprised?!"
+            1 to "那凳子结构上就不结实！",
+            2 to "破凳子！……嗯。说出来挺爽。",
+            3 to "破凳子！……我怎么一点都不意外？！"
         ),
         // Astro remembers more than the crew do — his TB intro is a deliberate "...".
         "ASTRO" to mapOf(
-            1 to "Been a long way back.",
-            2 to "I've been here before. I know that much.",
-            3 to "I remember this room. Not how. Just this."
+            1 to "回来的路够长。",
+            2 to "我来过这儿。这点我确定。",
+            3 to "这间屋子我记得。不记得怎么记得。"
         )
     )
 
@@ -817,20 +818,20 @@ class ChatSystem {
 
         val tbName = if (StoryStateManager.isAstroLoop(state.persistence)) "TOBAR" else "TB-26"
         val tb26Intros = mapOf(
-            "RASCAL" to "New arrival. Watch your valuables.",
-            "BRUTUS" to "A bear just walked in. I'm not asking questions.",
-            "FROST" to "Temperature dropped. Must be the new pilot.",
-            "DASH" to "Something just ran past me. Twice.",
-            "EMBER" to "It's getting warm in here. New hire.",
-            "FANG" to "The new pilot hangs upside down. I've seen worse.",
-            "KRAKEN" to "Eight arms. Still can't reach the top shelf.",
-            "WHISKERS" to "A cat. In a bar. Standards have shifted.",
-            "UNIT-7" to "A robot ordered a drink. I served... something.",
-            "HAVOC" to "The new pilot broke a stool sitting down. Promising.",
+            "RASCAL" to "新来的。看好你的东西。",
+            "BRUTUS" to "一头熊刚进来。我不问。",
+            "FROST" to "温度掉了。准是新飞行员。",
+            "DASH" to "有东西从我身边跑过去了。两次。",
+            "EMBER" to "这儿热起来了。新来的。",
+            "FANG" to "新飞行员倒挂着。更怪的我也见过。",
+            "KRAKEN" to "八只手。还是够不到顶层。",
+            "WHISKERS" to "一只猫。在酒吧。标准变了。",
+            "UNIT-7" to "一个机器人点了酒。我上了……点东西。",
+            "HAVOC" to "新飞行员一坐就弄坏了凳子。有前途。",
             "ASTRO" to "..."
         )
         val lines = mutableListOf<ChatMessage>()
-        val intro = tb26Intros[pilotCallsign] ?: "New crew member."
+        val intro = tb26Intros[pilotCallsign] ?: "新船员。"
         lines.add(ChatMessage(tbName, intro, 0xFF88AACC.toInt()))
         // The arrival answers TB — announcement then response, one beat apart.
         arrivalResponseFor(pilotCallsign, state.persistence.getStoryLoop())?.let { response ->
@@ -841,7 +842,7 @@ class ChatSystem {
         if (pilotCallsign == "RASCAL" && StoryStateManager.hasLoopedBefore(state.persistence)) {
             val rascalColor = PilotDefinitions.getPilot("pilot_rascal")?.color
                 ?: 0xFFCCCCCC.toInt()
-            lines.add(ChatMessage("RASCAL", "Consider the slot machine... looked after.", rascalColor))
+            lines.add(ChatMessage("RASCAL", "就当老虎机……有人照看了。", rascalColor))
         }
         appendOrQueue(state, lines)
     }
@@ -894,10 +895,10 @@ class ChatSystem {
             // to eight characters: the stem is long and the figure grows with the run.
             when {
                 isNewBest -> lines.add(ChatMessage("TOBAR",
-                    "Welcome back! You survived for $lastRunFormatted - new best! ${newBestTimeReactions.random()}",
+                    "欢迎回来！你撑了 $lastRunFormatted——新纪录！${newBestTimeReactions.random()}",
                     0xFF88AACC.toInt()))
                 else -> lines.add(ChatMessage("TOBAR",
-                    "Welcome back! You survived for $lastRunFormatted. Best $bestFormatted.",
+                    "欢迎回来！你撑了 $lastRunFormatted。最好 $bestFormatted。",
                     0xFF88AACC.toInt()))
             }
             addBandanaCeremony(state, lines)
@@ -959,15 +960,15 @@ class ChatSystem {
         val takings = GameConfig.formatYen(yenEarned)
         when {
             tutorial != null || yenEarned <= 0 ->
-                lines.add(ChatMessage(tbName, "Welcome back, commander.", 0xFF88AACC.toInt()))
+                lines.add(ChatMessage(tbName, "欢迎回来，指挥官。", 0xFF88AACC.toInt()))
             // One line either way, greeting included. The greeting stays on a record run because
             // "Welcome back, commander." is TB-26's, and the player's best run is the last return
             // that should go ungreeted; that is what keeps the reaction pool terse.
             isNewBestYen -> lines.add(ChatMessage(tbName,
-                "Welcome back, commander. $takings - new best! ${newBestYenReactions.random()}",
+                "欢迎回来，指挥官。$takings——新纪录！${newBestYenReactions.random()}",
                 0xFF88AACC.toInt()))
             else -> lines.add(ChatMessage(tbName,
-                "Welcome back, commander. $takings. Best ${GameConfig.formatYen(previousBestYen)}.",
+                "欢迎回来，指挥官。$takings。最好 ${GameConfig.formatYen(previousBestYen)}。",
                 0xFF88AACC.toInt()))
         }
 
@@ -1019,7 +1020,7 @@ class ChatSystem {
         if (dejaVu != null) {
             val pilot = PilotDefinitions.pilots.find { it.id == pilotId }
             if (pilot != null) {
-                val displayDejaVu = if (StoryStateManager.isAstroLoop(state.persistence)) dejaVu.replace("TB-26", "Tobar") else dejaVu
+                val displayDejaVu = if (StoryStateManager.isAstroLoop(state.persistence)) dejaVu.replace("TB-26", "托巴") else dejaVu
                 lines.add(ChatMessage(pilot.callsign, displayDejaVu, pilot.color))
             }
         }
@@ -1132,9 +1133,9 @@ class ChatSystem {
         val tbColor = 0xFF88AACC.toInt()
         val medic = PilotDefinitions.pilots.find { it.id == "pilot_medic" } ?: return
         queueDeathReturnLines(state, listOf(
-            ChatMessage(tbName, "Launchpad's next door, commander. When you're ready.", tbColor),
-            ChatMessage(medic.callsign, "Commander? TB, there's nobody there.", medic.color),
-            ChatMessage(tbName, "There is. Next door, when you're ready.", tbColor)
+            ChatMessage(tbName, "发射台在隔壁，指挥官。准备好了就去。", tbColor),
+            ChatMessage(medic.callsign, "指挥官？TB，那儿没人。", medic.color),
+            ChatMessage(tbName, "有的。在隔壁。准备好了就去。", tbColor)
         ))
     }
 
@@ -1146,13 +1147,13 @@ class ChatSystem {
         if (StoryStateManager.isAstroLoop(state.persistence)) return
 
         // TB-26 greeting — appears immediately
-        state.addChatMessage("TB-26", "Welcome back, commander.", 0xFF88AACC.toInt())
+        state.addChatMessage("TB-26", "欢迎回来，指挥官。", 0xFF88AACC.toInt())
 
         // Medic volunteers — delayed 2 seconds via conversation queue
         val medic = PilotDefinitions.pilots.find { it.id == "pilot_medic" }
         if (medic != null) {
             state.activeConversation = listOf(
-                ChatMessage(medic.callsign, "No pilots? I'm a medic, not a fighter... but fine.", medic.color)
+                ChatMessage(medic.callsign, "没有飞行员？我是医官，不是战斗员……行吧。", medic.color)
             )
             state.conversationLineIndex = 0
             state.conversationLineTimer = 2f

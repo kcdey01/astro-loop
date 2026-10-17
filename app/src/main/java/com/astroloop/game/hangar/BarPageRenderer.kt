@@ -11,6 +11,7 @@ import com.astroloop.game.data.BandanaDefinitions
 import com.astroloop.game.data.PassiveDefinitions
 import com.astroloop.game.data.PersistenceManager
 import com.astroloop.game.data.PilotDef
+import com.astroloop.game.data.Callsigns
 import com.astroloop.game.data.PilotDefinitions
 import com.astroloop.game.data.PilotHintCards
 import com.astroloop.game.entity.Boss
@@ -219,7 +220,7 @@ class BarPageRenderer(
         textPaint.textSize = (cardHeight * 0.13f).coerceIn(12f, 22f)
         textPaint.color = 0xFFFFFFFF.toInt()
         textPaint.alpha = alpha
-        canvas.drawText(pilot.callsign, rect.centerX(), stripTop + stripH * 0.38f, textPaint)
+        canvas.drawText(Callsigns.of(pilot.callsign), rect.centerX(), stripTop + stripH * 0.38f, textPaint)
         textPaint.alpha = 255
 
         // Passive name text only (no icon)
@@ -390,7 +391,7 @@ class BarPageRenderer(
 
                         textPaint.textSize = (cardHeight * 0.12f).coerceIn(13f, 22f)
                         textPaint.color = 0xFF994444.toInt()
-                        canvas.drawText("He's gone.", rect.centerX(), stripTop + stripH * 0.78f, textPaint)
+                        canvas.drawText("他不在了。", rect.centerX(), stripTop + stripH * 0.78f, textPaint)
                         textPaint.alpha = 255
                     } else {
                         // Back face — cross-dissolves with portrait at animation end
@@ -554,7 +555,7 @@ class BarPageRenderer(
             val msgY = chatTop + (i + 1) * lineHeight
             textPaint.textSize = chatFontSize
             textPaint.color = msg.color
-            val callsignText = "[${msg.speaker}]: "
+            val callsignText = "[${Callsigns.of(msg.speaker)}]: "
             canvas.drawText(callsignText, chatLeft + 6f, msgY, textPaint)
             val callsignWidth = textPaint.measureText(callsignText)
             textPaint.color = 0xFFCCCCCC.toInt()
@@ -996,19 +997,19 @@ class BarPageRenderer(
         signGlowPaint.color = cyan
         signGlowPaint.textSize = size * 1.35f
         signGlowPaint.alpha = (60 * dim).toInt()
-        canvas.drawText("BAR", x, y, signGlowPaint)
+        canvas.drawText("酒吧", x, y, signGlowPaint)
         signGlowPaint.textSize = size * 1.15f
         signGlowPaint.alpha = (90 * dim).toInt()
-        canvas.drawText("BAR", x, y, signGlowPaint)
+        canvas.drawText("酒吧", x, y, signGlowPaint)
 
         // Crisp glyph.
         signPaint.color = cyan
         signPaint.textSize = size
         signPaint.alpha = (230 * dim).toInt()
-        canvas.drawText("BAR", x, y, signPaint)
+        canvas.drawText("酒吧", x, y, signPaint)
 
         // Tube underline.
-        val w = signPaint.measureText("BAR")
+        val w = signPaint.measureText("酒吧")
         signLinePaint.color = cyan
         signLinePaint.alpha = (90 * dim).toInt()
         canvas.drawLine(x - w / 2f, y + size * 0.45f, x + w / 2f, y + size * 0.45f, signLinePaint)

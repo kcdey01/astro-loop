@@ -10,7 +10,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class OblivionBeam : Weapon(
     id = "oblivion_beam",
-    name = "Oblivion Beam"
+    name = "湮灭光矛"
 ) {
     override val knobs = KnobsWeapons.oblivionBeam
 

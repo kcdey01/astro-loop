@@ -102,6 +102,14 @@ android {
         buildConfig = true
     }
 
+    // Fonts are loaded as FontFamily from assets (see FontManager), and Font.Builder(AssetManager,
+    // path) requires the file to be stored uncompressed — it maps the APK entry directly. Left to
+    // the default they are deflated, every family load fails, and the game silently drops back to
+    // a single Latin face with no Chinese glyphs in it.
+    androidResources {
+        noCompress += listOf("ttf", "otf")
+    }
+
     testOptions {
         unitTests.isIncludeAndroidResources = true
     }

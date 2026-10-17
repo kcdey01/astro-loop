@@ -38,7 +38,14 @@ object TextWrap {
         return kept
     }
 
-    /** Classic fill-then-break. A word wider than the column gets a line to itself. */
+    /**
+     * Classic fill-then-break. A word wider than the column gets a line to itself.
+     *
+     * Chinese has no spaces, so a whole sentence arrives as one "word" and would overflow the
+     * card in a single unbreakable run. Such a word is broken between characters instead, and
+     * the break is nudged back when it would leave closing punctuation stranded at the start
+     * of the next line — 「弹药,」/「伤害」 is wrong where 「弹药,伤害」/… is merely tight.
+     */
     fun greedy(text: String, maxWidth: Float, measure: (String) -> Float): List<String> {
         val out = mutableListOf<String>()
         var line = ""
@@ -50,9 +57,32 @@ object TextWrap {
                 out.add(line)
                 line = word
             }
+            while (measure(line) > maxWidth && countVisible(line) > 1) {
+                val cut = breakPoint(line, maxWidth, measure)
+                out.add(line.substring(0, cut).trimEnd())
+                line = line.substring(cut).trimStart()
+            }
         }
         if (line.isNotEmpty()) out.add(line)
         return out
+    }
+
+    private fun countVisible(s: String): Int = s.trim().length
+
+    /** Characters that must never begin a line in Chinese typesetting. */
+    private const val NO_LINE_START = "、。,.;:！？!?）」』》〉…—,、"
+
+    /** The longest prefix of [line] that fits [maxWidth], pulled back off closing punctuation. */
+    private fun breakPoint(line: String, maxWidth: Float, measure: (String) -> Float): Int {
+        var cut = 1
+        for (i in 1..line.length) {
+            if (measure(line.substring(0, i)) <= maxWidth) cut = i else break
+        }
+        var adjusted = cut
+        while (adjusted > 1 && adjusted < line.length && line[adjusted] in NO_LINE_START) {
+            adjusted--
+        }
+        return if (adjusted > 0) adjusted else cut
     }
 
     /**

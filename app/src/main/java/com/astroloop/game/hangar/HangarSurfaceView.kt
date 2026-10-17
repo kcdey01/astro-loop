@@ -325,14 +325,14 @@ class HangarSurfaceView(
          * upgrade at the reveal and grant that same upgrade when the reels stop.
          */
         val SLOT_UPGRADES: List<Pair<String, String>> = listOf(
-            "health" to "SALVAGE PLATE",
-            "shields" to "DEFLECTOR RIG",
-            "speed" to "NITRO BOOST",
-            "damage" to "HOT ROUNDS",
-            "crit" to "LUCKY ROUNDS",
-            "magnet" to "HAUL LINE",
-            "yen_bonus" to "FINDER'S FEE",
-            "salvage" to "SCAVENGER RIG"
+            "health" to "打捞装甲板",
+            "shields" to "偏导装置",
+            "speed" to "氮气加速",
+            "damage" to "热弹",
+            "crit" to "幸运弹",
+            "magnet" to "拖运索",
+            "yen_bonus" to "寻宝佣金",
+            "salvage" to "拾荒装置"
         )
 
         fun upgradeDisplayName(id: String): String? =
@@ -3120,7 +3120,7 @@ class HangarSurfaceView(
             state.vibrationMuted = !state.vibrationMuted
             persistence.setVibrationMuted(state.vibrationMuted)
             isVibrationMuted = state.vibrationMuted
-            state.showReadoutMessage(if (state.vibrationMuted) "VIBRATE OFF" else "VIBRATE ON")
+            state.showReadoutMessage(if (state.vibrationMuted) "震动 关" else "震动 开")
             SoundManager.playSFX("sfx_ui_tap")
             // Only on the way back on. Turning vibration off and then buzzing to confirm it would
             // be the button disobeying itself; `buttonTap` would no-op anyway, since

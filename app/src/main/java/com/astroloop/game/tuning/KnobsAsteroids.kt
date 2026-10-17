@@ -12,7 +12,7 @@ object KnobsAsteroids {
         trailDamage: Float, trailWidth: Float, trailLifetime: Float, magneticPullFactor: Float,
     ) {
         private val g = KnobGroup("Asteroids/Sizes/${size.replaceFirstChar { it.uppercase() }}", "asteroid.$size")
-        val hp = g.float("hp", "Health", hp, applies = Applies.NEW_SPAWNS)
+        val hp = g.float("hp", "生命", hp, applies = Applies.NEW_SPAWNS)
         val radius = g.float("radius", "Radius", radius, min = radius / 4f, max = radius * 4f, applies = Applies.NEW_SPAWNS)
         val speedFactor = g.float("speed_factor", "Speed ×", speedFactor, applies = Applies.NEW_SPAWNS)
         val trailDamage = g.float("trail_damage", "Trail wake damage", trailDamage)

@@ -50,13 +50,27 @@ Requires Android SDK 36 and JDK 17.
 
 No game engine: everything is drawn as vectors on a Canvas in pure Kotlin.
 
+## Chinese localization
+
+All player-facing text has a Simplified Chinese translation. It lives directly in
+the `*Definitions.kt` data tables instead of `strings.xml`, because the project has
+no runtime locale layer — every string is a Kotlin literal, and routing ~3,100 of
+them through resources would be a rewrite rather than a translation. CJK glyphs are
+drawn through a Noto Sans SC family chained onto Exo 2 with
+`Typeface.CustomFallbackBuilder`, and `TextWrap` breaks lines between characters so
+Chinese paragraphs wrap instead of overflowing their bubbles.
+
+[README.zh-CN.md](README.zh-CN.md) documents the terminology table, the font setup
+and the one screen that could not be translated (the arcade cabinet shell, which
+draws its own stroke-vector Latin glyphs).
+
 ## License
 
 Astro Loop is free software under the GNU General Public License v3.0
 (`GPL-3.0-only`). See [LICENSE](LICENSE).
 
-The bundled fonts (Exo 2, Orbitron) are under the SIL Open Font License 1.1.
-See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+The bundled fonts (Exo 2, Orbitron, Noto Sans SC) are under the SIL Open Font
+License 1.1. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
 Copyright (C) 2026 PubDeer
 

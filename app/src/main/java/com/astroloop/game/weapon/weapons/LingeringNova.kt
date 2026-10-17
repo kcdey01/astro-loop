@@ -15,7 +15,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class LingeringNova : Weapon(
     id = "lingering_nova",
-    name = "Lingering Nova"
+    name = "余烬新星"
 ) {
     override val knobs = KnobsWeapons.lingeringNova
 

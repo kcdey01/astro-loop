@@ -16,7 +16,7 @@ import com.astroloop.game.tuning.forLevel
 
 class NovaBlast : Weapon(
     id = "nova_blast",
-    name = "Nova Blast"
+    name = "新星爆发"
 ) {
     override val knobs = KnobsWeapons.novaBlast
     override val beatPhaseOffsetMs: Long = 2000L

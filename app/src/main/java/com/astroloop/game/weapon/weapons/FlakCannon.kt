@@ -15,7 +15,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class FlakCannon : Weapon(
     id = "flak_cannon",
-    name = "Flak Cannon"
+    name = "高射炮"
 ) {
     override val knobs = KnobsWeapons.flakCannon
 

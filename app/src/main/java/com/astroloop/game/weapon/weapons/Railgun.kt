@@ -11,7 +11,7 @@ import com.astroloop.game.tuning.forLevel
 
 class Railgun : Weapon(
     id = "railgun",
-    name = "Railgun"
+    name = "电磁炮"
 ) {
     override val knobs = KnobsWeapons.railgun
 

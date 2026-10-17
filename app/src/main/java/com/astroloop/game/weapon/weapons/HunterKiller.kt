@@ -13,7 +13,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class HunterKiller : Weapon(
     id = "hunter_killer",
-    name = "Hunter-Killer"
+    name = "猎杀者"
 ) {
     override val knobs = KnobsWeapons.hunterKiller
     override val beatPhaseOffsetMs: Long = 1000L

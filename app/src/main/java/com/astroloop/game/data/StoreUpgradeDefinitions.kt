@@ -122,59 +122,59 @@ object StoreUpgradeDefinitions {
     val tiles = listOf(
         // Row 1 — Survival
         UpgradeTile(
-            "Salvage Plate", "health", "+10 max health",
-            detail = "Survive more hits.",
+            "打捞装甲板", "health", "+10 最大生命",
+            detail = "能扛更多次伤害。",
             effects = listOf(
-                UpgradeEffect("Health", 10f, Format.FLAT, Readout.FROM_BASE, base = GameConfig.SHIP_BASE_HEALTH)
+                UpgradeEffect("生命", 10f, Format.FLAT, Readout.FROM_BASE, base = GameConfig.SHIP_BASE_HEALTH)
             )
         ),
         UpgradeTile(
-            "Deflector Rig", "shields", "+10 max shield",
-            detail = "Absorbs more hits.",
+            "偏导装置", "shields", "+10 最大护盾",
+            detail = "能吸收更多次伤害。",
             effects = listOf(
-                UpgradeEffect("Shield", 10f, Format.FLAT, Readout.FROM_BASE, base = GameConfig.SHIP_BASE_SHIELDS)
+                UpgradeEffect("护盾", 10f, Format.FLAT, Readout.FROM_BASE, base = GameConfig.SHIP_BASE_SHIELDS)
             )
         ),
         UpgradeTile(
-            "Nitro Boost", "speed", "+5% ship speed",
-            detail = "You move faster.",
-            effects = listOf(UpgradeEffect("ship speed", 0.05f, Format.PERCENT))
+            "氮气加速", "speed", "+5% 飞船速度",
+            detail = "飞得更快。",
+            effects = listOf(UpgradeEffect("飞船速度", 0.05f, Format.PERCENT))
         ),
         // Row 2 — Combat
         UpgradeTile(
-            "Hot Rounds", "damage", "+5% all damage",
-            detail = "Everything you fire hits harder.",
-            effects = listOf(UpgradeEffect("all damage", 0.05f, Format.PERCENT))
+            "热弹", "damage", "+5% 全部伤害",
+            detail = "所有武器的伤害都更高。",
+            effects = listOf(UpgradeEffect("全部伤害", 0.05f, Format.PERCENT))
         ),
         UpgradeTile(
-            "Lucky Rounds", "crit", "+5% crit chance",
-            detail = "Some shots hit for double.",
+            "幸运弹", "crit", "+5% 暴击率",
+            detail = "部分攻击造成双倍伤害。",
             effects = listOf(
-                UpgradeEffect("Crit", 0.05f, Format.PERCENT, Readout.ABSOLUTE)
+                UpgradeEffect("暴击", 0.05f, Format.PERCENT, Readout.ABSOLUTE)
             )
         ),
         UpgradeTile(
-            "Haul Line", "magnet", "+15% pickup range",
-            detail = "Collects star dust from further out.",
+            "拖运索", "magnet", "+15% 拾取范围",
+            detail = "能在更远处吸取星尘。",
             effects = listOf(
-                UpgradeEffect("pickup range", 0.15f, Format.PERCENT),
+                UpgradeEffect("拾取范围", 0.15f, Format.PERCENT),
                 // Kept, never printed: the owner cut the pull number as not player-relevant, but the
                 // game still applies it and the agreement test still pins it against GameState.
-                UpgradeEffect("pull speed", 0.20f, Format.PERCENT, shown = false)
+                UpgradeEffect("吸取速度", 0.20f, Format.PERCENT, shown = false)
             )
         ),
         // Row 3 — Economy + NG+
         UpgradeTile(
-            "Finder's Fee", "yen_bonus", "+20% yen earned",
-            detail = "Earn more yen every run.",
-            effects = listOf(UpgradeEffect("yen earned", 0.20f, Format.PERCENT))
+            "寻宝佣金", "yen_bonus", "+20% 円币收益",
+            detail = "每局获得更多円币。",
+            effects = listOf(UpgradeEffect("円币收益", 0.20f, Format.PERCENT))
         ),
         UpgradeTile(
-            "Scavenger Rig", "salvage", "+20% drop rate",
-            detail = "Asteroids drop upgrades more often.",
-            effects = listOf(UpgradeEffect("upgrade drops", 0.20f, Format.PERCENT))
+            "拾荒装置", "salvage", "+20% 掉落率",
+            detail = "陨石更常掉落强化。",
+            effects = listOf(UpgradeEffect("强化掉落", 0.20f, Format.PERCENT))
         ),
-        UpgradeTile("Emergency Shield", "emergency_shield", "Survive a lethal hit", isNgPlus = true)
+        UpgradeTile("应急护盾", "emergency_shield", "挡下一次致命伤害", isNgPlus = true)
     )
 
     /**

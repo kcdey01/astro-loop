@@ -21,9 +21,9 @@ object CrystalFightLines {
      * longer distinguishes. Everyone who comes is the one who left it.
      */
     val opening = listOf(
-        "You left me in the sand.",
-        "Nobody came back for me.",
-        "So I came here."
+        "你把我留在了沙里。",
+        "没人回来找我。",
+        "所以我来了这里。"
     )
 
     /**
@@ -39,11 +39,11 @@ object CrystalFightLines {
      * for: whoever is flying, they do not answer.)
      */
     fun taunt(p: CrystalPhase): Pair<String, String?> = when (p) {
-        CrystalPhase.P1 -> "You came back." to "They always come back."           // recognition
-        CrystalPhase.P2 -> "Pick me up. One more loop." to "Nothing has to end."  // invitation
-        CrystalPhase.P3 -> "They're all still in here." to "Every one you lost."  // the offer
-        CrystalPhase.P4 -> "We could still begin." to "You and me. Again."        // the bargain
-        CrystalPhase.P5 -> "STAY - STAY..." to null                                // desperation
+        CrystalPhase.P1 -> "你回来了。" to "他们总会回来。"           // recognition
+        CrystalPhase.P2 -> "把我捡起来。再来一轮。" to "没有什么必须结束。"  // invitation
+        CrystalPhase.P3 -> "他们都还在里面。" to "你失去的每一个。"  // the offer
+        CrystalPhase.P4 -> "我们还可以重新开始。" to "你和我。再一次。"        // the bargain
+        CrystalPhase.P5 -> "留下——留下……" to null                                // desperation
     }
 
     /**
@@ -58,9 +58,9 @@ object CrystalFightLines {
      * speaks that are not an offer.
      */
     val pauseDenial = listOf(
-        "Not yet.",
-        "You don't get to stop.",
-        "Stay where I can see you."
+        "还不行。",
+        "你没资格停下。",
+        "待在我看得见的地方。"
     )
 
     // <=~58 chars each (bar chatter column budget)
@@ -80,7 +80,7 @@ object CrystalFightLines {
      * There is no equivalent on a LOSS. A crystal that outlives you has nothing to thank
      * you for.
      */
-    const val farewell = "...Thank you."
+    const val farewell = "……谢谢你。"
 
     /**
      * Bar chatter on the WIN — a design decision, and rewritten from the ground rather than
@@ -102,8 +102,8 @@ object CrystalFightLines {
      * crystal's own opening - "Nobody came back for me." Someone finally did.
      */
     val barChatter = listOf(
-        "TOBAR" to "Something out there's gone quiet.",
-        "MEDIC" to "What was?",
-        "TOBAR" to "...I don't know. But it's not waiting any more."
+        "TOBAR" to "外面有什么东西安静下来了。",
+        "MEDIC" to "什么？",
+        "TOBAR" to "……我不知道。但它不再等谁了。"
     )
 }

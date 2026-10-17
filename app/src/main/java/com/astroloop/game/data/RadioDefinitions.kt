@@ -9,332 +9,332 @@ object RadioDefinitions {
         // =====================================================================
 
         "shields_down" to mapOf(
-            "pilot_medic" to listOf("Shields are down! Watch yourself!", "No more shields - be careful!", "Shield generator's offline!"),
-            "pilot_rascal" to listOf("Shields popped! Time to get sneaky!", "No shields? No problem... maybe.", "We're naked out here!"),
-            "pilot_brutus" to listOf("Shields gone.", "Hmph. No shields.", "Good. Now it's personal."),
-            "pilot_frost" to listOf("Shield buffer depleted.", "Running without shields. Suboptimal.", "Cold comfort - shields are gone."),
-            "pilot_dash" to listOf("Shields down! Gotta move faster!", "No shields - speed is our armor now!", "Lost shields! Dodge everything!"),
-            "pilot_ember" to listOf("Shields burned out!", "No shields? I'll burn brighter!", "We're exposed! Light 'em up!"),
-            "pilot_fang" to listOf("Shields... gone. I feel the void.", "No shields. Darkness draws closer.", "Exposed. Good. Let them come."),
-            "pilot_whiskers" to listOf("Shields are gone. How annoying.", "Ugh. No shields. Beneath me.", "I did NOT sign up for this."),
-            "pilot_kraken" to listOf("Shield matrix offline.", "Tentacles brace for impact.", "No shields. The deep protects."),
-            "pilot_havoc" to listOf("SHIELDS DOWN! LET'S GOOO!", "Who needs shields anyway?!", "Bare hull! Maximum excitement!"),
-            "pilot_unit7" to listOf("Shield status: depleted.", "Warning: shield generator offline.", "Survival odds: recalculating."),
-            "pilot_astro" to listOf("Shields are down. Stay sharp.", "Lost shields - TB-26, watch our six.", "No shields. We've had worse.")
+            "pilot_medic" to listOf("护盾没了！当心！", "护盾全失——小心点！", "护盾发生器掉线了！"),
+            "pilot_rascal" to listOf("护盾爆了！该溜了！", "没护盾？没事……大概吧。", "咱这是裸奔啊！"),
+            "pilot_brutus" to listOf("护盾没了。", "哼。没盾。", "好。现在算私仇了。"),
+            "pilot_frost" to listOf("护盾缓冲耗尽。", "无护盾运行。不理想。", "冷笑话：护盾没了。"),
+            "pilot_dash" to listOf("护盾没了！得再快点！", "没盾了——速度就是装甲！", "护盾丢了！全都躲开！"),
+            "pilot_ember" to listOf("护盾烧穿了！", "没盾？那我烧得更旺！", "暴露了！给我点起来！"),
+            "pilot_fang" to listOf("盾……没了。我摸到虚空了。", "无盾。黑暗逼近。", "暴露了。好。让他们来。"),
+            "pilot_whiskers" to listOf("护盾没了。真烦。", "啧。没盾。太掉价。", "这活儿我可没签过！"),
+            "pilot_kraken" to listOf("护盾矩阵离线。", "触手准备挨打。", "无盾。深渊护我。"),
+            "pilot_havoc" to listOf("护盾没了！冲啊——！", "谁需要护盾啊？！", "裸船体！刺激拉满！"),
+            "pilot_unit7" to listOf("护盾状态：耗尽。", "警告：护盾发生器离线。", "存活率：重算中。"),
+            "pilot_astro" to listOf("护盾没了。都打起精神。", "护盾丢了——TB-26，看住尾后。", "没盾。更糟的也熬过。")
         ),
 
         "big_hit" to mapOf(
             "pilot_medic" to listOf(
-                "Huge hit! Who's flying?!",
-                "That spiked every readout!",
-                "I'm a doctor, not a dummy!"
+                "重击！谁在开船？！",
+                "仪表全飙红了！",
+                "我是医生，不是靶子！"
             ),
             "pilot_rascal" to listOf(
-                "Whoa! Nearly lost my loot!",
-                "NOT part of the heist plan!",
-                "Ow! I felt that in my tail!"
+                "哇！差点赔光本钱！",
+                "这不在抢劫计划里！",
+                "嗷！尾巴都疼！"
             ),
             "pilot_brutus" to listOf(
-                "Hngh. Hit hard.",
-                "Pain. Good reminder.",
-                "They'll pay for that."
+                "哼。打得够重。",
+                "疼。正好记着。",
+                "这笔他们要还。"
             ),
             "pilot_frost" to listOf(
-                "Significant hull damage. Noted.",
-                "Statistically... unfortunate.",
-                "Ice cracks under pressure too."
+                "船体显著受损。已记录。",
+                "从概率上说……不幸。",
+                "冰受压也会裂。"
             ),
             "pilot_dash" to listOf(
-                "OW! Wasn't fast enough!",
-                "Big hit! Need to dodge quicker!",
-                "That one rattled my teeth!"
+                "嗷！还是慢了！",
+                "重击！躲得再快点！",
+                "这一下牙都震松了！"
             ),
             "pilot_ember" to listOf(
-                "That blow only fans the flames!",
-                "They hit hard - we'll hit harder!",
-                "Pain is just fuel for the fire!"
+                "这一击只是给我煽风！",
+                "他们打得狠——我们更狠！",
+                "痛，只是火的燃料！"
             ),
             "pilot_fang" to listOf(
-                "Pain has a certain... flavor.",
-                "A heavy blow. The darkness stirs.",
-                "They struck deep. I remember it."
+                "痛……有种味道。",
+                "重击。黑暗醒了。",
+                "这一下扎得深。我记着。"
             ),
             "pilot_whiskers" to listOf(
-                "Excuse me?! Watch the ship!",
-                "That was RUDE. Absolutely rude.",
-                "Nine lives flashed before my eyes."
+                "喂？！看着点船！",
+                "太没礼貌了。真没礼貌。",
+                "九条命都闪了一遍。"
             ),
             "pilot_kraken" to listOf(
-                "The hull groans like a whale song.",
-                "Even leviathans feel the harpoon.",
-                "A crushing blow. The abyss tests."
+                "船体在哼，像鲸歌。",
+                "利维坦也怕鱼叉。",
+                "重压。深渊在试我。"
             ),
             "pilot_havoc" to listOf(
-                "WHAT A HIT! DO IT AGAIN!",
-                "HAHA! That one actually hurt!",
-                "BIG DAMAGE! I'M STILL STANDING!"
+                "好一击！再来一次！",
+                "哈哈！这下真疼了！",
+                "大伤害！我还站着！"
             ),
             "pilot_unit7" to listOf(
-                "WARNING: Hull integrity loss > 25%.",
-                "Impact: critical. Evasion advised.",
-                "Structural damage logged. Caution."
+                "警告：船体完整度损失超 25%。",
+                "撞击：严重。建议规避。",
+                "结构损伤已记录。谨慎。"
             ),
             "pilot_astro" to listOf(
-                "Heavy hit - hull's holding. Barely.",
-                "Rattled TB-26's circuits. And mine.",
-                "Big impact. Shake it off."
+                "重击——船体撑住了。勉强。",
+                "震得 TB-26 电路乱跳。我也乱。",
+                "重击。抖抖就过。"
             )
         ),
 
         "low_health" to mapOf(
             "pilot_medic" to listOf(
-                "Hull's critical - out of bandages!",
-                "Flatlining! One more hit and done!",
-                "Vitals in the red - all of them!"
+                "船体危急——绷带用完了！",
+                "心跳平了！再一下就没！",
+                "生命体征全红——全部！"
             ),
             "pilot_rascal" to listOf(
-                "We're falling apart! Time to bail?",
-                "Held together by tape and luck!",
-                "One more scratch and we're junk!"
+                "要散架了！撤不撤？",
+                "全靠胶带和运气撑着！",
+                "再蹭一下就成废铁！"
             ),
             "pilot_brutus" to listOf(
-                "Hull critical. Still fighting.",
-                "Bleeding out. Don't care.",
-                "Almost dead. Good."
+                "船体危急。还打。",
+                "在漏。不在乎。",
+                "快死了。好。"
             ),
             "pilot_frost" to listOf(
-                "Hull below 20%. Odds: declining.",
-                "Thin ice. Thinner than usual.",
-                "Critical. Don't get hit again."
+                "船体低于 20%。胜率：下降。",
+                "薄冰。比平时更薄。",
+                "危急。别再挨一下。"
             ),
             "pilot_dash" to listOf(
-                "Hull's almost gone! Can't outrun!",
-                "We're shredded! One hit and BOOM!",
-                "Critical! Go go go go go!"
+                "船体快没了！跑不过！",
+                "打烂了！再一下就是轰！",
+                "危急！走走走走走！"
             ),
             "pilot_ember" to listOf(
-                "Barely a spark - don't go out!",
-                "We're a dying ember! Not like this!",
-                "One breath from ashes! Fight on!"
+                "只剩一点火星——别灭！",
+                "我们成余烬了！不能这样！",
+                "离灰只差一口气！继续打！"
             ),
             "pilot_fang" to listOf(
-                "Close to the end. I hear it.",
-                "Death is near. Its wing brushes.",
-                "The hull bleeds. So fragile."
+                "快到尽头了。我听见了。",
+                "死很近。翅尖擦过。",
+                "船体在流血。太脆。"
             ),
             "pilot_whiskers" to listOf(
-                "Humiliating. We're barely flying.",
-                "I refuse to die in this tin can.",
-                "Critical hull?! Unacceptable."
+                "丢人。几乎飞不动了。",
+                "我拒绝死在这铁罐里。",
+                "船体危急？！不可接受。"
             ),
             "pilot_kraken" to listOf(
-                "The hull cracks. The deep calls.",
-                "Sinking toward the abyss. Hold.",
-                "Nearly crushed. Time to surface."
+                "船体开裂。深渊在唤。",
+                "沉向深渊。撑住。",
+                "快被压碎了。该上浮。"
             ),
             "pilot_havoc" to listOf(
-                "CRITICAL HULL! THE BEST PART!",
-                "ALMOST DEAD! NEVER FELT MORE ALIVE!",
-                "ONE HIT LEFT! BRING IT ON!"
+                "船体危急！最带劲的部分！",
+                "快死了！从没这么活过！",
+                "还剩一击！来啊！"
             ),
             "pilot_unit7" to listOf(
-                "Hull critical. Termination imminent.",
-                "WARNING: One more impact = failure.",
-                "Survival odds near zero. Noted."
+                "船体危急。终止在即。",
+                "警告：再撞一次＝失败。",
+                "存活率近零。已记录。"
             ),
             "pilot_astro" to listOf(
-                "Hull's critical - be smart here.",
-                "Hanging by a thread. TB-26, steady.",
-                "One hit from done. Make it count."
+                "船体危急——这里要稳。",
+                "只剩一线。TB-26，稳住。",
+                "再一下就完。打准点。"
             )
         ),
 
         "phoenix" to mapOf(
             "pilot_medic" to listOf(
-                "Patient revived! Medical miracle!",
-                "Flatlined and came back! Love it!",
-                "Clear! We're back! Not again!"
+                "病人抢回来了！医学奇迹！",
+                "平了又回来了！我爱这行！",
+                "除颤成功！回来了！别再来！"
             ),
             "pilot_rascal" to listOf(
-                "Ha! Can't keep a good raccoon down!",
-                "Death couldn't catch me! Slippery!",
-                "Back from the dead! Got my loot!"
+                "哈！好浣熊压不死！",
+                "死神抓不住我！滑得很！",
+                "死了又回来！钱还在！"
             ),
             "pilot_brutus" to listOf(
-                "Died. Came back. Angrier.",
-                "Not done yet.",
-                "Death was boring. Returned."
+                "死了。回来了。更气。",
+                "还没完。",
+                "死太无聊。回来了。"
             ),
             "pilot_frost" to listOf(
-                "Resurrection complete. Bracing.",
-                "Back from the cold. Colder now.",
-                "Clinical death: brief. Resumed."
+                "复活完成。正在支撑。",
+                "从冷里回来。更冷了。",
+                "临床死亡：短暂。已恢复。"
             ),
             "pilot_dash" to listOf(
-                "I'M BACK! Too fast for the reaper!",
-                "Second chance! Let's not waste it!",
-                "Death couldn't slow me down!"
+                "我回来了！死神追不上！",
+                "第二条命！别浪费！",
+                "死神也拖不住我！"
             ),
             "pilot_ember" to listOf(
-                "RISEN FROM THE ASHES! Born to!",
-                "Can't kill a phoenix! I am fire!",
-                "Cinder to inferno - I LIVE AGAIN!"
+                "从灰烬里爬起来！天生如此！",
+                "凤凰杀不死！我就是火！",
+                "残烬成烈焰——我又活了！"
             ),
             "pilot_fang" to listOf(
-                "I tasted death. It tasted like me.",
-                "Back from the dark. It wasn't ready.",
-                "Even the void spits me out."
+                "我尝过死。死像我。",
+                "从黑里回来。它没准备好。",
+                "连虚空都吐我出来。"
             ),
             "pilot_whiskers" to listOf(
-                "Obviously. Not done being annoyed.",
-                "Death? Please. Lives to spare.",
-                "Undignified. We never speak of it."
+                "当然。还没烦够。",
+                "死？省省。命还多着。",
+                "太不体面。此事不提。"
             ),
             "pilot_kraken" to listOf(
-                "The abyss returned me. Not yet.",
-                "Back from the deep. Kraken endures.",
-                "Death is just another ocean."
+                "深渊把我退回来了。还不到时候。",
+                "自深渊归。海妖不倒。",
+                "死不过是另一片海。"
             ),
             "pilot_havoc" to listOf(
-                "DIED AND CAME BACK! BEST DAY!",
-                "ROUND TWO! HAHAHAHA!",
-                "DEATH CAN'T HOLD ME! NOTHING CAN!"
+                "死了又回来！今天最爽！",
+                "第二回合！哈哈哈哈！",
+                "死神留不住我！谁都留不住！"
             ),
             "pilot_unit7" to listOf(
-                "Reboot complete. Systems nominal.",
-                "ERROR: Death log. Status: override.",
-                "Termination experienced. Resuming."
+                "重启完成。系统正常。",
+                "错误：死亡日志。状态：覆写。",
+                "已体验终止。继续运行。"
             ),
             "pilot_astro" to listOf(
-                "We're back! TB-26, diagnostics!",
-                "Phoenix core saved us. Still in it.",
-                "Back from the edge. Stay sharp."
+                "回来了！TB-26，自检！",
+                "凤凰核心救了我们。还没完。",
+                "从边上回来了。都警醒点。"
             )
         ),
 
         "boss_spawn" to mapOf(
             "pilot_medic" to listOf(
-                "Massive hostile! Prep for trauma!",
-                "That thing's huge! Need supplies!",
-                "Boss on scanners! My heart!"
+                "巨型敌舰！准备接伤患！",
+                "那玩意儿真大！要补货！",
+                "扫描到 Boss！我的心！"
             ),
             "pilot_rascal" to listOf(
-                "Big shiny target! Good loot bet!",
-                "Boss incoming! Biggest score yet!",
-                "That's a BIG one! More to steal!"
+                "又大又亮！肯定有油水！",
+                "Boss 来了！最大一票！",
+                "这家伙够大！能偷的更多！"
             ),
             "pilot_brutus" to listOf(
-                "Big one. Good.",
-                "Boss. Finally, a challenge.",
-                "Mine."
+                "大的。好。",
+                "Boss。终于有点挑战。",
+                "我的。"
             ),
             "pilot_frost" to listOf(
-                "Large hostile. Calculating weak pts.",
-                "Boss-class. Precision required.",
-                "Thermal signature: enormous."
+                "大型敌舰。正在算弱点。",
+                "Boss 级。要求精准。",
+                "热信号：极大。"
             ),
             "pilot_dash" to listOf(
-                "BOSS! It's huge! Can I outrun it?!",
-                "Big target! Gotta be quick!",
-                "That thing is MASSIVE! Let's GO!"
+                "Boss！太大了！跑得过吗？！",
+                "大目标！得快！",
+                "这玩意儿太大！上啊！"
             ),
             "pilot_ember" to listOf(
-                "A worthy pyre! Let it BURN!",
-                "Bigger they are, brighter they burn!",
-                "Finally! A flame worthy of legend!"
+                "配得上的柴堆！烧起来！",
+                "越大，烧得越亮！",
+                "终于！够得上传说的火！"
             ),
             "pilot_fang" to listOf(
-                "Something vast stirs in the dark.",
-                "A great shadow. I welcome it.",
-                "I can hear its heartbeat. So loud."
+                "黑暗里有庞然大物在动。",
+                "巨大的影子。我欢迎。",
+                "听得见它心跳。好响。"
             ),
             "pilot_whiskers" to listOf(
-                "A giant ugly thing. My favorite.",
-                "A boss? Tedious. Get it over with.",
-                "Grotesque. Destroy it quickly."
+                "又大又丑。我最爱。",
+                "Boss？无聊。快点收场。",
+                "丑陋。速毁。"
             ),
             "pilot_kraken" to listOf(
-                "A fellow leviathan. Respect.",
-                "Something massive surfaces. Stirs.",
-                "A titan. Let our tentacles clash."
+                "同为巨兽。敬它。",
+                "庞然大物浮上来了。动了。",
+                "泰坦。让触手碰一碰。"
             ),
             "pilot_havoc" to listOf(
-                "BOSS FIGHT!! YES YES YES!",
-                "BIG TARGET! MAXIMUM FIREPOWER!",
-                "FINALLY SOMETHING WORTH SHOOTING!"
+                "Boss 战！！好耶好耶好耶！",
+                "大目标！火力拉满！",
+                "终于有值得开火的了！"
             ),
             "pilot_unit7" to listOf(
-                "Boss-class. Threat: extreme.",
-                "Large hostile. Combat protocols on.",
-                "Calculating strategy for target."
+                "Boss 级。威胁：极高。",
+                "大型敌舰。战斗协议启动。",
+                "正在计算对敌策略。"
             ),
             "pilot_astro" to listOf(
-                "Boss incoming. TB-26, weapons hot.",
-                "Big one on scope. Stay focused.",
-                "Boss class contact. Take it apart."
+                "Boss 接近。TB-26，武器待发。",
+                "镜里有大的。稳住。",
+                "Boss 级接触。拆了它。"
             )
         ),
 
         "evolution" to mapOf(
             "pilot_medic" to listOf(
-                "Evolved! THAT'S good medicine!",
-                "Evolved! Prognosis: terminal!",
-                "Full evolution! Prescribing this!"
+                "进化了！这才是好药！",
+                "进化了！预后：必死！",
+                "完全进化！这方子我开！"
             ),
             "pilot_rascal" to listOf(
-                "Ooh, shiny new upgrade! Jackpot!",
-                "Evolved! Worth a fortune now!",
-                "Look at that! Best heist haul ever!"
+                "哟，亮闪闪的新升级！中头彩！",
+                "进化了！现在值大钱！",
+                "瞧这玩意儿！抢劫史上最肥！"
             ),
             "pilot_brutus" to listOf(
-                "Stronger now. Good.",
-                "Evolved. They're done.",
-                "More power. Less talking."
+                "更强了。好。",
+                "进化。他们完了。",
+                "多点力。少废话。"
             ),
             "pilot_frost" to listOf(
-                "Evolution. Efficiency: dramatic.",
-                "Weapon output now optimal. Elegant.",
-                "Evolved. The math is beautiful."
+                "进化。效率：显著。",
+                "武器输出已达最优。优雅。",
+                "进化了。这算式真美。"
             ),
             "pilot_dash" to listOf(
-                "EVOLVED! We're unstoppable now!",
-                "SO COOL! Let's use it!",
-                "Evolution! Faster! Stronger! MORE!"
+                "进化了！我们挡不住了！",
+                "太帅了！试试！",
+                "进化！更快！更强！更多！"
             ),
             "pilot_ember" to listOf(
-                "EVOLUTION! The flame ascends!",
-                "Reborn in fire! A BLAZE of power!",
-                "The crucible forges greatness!"
+                "进化！火焰升腾！",
+                "火中重生！一身烈焰！",
+                "熔炉才炼得出伟大！"
             ),
             "pilot_fang" to listOf(
-                "Evolved. I feel its hunger sharpen.",
-                "Darker. Deadlier. Perfect.",
-                "Its whisper is now a scream."
+                "进化。它的饿更利了。",
+                "更暗。更致命。完美。",
+                "它的低语变成尖叫了。"
             ),
             "pilot_whiskers" to listOf(
-                "Finally, worthy of my talent.",
-                "Evolved. About time.",
-                "Acceptable. This will do nicely."
+                "终于配得上我的天赋。",
+                "进化。早该如此。",
+                "可以接受。堪用了。"
             ),
             "pilot_kraken" to listOf(
-                "Deep power flows through it.",
-                "A kraken sheds its skin. Evolved.",
-                "From the depths, true power rises."
+                "深渊之力流过去了。",
+                "海妖蜕皮。进化了。",
+                "自深处，真正的力量升起。"
             ),
             "pilot_havoc" to listOf(
-                "EVOLVED! THIS THING IS INSANE!",
-                "MAXIMUM POWER! HAHAHAHA!",
-                "EVOLUTION! NOTHING SURVIVES THIS!"
+                "进化了！这玩意儿疯了！",
+                "最大功率！哈哈哈哈！",
+                "进化！没人扛得住这个！"
             ),
             "pilot_unit7" to listOf(
-                "Evolution complete. Output +347%.",
-                "EVOLUTION. We are now the threat.",
-                "Output is now... impressive."
+                "进化完成。输出 +347%。",
+                "进化。现在我们是威胁。",
+                "输出现在……很可观。"
             ),
             "pilot_astro" to listOf(
-                "Evolved! TB-26, see these numbers?",
-                "Full evolution. Now we're cooking.",
-                "Evolved and locked in. Finish this."
+                "进化了！TB-26，看见这数据？",
+                "完全进化。这才够劲。",
+                "进化锁定。收尾。"
             )
         ),
 
@@ -344,307 +344,307 @@ object RadioDefinitions {
 
         "first_weapon" to mapOf(
             "pilot_medic" to listOf(
-                "New weapon! Good medicine!",
-                "Nice pickup! More options for us."
+                "新武器！好药！",
+                "捡得好！选择更多了。"
             ),
             "pilot_rascal" to listOf(
-                "First grab! Finders keepers!",
-                "Snagged one! Heist is off right."
+                "先到先得！谁捡归谁！",
+                "到手一把！开局不错。"
             ),
             "pilot_brutus" to listOf(
-                "Got a weapon. Let's go.",
-                "More guns. Good."
+                "拿到武器了。走。",
+                "枪多了。好。"
             ),
             "pilot_frost" to listOf(
-                "First weapon online. Damage curves?",
-                "Interesting. Running the numbers."
+                "首件武器上线。伤害曲线？",
+                "有意思。先算算。"
             ),
             "pilot_dash" to listOf(
-                "New weapon! Double the dakka!",
-                "Armed up! How fast does it fire?!"
+                "新武器！火力翻倍！",
+                "有枪了！射速多快？！"
             ),
             "pilot_ember" to listOf(
-                "First spark! Set the sky ablaze!",
-                "A weapon! The flame begins small."
+                "第一点火星！烧了天！",
+                "有武器了！火都是小起来的。"
             ),
             "pilot_fang" to listOf(
-                "First weapon. The night hunt begins.",
-                "Armed now. The darkness has teeth."
+                "第一把武器。夜猎开始。",
+                "有牙了。黑暗长牙了。"
             ),
             "pilot_whiskers" to listOf(
-                "A weapon. Finally. I was bored.",
-                "Acceptable. This one has potential."
+                "武器。终于。我都无聊了。",
+                "可以。这把有点潜力。"
             ),
             "pilot_kraken" to listOf(
-                "Like a tentacle finding its grip.",
-                "Armed. The deep provides."
+                "像触手找到了着力点。",
+                "有武器了。深渊所赐。"
             ),
             "pilot_havoc" to listOf(
-                "FIRST WEAPON! TIME TO PARTY!",
-                "ARMED AND DANGEROUS! LET'S GO!"
+                "第一把武器！开派对！",
+                "有枪很危险！冲！"
             ),
             "pilot_unit7" to listOf(
-                "Weapon integrated. Efficiency up.",
-                "Secondary weapon. Arsenal growing."
+                "武器已整合。效率提升。",
+                "副武器。军火在涨。"
             ),
             "pilot_astro" to listOf(
-                "First weapon's in. TB-26, warm up.",
-                "Locked and loaded. Here we go."
+                "第一把武器装好。TB-26，热机。",
+                "装弹上膛。开始了。"
             )
         ),
 
         "weapon_maxed" to mapOf(
             "pilot_medic" to listOf(
-                "Maxed! Full dose of destruction!",
-                "Level five! Healthy weapon!"
+                "满级！一整剂毁灭！",
+                "五级！这武器很健康！"
             ),
             "pilot_rascal" to listOf(
-                "Maxed! Worth top dollar!",
-                "Fully upgraded! Shiniest ever!"
+                "满级！值大价钱！",
+                "升满了！从来没这么亮！"
             ),
             "pilot_brutus" to listOf(
-                "Maxed. Good enough.",
-                "Full power. Smash."
+                "满级。够了。",
+                "全力。砸。"
             ),
             "pilot_frost" to listOf(
-                "Maximum efficiency. Satisfying.",
-                "Peak performance. Numbers: pristine."
+                "效率最大化。舒服。",
+                "巅峰性能。数据：漂亮。"
             ),
             "pilot_dash" to listOf(
-                "MAXED! It's so fast now!",
-                "Level five! Can it go higher?!"
+                "满级！现在太快了！",
+                "五级！还能再高吗？！"
             ),
             "pilot_ember" to listOf(
-                "Maximum power! A SUPERNOVA!",
-                "Maxed out! The forge burns eternal!"
+                "最大功率！超新星！",
+                "满级！熔炉永燃！"
             ),
             "pilot_fang" to listOf(
-                "Maximum level. A perfect predator.",
-                "Fully honed. Fangs in the dark."
+                "满级。完美的猎手。",
+                "磨利了。暗中全是牙。"
             ),
             "pilot_whiskers" to listOf(
-                "Maxed. I suppose that's adequate.",
-                "Level five. Took long enough."
+                "满级。勉强算够。",
+                "五级。可真够久的。"
             ),
             "pilot_kraken" to listOf(
-                "Fully grown. Tentacle at full reach.",
-                "Maximum depth achieved. Magnificent."
+                "长满了。触手伸到最远。",
+                "已抵最深。壮丽。"
             ),
             "pilot_havoc" to listOf(
-                "MAXED OUT! UNLIMITED POWER!",
-                "FULL LEVEL! MORE DAKKA!"
+                "满级！无限力量！",
+                "满级！再多点火力！"
             ),
             "pilot_unit7" to listOf(
-                "Upgrade ceiling. No further gains.",
-                "Level 5. Performance: optimal."
+                "升级上限。无更多收益。",
+                "5 级。性能：最优。"
             ),
             "pilot_astro" to listOf(
-                "Maxed - that's our big gun now.",
-                "Level five. TB-26, flag it primary."
+                "满级——这就是我们的重炮。",
+                "五级。TB-26，标为主武器。"
             )
         ),
 
         "passive_maxed" to mapOf(
             "pilot_medic" to listOf(
-                "Passive maxed! Best treatment plan!",
-                "Full stacks! Preventive care!"
+                "被动满级！最佳疗程！",
+                "叠满！预防保健！"
             ),
             "pilot_rascal" to listOf(
-                "Passive maxed! Pockets stuffed!",
-                "All stacks! Cleared the vault!"
+                "被动满级！口袋塞满了！",
+                "叠满！金库搬空了！"
             ),
             "pilot_brutus" to listOf(
-                "Maxed. Stronger.",
-                "Full stacks. Good."
+                "满级。更强。",
+                "叠满。好。"
             ),
             "pilot_frost" to listOf(
-                "Fully stacked. Optimal config.",
-                "Max stacks. Efficiency plateaus."
+                "全叠满。最优配置。",
+                "满层。效率见顶。"
             ),
             "pilot_dash" to listOf(
-                "Passive maxed! Cranked up!",
-                "Full stacks! I FEEL the boost!"
+                "被动满级！拉满了！",
+                "叠满！我感觉到了！"
             ),
             "pilot_ember" to listOf(
-                "Maxed! Inner flame burns brightest!",
-                "Full stacks - a fire fully kindled!"
+                "满级！内火烧得最亮！",
+                "叠满——火全点起来了！"
             ),
             "pilot_fang" to listOf(
-                "Quiet power, fully awakened.",
-                "All stacks. Shadows deepen."
+                "静默之力，全醒了。",
+                "全叠满。影子更深了。"
             ),
             "pilot_whiskers" to listOf(
-                "Maxed. Could've happened sooner.",
-                "Full stacks. I deserve this much."
+                "满级。早该如此。",
+                "叠满。我配得上这么多。"
             ),
             "pilot_kraken" to listOf(
-                "Fully saturated. Deep current flows.",
-                "Max stacks. Pressure of the deep."
+                "饱满了。深流在走。",
+                "满层。深渊的压强。"
             ),
             "pilot_havoc" to listOf(
-                "PASSIVE MAXED! STACKED UP!",
-                "FULL STACKS! FEELS INCREDIBLE!"
+                "被动满级！叠起来了！",
+                "叠满！感觉太爽！"
             ),
             "pilot_unit7" to listOf(
-                "Passive at max. No further upgrades.",
-                "All slots filled. Efficiency: peak."
+                "被动已满。无法再升。",
+                "槽位全满。效率：峰值。"
             ),
             "pilot_astro" to listOf(
-                "Passive maxed. Every bit helps.",
-                "Full stacks on that one. Solid."
+                "被动满级。多一分是一分。",
+                "那个叠满了。扎实。"
             )
         ),
 
         "first_enemy" to mapOf(
             "pilot_medic" to listOf(
-                "Enemy ships! Here come patients.",
-                "Enemies! Don't get hurt - two hands!"
+                "敌舰！病号来了。",
+                "敌人！别受伤——我就两只手！"
             ),
             "pilot_rascal" to listOf(
-                "Company! Bet they've got stuff!",
-                "Enemies! Time to pick pockets!"
+                "来客了！身上肯定有货！",
+                "敌人！该摸口袋了！"
             ),
             "pilot_brutus" to listOf(
-                "Enemies. Finally.",
-                "Targets. Good."
+                "敌人。终于。",
+                "目标。好。"
             ),
             "pilot_frost" to listOf(
-                "Enemies detected. Cold protocol.",
-                "Enemy contact. Calculating."
+                "检测到敌舰。冷处理协议。",
+                "敌情接触。计算中。"
             ),
             "pilot_dash" to listOf(
-                "ENEMIES! Here they come! I'm READY!",
-                "Enemy ships! Let's race 'em!"
+                "敌人！来了！我准备好了！",
+                "敌舰！跟他们赛一场！"
             ),
             "pilot_ember" to listOf(
-                "Enemies! Fresh kindling!",
-                "Ships inbound - the pyre awaits!"
+                "敌人！新鲜柴火！",
+                "敌舰进入——柴堆备好了！"
             ),
             "pilot_fang" to listOf(
-                "Prey. I hear their engines tremble.",
-                "Ships in the dark. Unaware of me."
+                "猎物。我听见引擎在抖。",
+                "黑里的船。还不知道我在。"
             ),
             "pilot_whiskers" to listOf(
-                "Oh, enemies. How original.",
-                "Enemies. Can't even fly in peace."
+                "哦，敌人。真有新意。",
+                "敌人。连飞都不得安生。"
             ),
             "pilot_kraken" to listOf(
-                "Ships on surface. Drag them down.",
-                "Like fish above my domain."
+                "水面上的船。拖下来。",
+                "像游在我地盘上的鱼。"
             ),
             "pilot_havoc" to listOf(
-                "ENEMIES! FINALLY SOMEONE TO SHOOT!",
-                "HERE THEY COME! OPEN FIRE!"
+                "敌人！终于有东西可打了！",
+                "他们来了！开火！"
             ),
             "pilot_unit7" to listOf(
-                "Hostiles detected. Weapons: free.",
-                "Enemy contact. Combat routines on."
+                "检测到敌意目标。武器：解锁。",
+                "敌情接触。战斗例程启动。"
             ),
             "pilot_astro" to listOf(
-                "First wave. TB-26, heads up.",
-                "Enemies on scope. Handle this."
+                "第一波。TB-26，注意。",
+                "镜里有敌。处理掉。"
             )
         ),
 
         "density_spike" to mapOf(
             "pilot_medic" to listOf(
-                "Too many! Can't treat them all!",
-                "Swarm! This is a triage nightmare!"
+                "太多了！救不过来！",
+                "铺天盖地！分诊要疯了！"
             ),
             "pilot_rascal" to listOf(
-                "They're everywhere! Getting spicy!",
-                "Swarming! Hard to pickpocket!"
+                "到处都是！有点刺激！",
+                "全是人！没法摸包！"
             ),
             "pilot_brutus" to listOf(
-                "More targets. More punching.",
-                "Swarm. Bring it."
+                "目标多。拳头多。",
+                "蜂群。来吧。"
             ),
             "pilot_frost" to listOf(
-                "Density spiking. Math: unpleasant.",
-                "Enemy count up. Odds: unfavorable."
+                "密度飙升。数据难看。",
+                "敌数增加。胜率：不利。"
             ),
             "pilot_dash" to listOf(
-                "SO MANY! Gotta weave through!",
-                "Everywhere! Dodging at max speed!"
+                "太多了！得穿过去！",
+                "到处都是！全速闪避！"
             ),
             "pilot_ember" to listOf(
-                "A swarm! More fuel for the inferno!",
-                "They crowd the sky - burn them ALL!"
+                "一群！正好给炼狱添柴！",
+                "挤满天空——全烧了！"
             ),
             "pilot_fang" to listOf(
-                "The swarm thickens. A feast.",
-                "So many heartbeats. So many targets."
+                "蜂群变稠。盛宴。",
+                "这么多心跳。这么多猎物。"
             ),
             "pilot_whiskers" to listOf(
-                "Absurd. No personal space here.",
-                "Swarming me?! No manners?!"
+                "荒唐。一点距离感都没有。",
+                "围我？！懂不懂礼貌？！"
             ),
             "pilot_kraken" to listOf(
-                "They school together. Easy prey.",
-                "A swarm. The kraken feeds."
+                "成群结队。好抓。",
+                "一群。海妖开饭。"
             ),
             "pilot_havoc" to listOf(
-                "SO MANY TARGETS! THIS IS PARADISE!",
-                "THEY'RE EVERYWHERE! I LOVE IT!"
+                "目标这么多！天堂啊！",
+                "到处都是！爽死了！"
             ),
             "pilot_unit7" to listOf(
-                "Density exceeds parameters.",
-                "ALERT: Target-rich environment."
+                "密度超出参数。",
+                "警报：目标密集区。"
             ),
             "pilot_astro" to listOf(
-                "Getting thick. TB-26, stay close.",
-                "Enemy count ramping up - stay sharp."
+                "变密了。TB-26，跟紧。",
+                "敌数攀升——保持警觉。"
             )
         ),
 
         "yen_milestone" to mapOf(
             "pilot_medic" to listOf(
-                "A fortune! Enough for a hospital!",
-                "Massive haul! Insurance can't match!"
+                "发财了！够开家医院！",
+                "这么多！保险都赔不起！"
             ),
             "pilot_rascal" to listOf(
-                "ALL THAT YEN! Biggest score ever!",
-                "We're RICH! I'm just holding it."
+                "全是円币！史上最大票！",
+                "发了！我先替他拿着。"
             ),
             "pilot_brutus" to listOf(
-                "Lots of yen. Buy more ammo.",
-                "Rich. Don't care. Keep fighting."
+                "円币多。多买弹药。",
+                "有钱。不管。继续打。"
             ),
             "pilot_frost" to listOf(
-                "Impressive yen. Cold, hard fortune.",
-                "Profit margins: exceptional."
+                "円币可观。冷硬的运气。",
+                "利润率：优异。"
             ),
             "pilot_dash" to listOf(
-                "SO MUCH YEN! Ka-ching ka-ching!",
-                "We're making bank at top speed!"
+                "这么多円币！叮当叮当！",
+                "全速发财！"
             ),
             "pilot_ember" to listOf(
-                "Golden fortune forged in fire!",
-                "Yen overflowing! Wealth like smoke!"
+                "烈火铸金！",
+                "円币溢出！财富如烟！"
             ),
             "pilot_fang" to listOf(
-                "The dark respects fortune.",
-                "Wealth whispers in the void."
+                "黑暗敬重财富。",
+                "财富在虚空低语。"
             ),
             "pilot_whiskers" to listOf(
-                "Acceptable earnings. I might stay.",
-                "Finally, worthy compensation."
+                "收入还行。也许留下。",
+                "总算。配得上我的价钱。"
             ),
             "pilot_kraken" to listOf(
-                "Treasure from the deep. Hoarded.",
-                "A sea of yen. Sunken gold."
+                "深渊之宝。归我。",
+                "円币成海。沉金。"
             ),
             "pilot_havoc" to listOf(
-                "WE'RE LOADED! SPEND IT ALL ON GUNS!",
-                "LOOK AT THAT YEN! KABOOM MONEY!"
+                "发财了！全买枪！",
+                "看这円币！炸钱！"
             ),
             "pilot_unit7" to listOf(
-                "Yen exceeds projections. Noted.",
-                "Yen milestone. Efficiency: notable."
+                "円币超预期。记录。",
+                "円币达标。效率：显著。"
             ),
             "pilot_astro" to listOf(
-                "Serious haul. Drinks on me later.",
-                "TB-26, log that - best payday yet."
+                "收获不小。回头我请酒。",
+                "TB-26，记下来——最肥的一票。"
             )
         ),
 
@@ -653,18 +653,18 @@ object RadioDefinitions {
         // =====================================================================
 
         "combat_start" to mapOf(
-            "pilot_medic" to listOf("Let's keep everyone alive out there."),
-            "pilot_rascal" to listOf("Time to grab some loot! Let's go!"),
-            "pilot_brutus" to listOf("Finally."),
-            "pilot_frost" to listOf("Engines cold. Weapons hot. Go."),
-            "pilot_dash" to listOf("GO GO GO GO GO!"),
-            "pilot_ember" to listOf("Light the engines. Light everything."),
-            "pilot_fang" to listOf("Into the dark. Where I belong."),
-            "pilot_whiskers" to listOf("Fine. Let's get this over with."),
-            "pilot_kraken" to listOf("The deep calls. We answer."),
-            "pilot_havoc" to listOf("FULL POWER! NO REGRETS!"),
-            "pilot_unit7" to listOf("Combat systems online. Launching."),
-            "pilot_astro" to listOf("Ready when you are, TB-26.")
+            "pilot_medic" to listOf("都活着回来。"),
+            "pilot_rascal" to listOf("去捞一票！走！"),
+            "pilot_brutus" to listOf("终于。"),
+            "pilot_frost" to listOf("引擎冷。武器热。走。"),
+            "pilot_dash" to listOf("走走走走走！"),
+            "pilot_ember" to listOf("点火。全点了。"),
+            "pilot_fang" to listOf("进黑暗。我该在的地方。"),
+            "pilot_whiskers" to listOf("行吧。快点打完。"),
+            "pilot_kraken" to listOf("深渊在唤。我们应。"),
+            "pilot_havoc" to listOf("全功率！不后悔！"),
+            "pilot_unit7" to listOf("战斗系统上线。发射。"),
+            "pilot_astro" to listOf("随时可以，TB-26。")
         ),
 
         // =====================================================================
@@ -673,64 +673,64 @@ object RadioDefinitions {
 
         "near_miss" to mapOf(
             "pilot_medic" to listOf(
-                "Too close! My heart can't take this!",
-                "Almost clipped us! Need a breather.",
-                "Whew! Barely avoided a house call!"
+                "太近了！心脏受不了！",
+                "差点撞上！让我缓一下。",
+                "呼！差点得给自己出诊！"
             ),
             "pilot_rascal" to listOf(
-                "Ha! Missed me! Too slippery!",
-                "Whoa! Almost nicked my tail!",
-                "Nice try! Can't catch this raccoon!"
+                "哈！没打中！我太滑了！",
+                "哟！差点削到我尾巴！",
+                "想得美！逮不着这浣熊！"
             ),
             "pilot_brutus" to listOf(
-                "Missed.",
-                "Close. Not close enough.",
-                "Tch. Sloppy shot."
+                "没中。",
+                "近。还不够近。",
+                "啧。打歪了。"
             ),
             "pilot_frost" to listOf(
-                "Margin: negligible. Noted.",
-                "That was within two meters. Tight.",
-                "Close call. Statistically expected."
+                "偏差：可忽略。记录。",
+                "距两米内。够紧。",
+                "险。统计上正常。"
             ),
             "pilot_dash" to listOf(
-                "WHOA! Too close! Faster, FASTER!",
-                "Almost got us! Need more speed!",
-                "That grazed us! My reflexes rule!"
+                "哇！太近！再快，再快！",
+                "差点中！还得更快！",
+                "擦到了！我反应一流！"
             ),
             "pilot_ember" to listOf(
-                "Try harder than that!",
-                "Close! That one singed us!",
-                "Barely dodged - flame won't flinch!"
+                "就这点火力？",
+                "险！那发燎到我们了！",
+                "险险闪过——火不退！"
             ),
             "pilot_fang" to listOf(
-                "I felt that one whisper past.",
-                "Close. Death brushed my wing.",
-                "Almost. But I'm the predator here."
+                "那发贴着我耳边过。",
+                "近。死亡擦过我的翼。",
+                "差点。但猎手是我。"
             ),
             "pilot_whiskers" to listOf(
-                "Excuse me?! Watch where you shoot!",
-                "How dare they. Far too close.",
-                "Hmph. My reflexes are impeccable."
+                "有没有搞错？！看着打！",
+                "放肆。太近了。",
+                "哼。本喵反应无懈可击。"
             ),
             "pilot_kraken" to listOf(
-                "It passed like a current. Close.",
-                "The deep flinched. A rare thing.",
-                "That one grazed the tentacles."
+                "像洋流一样掠过。近。",
+                "深渊退了半步。罕见。",
+                "那发擦到触须。"
             ),
             "pilot_havoc" to listOf(
-                "WHOA! THAT WAS AWESOME!",
-                "ALMOST GOT ME! DO IT AGAIN!",
-                "HAHA! CLOSE ONE! I LOVE THIS!"
+                "哇！太爽了！",
+                "差点打中我！再来！",
+                "哈哈！好险！我爱死这了！"
             ),
             "pilot_unit7" to listOf(
-                "Near miss. Margin: 1.3 meters.",
-                "Evasion successful. Recalculating.",
-                "Projectile passed within tolerance."
+                "近失。偏差：1.3 米。",
+                "规避成功。重新计算。",
+                "弹体通过，在容差内。"
             ),
             "pilot_astro" to listOf(
-                "Close one. Stay sharp, TB-26.",
-                "That nearly clipped us. Eyes open.",
-                "Tight dodge. Keep it together."
+                "惊险。保持警觉，TB-26。",
+                "差点被切。睁大眼。",
+                "躲得紧。稳住。"
             )
         ),
 
@@ -740,64 +740,64 @@ object RadioDefinitions {
 
         "kill_streak" to mapOf(
             "pilot_medic" to listOf(
-                "Hostiles down! No one to treat!",
-                "Streak! Triage just got easier!",
-                "Three down! No patients lost!"
+                "敌机坠落！没人需要救！",
+                "连杀！分诊轻松多了！",
+                "三架！没丢一个伤员！"
             ),
             "pilot_rascal" to listOf(
-                "Combo! Look at all that loot!",
-                "Triple kill! This is a gold mine!",
-                "On a roll! Best heist ever!"
+                "连击！看这堆货！",
+                "三连！这是金矿！",
+                "手气正旺！最爽一票！"
             ),
             "pilot_brutus" to listOf(
-                "More. Keep 'em coming.",
-                "Streak. Good.",
-                "Three down. Not enough."
+                "再来。别停。",
+                "连杀。好。",
+                "三架。不够。"
             ),
             "pilot_frost" to listOf(
-                "Kill efficiency spiking. Impressive.",
-                "Multiple kills. Data looks good.",
-                "Streak confirmed. Cold and precise."
+                "击杀效率飙升。可观。",
+                "多杀。数据漂亮。",
+                "连杀确认。冷静精准。"
             ),
             "pilot_dash" to listOf(
-                "BOOM BOOM BOOM! Can't stop us!",
-                "Kill streak! On FIRE! Speed kills!",
-                "Three down! Who's next?!"
+                "轰！轰！轰！停不下来！",
+                "连杀！燃了！快就是杀！",
+                "三架！下一个谁？！"
             ),
             "pilot_ember" to listOf(
-                "A chain of fire! One by one!",
-                "Kill streak! The blaze spreads!",
-                "One after another - inferno!"
+                "火链！一架接一架！",
+                "连杀！火势蔓延！",
+                "一架接一架——炼狱！"
             ),
             "pilot_fang" to listOf(
-                "The hunt is bountiful tonight.",
-                "Three prey, three kills. Efficient.",
-                "A streak of shadow. Unseen."
+                "今夜猎获丰厚。",
+                "三猎物，三杀。干净。",
+                "一道影。无人见。"
             ),
             "pilot_whiskers" to listOf(
-                "Naturally. I make this look easy.",
-                "Streak. As expected of my caliber.",
-                "Three down. Yawn. Next?"
+                "当然。我打得像散步。",
+                "连杀。本喵的水准。",
+                "三架。困。下一个？"
             ),
             "pilot_kraken" to listOf(
-                "They fall like ships into the deep.",
-                "A feast of wreckage. Kraken feeds.",
-                "Three dragged down. More follow."
+                "如船沉入深渊。",
+                "残骸成宴。海妖进食。",
+                "拖下三架。还有更多。"
             ),
             "pilot_havoc" to listOf(
-                "KILL STREAK! HAHAHA YES!",
-                "THREE DOWN! KEEP IT GOING!",
-                "STREAK! EXPLOSIONS EVERYWHERE!"
+                "连杀！哈哈哈爽！",
+                "三架！继续！",
+                "连杀！到处爆炸！"
             ),
             "pilot_unit7" to listOf(
-                "Multi-kill. Efficiency: optimal.",
-                "Streak active. Combat rating: up.",
-                "Sequential eliminations confirmed."
+                "多杀。效率：最优。",
+                "连杀生效。战力：上升。",
+                "连续清除已确认。"
             ),
             "pilot_astro" to listOf(
-                "Three down fast. We're in the zone.",
-                "Streak - TB-26, keep the pressure.",
-                "On a roll. Don't let up now."
+                "三架速清。状态正好。",
+                "连杀——TB-26，压住。",
+                "顺了。别松。"
             )
         ),
 
@@ -806,63 +806,63 @@ object RadioDefinitions {
         // =====================================================================
 
         "time_2min" to mapOf(
-            "pilot_medic" to listOf("Two minutes in. Vitals look stable."),
-            "pilot_rascal" to listOf("Two minutes! Just warming up."),
-            "pilot_brutus" to listOf("Two minutes. Waiting for a fight."),
-            "pilot_frost" to listOf("Two minutes. Baseline established."),
-            "pilot_dash" to listOf("Two minutes! Just getting started!"),
-            "pilot_ember" to listOf("Two minutes. Flame's just catching."),
-            "pilot_fang" to listOf("Two minutes. Hunt's barely begun."),
-            "pilot_whiskers" to listOf("Two minutes. Tolerable, I suppose."),
-            "pilot_kraken" to listOf("Two minutes. Still in the shallows."),
-            "pilot_havoc" to listOf("TWO MINUTES! JUST WARMING UP!"),
-            "pilot_unit7" to listOf("2:00. All systems nominal."),
-            "pilot_astro" to listOf("Two minutes. Settling in nicely.")
+            "pilot_medic" to listOf("两分钟。体征平稳。"),
+            "pilot_rascal" to listOf("两分钟！才热身！"),
+            "pilot_brutus" to listOf("两分钟。还没开打。"),
+            "pilot_frost" to listOf("两分钟。基线已立。"),
+            "pilot_dash" to listOf("两分钟！才刚开始！"),
+            "pilot_ember" to listOf("两分钟。火才刚起。"),
+            "pilot_fang" to listOf("两分钟。猎还没热。"),
+            "pilot_whiskers" to listOf("两分钟。还算能忍。"),
+            "pilot_kraken" to listOf("两分钟。仍在浅水。"),
+            "pilot_havoc" to listOf("两分钟！才刚热身！"),
+            "pilot_unit7" to listOf("2:00。系统全正常。"),
+            "pilot_astro" to listOf("两分钟。进入状态了。")
         ),
 
         "time_4min" to mapOf(
-            "pilot_medic" to listOf("Four minutes! No casualties yet!"),
-            "pilot_rascal" to listOf("Four minutes! Loot's piling up!"),
-            "pilot_brutus" to listOf("Four minutes. Getting good now."),
-            "pilot_frost" to listOf("Four minutes. Survival curve: good."),
-            "pilot_dash" to listOf("Four minutes and still flying fast!"),
-            "pilot_ember" to listOf("Four minutes - fire burns steady."),
-            "pilot_fang" to listOf("Four minutes in the dark. Good."),
-            "pilot_whiskers" to listOf("Four minutes. Better than most."),
-            "pilot_kraken" to listOf("Four minutes. The current carries."),
-            "pilot_havoc" to listOf("FOUR MINUTES OF PURE CHAOS! MORE!"),
-            "pilot_unit7" to listOf("4:00. Performance within parameters."),
-            "pilot_astro" to listOf("Four minutes. Solid run, TB-26.")
+            "pilot_medic" to listOf("四分钟！零伤亡！"),
+            "pilot_rascal" to listOf("四分钟！货堆起来了！"),
+            "pilot_brutus" to listOf("四分钟。开始有意思。"),
+            "pilot_frost" to listOf("四分钟。生存曲线：良好。"),
+            "pilot_dash" to listOf("四分钟，还在飙！"),
+            "pilot_ember" to listOf("四分钟——火还稳。"),
+            "pilot_fang" to listOf("黑暗中四分钟。不错。"),
+            "pilot_whiskers" to listOf("四分钟。比多数人强。"),
+            "pilot_kraken" to listOf("四分钟。洋流托着我们。"),
+            "pilot_havoc" to listOf("四分钟纯混乱！再来！"),
+            "pilot_unit7" to listOf("4:00。表现符合参数。"),
+            "pilot_astro" to listOf("四分钟。稳，TB-26。")
         ),
 
         "time_6min" to mapOf(
-            "pilot_medic" to listOf("Six minutes - getting hairy!"),
-            "pilot_rascal" to listOf("Six minutes! Dicey - I love it!"),
-            "pilot_brutus" to listOf("Six minutes. Now it's a real fight."),
-            "pilot_frost" to listOf("Six minutes. Threat density: rising."),
-            "pilot_dash" to listOf("Six minutes! Getting crazy out here!"),
-            "pilot_ember" to listOf("Six minutes - crucible burns hotter!"),
-            "pilot_fang" to listOf("Six minutes. Darker prey now."),
-            "pilot_whiskers" to listOf("Six minutes. I'm slightly impressed."),
-            "pilot_kraken" to listOf("Six minutes. Pressure of the deep."),
-            "pilot_havoc" to listOf("SIX MINUTES! MAYHEM NEVER STOPS!"),
-            "pilot_unit7" to listOf("6:00. Threat escalation: notable."),
-            "pilot_astro" to listOf("Six minutes. Stay focused, TB-26.")
+            "pilot_medic" to listOf("六分钟——有点悬了！"),
+            "pilot_rascal" to listOf("六分钟！够刺激！我喜欢！"),
+            "pilot_brutus" to listOf("六分钟。这才算打。"),
+            "pilot_frost" to listOf("六分钟。威胁密度：上升。"),
+            "pilot_dash" to listOf("六分钟！外面疯了！"),
+            "pilot_ember" to listOf("六分钟——熔炉更旺了！"),
+            "pilot_fang" to listOf("六分钟。猎物更黑了。"),
+            "pilot_whiskers" to listOf("六分钟。有点佩服了。"),
+            "pilot_kraken" to listOf("六分钟。深渊的压力。"),
+            "pilot_havoc" to listOf("六分钟！混乱不停！"),
+            "pilot_unit7" to listOf("6:00。威胁升级：显著。"),
+            "pilot_astro" to listOf("六分钟。稳住，TB-26。")
         ),
 
         "time_8min" to mapOf(
-            "pilot_medic" to listOf("Eight minutes! We're tough!"),
-            "pilot_rascal" to listOf("Eight minutes! Longest heist ever!"),
-            "pilot_brutus" to listOf("Eight minutes. Respect."),
-            "pilot_frost" to listOf("Eight minutes. Top percentile now."),
-            "pilot_dash" to listOf("EIGHT MINUTES! We're LEGENDS!"),
-            "pilot_ember" to listOf("Eight minutes - forged in fire!"),
-            "pilot_fang" to listOf("Eight minutes. Few survive this."),
-            "pilot_whiskers" to listOf("Eight minutes. I'll admit - not bad."),
-            "pilot_kraken" to listOf("Eight minutes in the abyss. Home."),
-            "pilot_havoc" to listOf("EIGHT MINUTES! UNSTOPPABLE!"),
-            "pilot_unit7" to listOf("8:00. Longevity: exceptional."),
-            "pilot_astro" to listOf("Eight minutes. Veteran run, TB-26.")
+            "pilot_medic" to listOf("八分钟！我们够硬！"),
+            "pilot_rascal" to listOf("八分钟！最长的一票！"),
+            "pilot_brutus" to listOf("八分钟。服。"),
+            "pilot_frost" to listOf("八分钟。已进前列。"),
+            "pilot_dash" to listOf("八分钟！我们是传奇！"),
+            "pilot_ember" to listOf("八分钟——火里锻出来的！"),
+            "pilot_fang" to listOf("八分钟。没几个活到这。"),
+            "pilot_whiskers" to listOf("八分钟。我承认，不赖。"),
+            "pilot_kraken" to listOf("深渊八分钟。到家了。"),
+            "pilot_havoc" to listOf("八分钟！停不下来！"),
+            "pilot_unit7" to listOf("8:00。续航：异常。"),
+            "pilot_astro" to listOf("八分钟。老兵水准，TB-26。")
         ),
 
         // =====================================================================
@@ -870,78 +870,78 @@ object RadioDefinitions {
         // =====================================================================
 
         "time_10min" to mapOf(
-            "pilot_medic"    to listOf("Ten minutes. Still no casualties."),
-            "pilot_rascal"   to listOf("Ten minutes! Am I setting records?"),
-            "pilot_brutus"   to listOf("Ten minutes. We belong here."),
-            "pilot_frost"    to listOf("Ten minutes. Survival curve: strong."),
-            "pilot_dash"     to listOf("TEN MINUTES! Still going! FASTER!"),
-            "pilot_ember"    to listOf("Ten minutes. Fire doesn't tire."),
-            "pilot_fang"     to listOf("Ten minutes. The hunt endures."),
-            "pilot_whiskers" to listOf("Ten minutes. I'll allow it."),
-            "pilot_kraken"   to listOf("Ten minutes. The current holds."),
-            "pilot_havoc"    to listOf("TEN MINUTES! CHAOS FOREVER!"),
-            "pilot_unit7"    to listOf("10:00. Output sustained. Confirmed."),
-            "pilot_astro"    to listOf("Ten minutes. Not slowing down.")
+            "pilot_medic"    to listOf("十分钟。还是零伤亡。"),
+            "pilot_rascal"   to listOf("十分钟！我破纪录了？"),
+            "pilot_brutus"   to listOf("十分钟。我们该在这。"),
+            "pilot_frost"    to listOf("十分钟。生存曲线：强。"),
+            "pilot_dash"     to listOf("十分钟！还在跑！更快！"),
+            "pilot_ember"    to listOf("十分钟。火不会累。"),
+            "pilot_fang"     to listOf("十分钟。猎还在。"),
+            "pilot_whiskers" to listOf("十分钟。准了。"),
+            "pilot_kraken"   to listOf("十分钟。洋流还稳。"),
+            "pilot_havoc"    to listOf("十分钟！混乱万岁！"),
+            "pilot_unit7"    to listOf("10:00。输出持续。确认。"),
+            "pilot_astro"    to listOf("十分钟。没减速。")
         ),
 
         "time_12min" to mapOf(
-            "pilot_medic"    to listOf("Twelve minutes. Outstanding."),
-            "pilot_rascal"   to listOf("Twelve minutes! Getting legendary."),
-            "pilot_brutus"   to listOf("Twelve minutes. Few reach this."),
-            "pilot_frost"    to listOf("Twelve minutes. Statistical outlier."),
-            "pilot_dash"     to listOf("TWELVE MINUTES! History, baby!"),
-            "pilot_ember"    to listOf("Twelve minutes. Flame holds steady."),
-            "pilot_fang"     to listOf("Twelve minutes. Only apex remains."),
-            "pilot_whiskers" to listOf("Twelve minutes. Genuinely impressed."),
-            "pilot_kraken"   to listOf("Twelve minutes. Uncharted current."),
-            "pilot_havoc"    to listOf("TWELVE MINUTES! WE OWN THE SKY!"),
-            "pilot_unit7"    to listOf("12:00. Outside all normal ranges."),
-            "pilot_astro"    to listOf("Twelve minutes. I know this place.")
+            "pilot_medic"    to listOf("十二分钟。出色。"),
+            "pilot_rascal"   to listOf("十二分钟！要成传说了！"),
+            "pilot_brutus"   to listOf("十二分钟。到的人少。"),
+            "pilot_frost"    to listOf("十二分钟。统计异常值。"),
+            "pilot_dash"     to listOf("十二分钟！写进历史！"),
+            "pilot_ember"    to listOf("十二分钟。火稳如初。"),
+            "pilot_fang"     to listOf("十二分钟。只剩巅峰。"),
+            "pilot_whiskers" to listOf("十二分钟。真服了。"),
+            "pilot_kraken"   to listOf("十二分钟。无图的洋流。"),
+            "pilot_havoc"    to listOf("十二分钟！天空归我们！"),
+            "pilot_unit7"    to listOf("12:00。超出全部常规。"),
+            "pilot_astro"    to listOf("十二分钟。这地方我认得。")
         ),
 
         "time_14min" to mapOf(
-            "pilot_medic"    to listOf("Fourteen minutes. Something special."),
-            "pilot_rascal"   to listOf("Fourteen minutes. Even I'm in awe."),
-            "pilot_brutus"   to listOf("Fourteen minutes. Never been here."),
-            "pilot_frost"    to listOf("Fourteen minutes. No data for this."),
-            "pilot_dash"     to listOf("FOURTEEN MINUTES! Nobody else!"),
-            "pilot_ember"    to listOf("Fourteen minutes. Eternal flame."),
-            "pilot_fang"     to listOf("Fourteen minutes. The apex of hunts."),
-            "pilot_whiskers" to listOf("Fourteen minutes. This is different."),
-            "pilot_kraken"   to listOf("Fourteen minutes. Past any chart."),
-            "pilot_havoc"    to listOf("FOURTEEN MINUTES! NEVER STOPPING!"),
-            "pilot_unit7"    to listOf("14:00. Precedent: none found."),
-            "pilot_astro"    to listOf("Fourteen minutes. This is mine.")
+            "pilot_medic"    to listOf("十四分钟。有点特别。"),
+            "pilot_rascal"   to listOf("十四分钟。连我都服。"),
+            "pilot_brutus"   to listOf("十四分钟。没来过。"),
+            "pilot_frost"    to listOf("十四分钟。没有数据。"),
+            "pilot_dash"     to listOf("十四分钟！没人到过！"),
+            "pilot_ember"    to listOf("十四分钟。不灭之火。"),
+            "pilot_fang"     to listOf("十四分钟。猎之巅峰。"),
+            "pilot_whiskers" to listOf("十四分钟。这次不一样。"),
+            "pilot_kraken"   to listOf("十四分钟。图上没有。"),
+            "pilot_havoc"    to listOf("十四分钟！永不停！"),
+            "pilot_unit7"    to listOf("14:00。先例：无。"),
+            "pilot_astro"    to listOf("十四分钟。这是我的。")
         ),
 
         "time_16min" to mapOf(
-            "pilot_medic"    to listOf("Sixteen minutes. We made it count."),
-            "pilot_rascal"   to listOf("Sixteen minutes. Can't top this."),
-            "pilot_brutus"   to listOf("Sixteen minutes. I've seen it now."),
-            "pilot_frost"    to listOf("Sixteen minutes. This rewrites data."),
-            "pilot_dash"     to listOf("SIXTEEN MINUTES. This is the run."),
-            "pilot_ember"    to listOf("Sixteen minutes. Now we're legend."),
-            "pilot_fang"     to listOf("Sixteen minutes. I am the apex."),
-            "pilot_whiskers" to listOf("Sixteen minutes. Even I'm at a loss."),
-            "pilot_kraken"   to listOf("Sixteen minutes. The deep is home."),
-            "pilot_havoc"    to listOf("SIXTEEN MINUTES. ...yeah. That's it."),
-            "pilot_unit7"    to listOf("16:00. Run defies classification."),
-            "pilot_astro"    to listOf("Sixteen minutes. This is enough.")
+            "pilot_medic"    to listOf("十六分钟。值了。"),
+            "pilot_rascal"   to listOf("十六分钟。没法更好了。"),
+            "pilot_brutus"   to listOf("十六分钟。我见过了。"),
+            "pilot_frost"    to listOf("十六分钟。数据要重写。"),
+            "pilot_dash"     to listOf("十六分钟。就是这趟。"),
+            "pilot_ember"    to listOf("十六分钟。我们成传奇。"),
+            "pilot_fang"     to listOf("十六分钟。我是巅峰。"),
+            "pilot_whiskers" to listOf("十六分钟。连我都没话说。"),
+            "pilot_kraken"   to listOf("十六分钟。深渊即家。"),
+            "pilot_havoc"    to listOf("十六分钟……对。就这样。"),
+            "pilot_unit7"    to listOf("16:00。无法归类。"),
+            "pilot_astro"    to listOf("十六分钟。够了。")
         ),
 
         "astro_echo" to mapOf(
-            "pilot_medic" to listOf("Ten minutes. Something feels off."),
-            "pilot_rascal" to listOf("Ten minutes. This is weird, right?"),
-            "pilot_brutus" to listOf("Ten minutes. Air's gone heavy."),
-            "pilot_frost" to listOf("Ten minutes. Something's shifted."),
-            "pilot_dash" to listOf("Ten minutes. You feel that too?"),
-            "pilot_ember" to listOf("Ten minutes. The air's wrong."),
-            "pilot_fang" to listOf("Ten minutes. My instincts itch."),
-            "pilot_whiskers" to listOf("Ten minutes. My fur's on end."),
-            "pilot_kraken" to listOf("Ten minutes. The current's odd."),
-            "pilot_havoc" to listOf("Ten minutes. Somethin's buzzin'."),
-            "pilot_unit7" to listOf("10:00. Anomaly. Source unknown."),
-            "pilot_astro" to listOf("Ten minutes. Like I've been here.")
+            "pilot_medic" to listOf("十分钟。有点不对。"),
+            "pilot_rascal" to listOf("十分钟。这很怪吧？"),
+            "pilot_brutus" to listOf("十分钟。空气沉了。"),
+            "pilot_frost" to listOf("十分钟。有东西偏了。"),
+            "pilot_dash" to listOf("十分钟。你也感觉到了？"),
+            "pilot_ember" to listOf("十分钟。空气不对。"),
+            "pilot_fang" to listOf("十分钟。本能发痒。"),
+            "pilot_whiskers" to listOf("十分钟。毛都炸了。"),
+            "pilot_kraken" to listOf("十分钟。洋流怪。"),
+            "pilot_havoc" to listOf("十分钟。有东西在响。"),
+            "pilot_unit7" to listOf("10:00。异常。来源未知。"),
+            "pilot_astro" to listOf("十分钟。像来过。")
         ),
 
         // =====================================================================
@@ -949,33 +949,33 @@ object RadioDefinitions {
         // =====================================================================
 
         "combat_start_horror" to mapOf(
-            "pilot_medic"    to listOf("Keep everyone alive. Again."),
-            "pilot_rascal"   to listOf("Feels familiar out here..."),
-            "pilot_frost"    to listOf("Same field. Different run."),
-            "pilot_brutus"   to listOf("Again."),
-            "pilot_dash"     to listOf("Here we go. Again."),
-            "pilot_ember"    to listOf("Some ashes don't stay cold."),
-            "pilot_fang"     to listOf("Something follows us out here."),
-            "pilot_whiskers" to listOf("Again. How quaint."),
-            "pilot_kraken"   to listOf("The deep remembers."),
-            "pilot_havoc"    to listOf("AGAIN! ...wait. LET'S GO!"),
-            "pilot_unit7"    to listOf("Run log: incrementing."),
-            "pilot_astro"    to listOf("Let's do this right.")
+            "pilot_medic"    to listOf("都活着。又一次。"),
+            "pilot_rascal"   to listOf("外面这感觉……熟。"),
+            "pilot_frost"    to listOf("同一片天。换一趟。"),
+            "pilot_brutus"   to listOf("又来了。"),
+            "pilot_dash"     to listOf("上了。又来。"),
+            "pilot_ember"    to listOf("有些灰，不会凉。"),
+            "pilot_fang"     to listOf("有东西跟着我们。"),
+            "pilot_whiskers" to listOf("又来。真新鲜。"),
+            "pilot_kraken"   to listOf("深渊记得。"),
+            "pilot_havoc"    to listOf("又来！……等等。走！"),
+            "pilot_unit7"    to listOf("运行日志：递增。"),
+            "pilot_astro"    to listOf("这次打对。")
         ),
 
         "time_8min_horror" to mapOf(
-            "pilot_medic"    to listOf("Eight minutes. Watch carefully."),
-            "pilot_rascal"   to listOf("Eight minutes. Something's coming."),
-            "pilot_frost"    to listOf("Eight minutes. Deviation incoming."),
-            "pilot_brutus"   to listOf("Eight minutes. It comes."),
-            "pilot_dash"     to listOf("Eight minutes! Here it comes!"),
-            "pilot_ember"    to listOf("Eight minutes. The fire changes."),
-            "pilot_fang"     to listOf("Eight minutes. The dark shifts."),
-            "pilot_whiskers" to listOf("Eight minutes. Familiar."),
-            "pilot_kraken"   to listOf("Eight minutes. The abyss stirs."),
-            "pilot_havoc"    to listOf("EIGHT MINUTES! IT ALWAYS\u2014"),
-            "pilot_unit7"    to listOf("8:00. Prior run data matches."),
-            "pilot_astro"    to listOf("Eight minutes. Something's here.")
+            "pilot_medic"    to listOf("八分钟。仔细看。"),
+            "pilot_rascal"   to listOf("八分钟。有东西来了。"),
+            "pilot_frost"    to listOf("八分钟。偏差将至。"),
+            "pilot_brutus"   to listOf("八分钟。它要来了。"),
+            "pilot_dash"     to listOf("八分钟！它来了！"),
+            "pilot_ember"    to listOf("八分钟。火变了。"),
+            "pilot_fang"     to listOf("八分钟。黑暗在动。"),
+            "pilot_whiskers" to listOf("八分钟。熟悉。"),
+            "pilot_kraken"   to listOf("八分钟。深渊动了。"),
+            "pilot_havoc"    to listOf("八分钟！它总是——"),
+            "pilot_unit7"    to listOf("8:00。与上轮数据吻合。"),
+            "pilot_astro"    to listOf("八分钟。有东西在这。")
         ),
 
         // =====================================================================
@@ -984,64 +984,64 @@ object RadioDefinitions {
 
         "retreat_home" to mapOf(
             "pilot_medic" to listOf(
-                "Taking damage \u2014 pulling back.",
-                "I need to get this looked at.",
-                "Retreating. Back in one piece."
+                "中弹了——后撤。",
+                "这伤得找人看看。",
+                "撤。还完整。"
             ),
             "pilot_rascal" to listOf(
-                "Not dying today. See ya at the bar!",
-                "Live to scam another day.",
-                "I'm out. Don't miss me too much."
+                "今天不死。酒吧见！",
+                "留着命，明天再骗。",
+                "我撤了。别太想我。"
             ),
             "pilot_brutus" to listOf(
-                "Falling back. This ain't over.",
-                "Taking hits. Pulling out.",
-                "I'm out. Regrouping."
+                "后撤。没完。",
+                "中弹。撤出。",
+                "我退出。重整。"
             ),
             "pilot_frost" to listOf(
-                "Retreating. Conditions unfavorable.",
-                "Pulling back. Not ideal.",
-                "I'm done here. For now."
+                "后撤。条件不利。",
+                "撤退。不理想。",
+                "我到这。暂时。"
             ),
             "pilot_dash" to listOf(
-                "I'm gone \u2014 full burn south!",
-                "Peeling off! Full speed!",
-                "Shield's up, burning it south!"
+                "我走了——全速南下！",
+                "脱队！全速！",
+                "护盾开着，全速往南！"
             ),
             "pilot_ember" to listOf(
-                "Pulling out before this gets worse.",
-                "Engines still hot \u2014 heading home.",
-                "I hate running. But I'm running."
+                "趁还没更糟，先撤。",
+                "引擎还热——回家。",
+                "我讨厌跑。但我在跑。"
             ),
             "pilot_fang" to listOf(
-                "The hunt resumes later.",
-                "I choose when I die. Not today.",
-                "Not here. I'm gone."
+                "猎，改日再续。",
+                "我选何时死。不是今天。",
+                "不在这。走了。"
             ),
             "pilot_kraken" to listOf(
-                "Pulling back. The deep calls.",
-                "Diving out. Not done yet.",
-                "I'm surfacing. This continues."
+                "后撤。深渊在唤。",
+                "下潜脱离。还没完。",
+                "我上浮。这事继续。"
             ),
             "pilot_whiskers" to listOf(
-                "Out of here before my luck runs dry!",
-                "Used one of my nine lives just now.",
-                "That was too close. I'm gone."
+                "趁运气没干，先溜！",
+                "刚耗掉一条命。",
+                "太险了。我撤。"
             ),
             "pilot_unit7" to listOf(
-                "Emergency retreat initiated.",
-                "Disengaging. Returning to base.",
-                "Shield active. Pulling back."
+                "启动紧急撤退。",
+                "脱离。返航基地。",
+                "护盾启动。后撤。"
             ),
             "pilot_havoc" to listOf(
-                "This is NOT how I go out!",
-                "Leaving \u2014 on my own terms.",
-                "Retreat. But I'll be back."
+                "老子不这么死！",
+                "走——按我的规矩。",
+                "撤。但我会回来。"
             ),
             "pilot_astro" to listOf(
-                "Not done. Just not here.",
-                "Pulling back. This isn't over.",
-                "Falling back. I'll finish this."
+                "没完。只是不在这。",
+                "后撤。还没结束。",
+                "退。我会收尾。"
             )
         )
     )
@@ -1063,9 +1063,9 @@ object RadioDefinitions {
 
     // Solo Astro lines for events where all normal lines reference TB-26
     private val soloAstroLines = mapOf(
-        "combat_start" to listOf("Systems green. Let's fly."),
-        "time_4min" to listOf("Four minutes. Good run so far."),
-        "time_6min" to listOf("Six minutes. Stay focused."),
-        "time_8min" to listOf("Eight minutes. Veteran ground.")
+        "combat_start" to listOf("系统正常。起飞。"),
+        "time_4min" to listOf("四分钟。目前不错。"),
+        "time_6min" to listOf("六分钟。别分神。"),
+        "time_8min" to listOf("八分钟。老兵的地界。")
     )
 }

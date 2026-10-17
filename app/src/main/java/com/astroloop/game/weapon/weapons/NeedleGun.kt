@@ -10,7 +10,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class NeedleGun : Weapon(
     id = "needle_gun",
-    name = "Needle Gun"
+    name = "针枪"
 ) {
     override val knobs = KnobsWeapons.needleGun
 

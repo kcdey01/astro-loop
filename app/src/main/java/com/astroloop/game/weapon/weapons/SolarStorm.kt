@@ -9,7 +9,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class SolarStorm : Weapon(
     id = "solar_storm",
-    name = "Solar Storm"
+    name = "太阳风暴"
 ) {
     override val knobs = KnobsWeapons.solarStorm
     override val beatPhaseOffsetMs: Long = 500L

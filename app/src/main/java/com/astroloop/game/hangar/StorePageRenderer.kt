@@ -330,17 +330,17 @@ class StorePageRenderer(
                         // Name
                         textPaint.textSize = (tileSize * 0.17f).coerceIn(14f, 24f)
                         textPaint.color = CrystalPalette.ICE
-                        canvas.drawText("Emergency Shield", rect.centerX(), rect.top + tileSize * 0.52f, textPaint)
+                        canvas.drawText("应急护盾", rect.centerX(), rect.top + tileSize * 0.52f, textPaint)
 
                         // Description — aligns with the Time Crystal description row
                         crystalDescPaint.textSize = (tileSize * 0.16f).coerceIn(13f, 22f)
                         crystalDescPaint.color = CrystalPalette.DEEP
-                        canvas.drawText("Survive a lethal hit", rect.centerX(), rect.top + tileSize * 0.62f, crystalDescPaint)
+                        canvas.drawText("挡下一次致命伤害", rect.centerX(), rect.top + tileSize * 0.62f, crystalDescPaint)
 
                         // Auto-equipped — aligns with the EQUIPPED row on the Time Crystal tile
                         costPaint.textSize = (tileSize * 0.16f).coerceIn(13f, 22f)
                         costPaint.color = 0xFF44FF44.toInt()
-                        canvas.drawText("EQUIPPED", rect.centerX(), rect.top + tileSize * 0.88f, costPaint)
+                        canvas.drawText("已装备", rect.centerX(), rect.top + tileSize * 0.88f, costPaint)
                     }
                     continue
                 }
@@ -398,17 +398,17 @@ class StorePageRenderer(
                     // Name
                     textPaint.textSize = (tileSize * 0.17f).coerceIn(14f, 24f)
                     textPaint.color = CrystalPalette.ICE
-                    canvas.drawText("TIME CRYSTAL", rect.centerX(), rect.top + tileSize * 0.52f, textPaint)
+                    canvas.drawText("时间水晶", rect.centerX(), rect.top + tileSize * 0.52f, textPaint)
 
                     // Description — aligns with effect text row on regular tiles
                     crystalDescPaint.textSize = (tileSize * 0.16f).coerceIn(13f, 22f)
                     crystalDescPaint.color = CrystalPalette.DEEP
-                    canvas.drawText("Astro's fate", rect.centerX(), rect.top + tileSize * 0.62f, crystalDescPaint)
+                    canvas.drawText("阿星的命运", rect.centerX(), rect.top + tileSize * 0.62f, crystalDescPaint)
 
                     // Auto-equipped — aligns with MAX/cost row on regular tiles
                     costPaint.textSize = (tileSize * 0.16f).coerceIn(13f, 22f)
                     costPaint.color = 0xFF44FF44.toInt()
-                    canvas.drawText("EQUIPPED", rect.centerX(), rect.top + tileSize * 0.88f, costPaint)
+                    canvas.drawText("已装备", rect.centerX(), rect.top + tileSize * 0.88f, costPaint)
                 }
             } else {
                 // Hold-to-buy fill, drawn BEFORE the faces so it reads as the tile's background
@@ -589,7 +589,7 @@ class StorePageRenderer(
         val y = rect.top + tileSize * StoreBackLayout.PRICE_BASELINE
         if (currentLevel >= maxLevel) {
             costPaint.color = 0xFF44FF44.toInt()
-            canvas.drawText("MAX", rect.centerX(), y, costPaint)
+            canvas.drawText("满级", rect.centerX(), y, costPaint)
         } else {
             costPaint.color = 0xFFFFD700.toInt()
             canvas.drawText(
@@ -657,7 +657,7 @@ class StorePageRenderer(
             crystalDescPaint.color = 0xFFAAAAAA.toInt()
             crystalDescPaint.alpha = a
             for (line in nextLines) {
-                canvas.drawText("next $line", rect.centerX(), y, crystalDescPaint)
+                canvas.drawText("下级 $line", rect.centerX(), y, crystalDescPaint)
                 y += lineHeight
             }
         }
@@ -758,7 +758,7 @@ class StorePageRenderer(
         textPaint.textSize = StoreTextSizes.backTitle(tileSize)
         textPaint.color = CrystalPalette.ICE
         textPaint.alpha = a
-        canvas.drawText("EMERGENCY SHIELD", rect.centerX(), rect.top + tileSize * 0.15f, textPaint)
+        canvas.drawText("应急护盾", rect.centerX(), rect.top + tileSize * 0.15f, textPaint)
 
         // Status line — parallel to the green "EQUIPPED" the front shows, but styled like the
         // front's own subtitle row (crystalDescPaint + CrystalPalette.DEEP, same as "Survive a
@@ -771,7 +771,7 @@ class StorePageRenderer(
         crystalDescPaint.textSize = StoreTextSizes.backDetail(tileSize)
         crystalDescPaint.color = CrystalPalette.DEEP
         crystalDescPaint.alpha = a
-        canvas.drawText("Always equipped", rect.centerX(), rect.top + tileSize * 0.27f, crystalDescPaint)
+        canvas.drawText("永久装备", rect.centerX(), rect.top + tileSize * 0.27f, crystalDescPaint)
 
         crystalDescPaint.textSize = StoreTextSizes.backDetail(tileSize)
         crystalDescPaint.color = 0xFFDDDDDD.toInt()
@@ -950,7 +950,7 @@ class StorePageRenderer(
             else 0.7f + 0.3f * sin(time / 400.0).toFloat()
         textPaint.color = 0xFFCC4422.toInt()
         textPaint.alpha = (neonFlicker * 255).toInt()
-        canvas.drawText("BLACK MARKET", signX, signY, textPaint)
+        canvas.drawText("黑市", signX, signY, textPaint)
         // Neon glow
         accentPaint.color = 0xFFCC4422.toInt()
         accentPaint.alpha = (neonFlicker * 25).toInt()
@@ -1056,9 +1056,9 @@ class StorePageRenderer(
          * [SHIELD_BACK_BUDGET] guards the total; the device check is S10.
          */
         val SHIELD_BACK_BODY = listOf(
-            "Salvaged from a ship that never was.",
+            "从一艘不存在的飞船上打捞而来。",
             "",
-            "When the hull fails, you withdraw alive."
+            "船体碎裂时，你还能活着退出。"
         )
 
         /**
@@ -1471,13 +1471,13 @@ class StorePageRenderer(
                 val textX = resultRect.centerX() + symbolSize * 0.2f
                 val textY = resultRect.centerY() + fontSize * 0.15f
                 if (resultAge < 1500L) {
-                    canvas.drawText("JACKPOT!", textX, textY, textPaint)
+                    canvas.drawText("头奖！", textX, textY, textPaint)
                 } else if (resultAge < 2000L) {
                     // Scroll transition — slide up
                     val t = (resultAge - 1500L) / 500f
                     val offset = t * fontSize * 1.2f
                     textPaint.alpha = ((1f - t) * fadeAlpha * 255).toInt()
-                    canvas.drawText("JACKPOT!", textX, textY - offset, textPaint)
+                    canvas.drawText("头奖！", textX, textY - offset, textPaint)
                     textPaint.alpha = (t * fadeAlpha * 255).toInt()
                     canvas.drawText(state.spinResultUpgrade!!, textX, textY - offset + fontSize * 1.2f, textPaint)
                 } else {
@@ -1506,7 +1506,7 @@ class StorePageRenderer(
                 val textX = resultRect.centerX() + symbolSize * 0.2f
                 val textY = resultRect.centerY() + fontSize * 0.15f
                 if (resultAge < 1500L) {
-                    canvas.drawText("JACKPOT!", textX, textY, textPaint)
+                    canvas.drawText("头奖！", textX, textY, textPaint)
                 } else {
                     canvas.drawText("+${state.spinResultYen}\u00A5", textX, textY, textPaint)
                 }
@@ -1563,7 +1563,7 @@ class StorePageRenderer(
                 textPaint.textSize = fontSize
                 textPaint.color = 0xFF555555.toInt()
                 textPaint.alpha = (fadeAlpha * 200).toInt()
-                canvas.drawText("No luck", resultRect.centerX(), resultRect.centerY() + fontSize * 0.15f, textPaint)
+                canvas.drawText("没中", resultRect.centerX(), resultRect.centerY() + fontSize * 0.15f, textPaint)
             }
             textPaint.alpha = 255
         } else {
@@ -1603,12 +1603,12 @@ class StorePageRenderer(
                 // START, not PRESS START: a cabinet prints START on the button face and
                 // lets the SCREEN say "press start". Writing the verb on the thing you
                 // press is the tell that the phrase came off the wrong surface.
-                hasBankedCredit -> "START"
-                state.actualYen < 100 && !state.isSpinning -> "NO \u00A5"
-                else -> "INSERT COIN \u2014 100\u00A5"
+                hasBankedCredit -> "开始"
+                state.actualYen < 100 && !state.isSpinning -> "无 \u00A5"
+                else -> "投币 \u2014 100\u00A5"
             }
         } else {
-            if (state.actualYen < 100 && !state.isSpinning) "NO \u00A5" else "SPIN \u2014 100\u00A5"
+            if (state.actualYen < 100 && !state.isSpinning) "无 \u00A5" else "转动 \u2014 100\u00A5"
         }
         canvas.drawText(buttonLabel, buttonRect.centerX(), buttonRect.centerY() + fontSize * 0.35f, textPaint)
         state.insertCoinRect = if (isCabinet) RectF(buttonRect) else null
@@ -1759,7 +1759,7 @@ class StorePageRenderer(
                 textAlign = Paint.Align.CENTER
                 isAntiAlias = true
             }
-            canvas.drawText("CODEX", (paperLeftX + paperRightX) / 2f, (paperTopY + paperBottomY) / 2f + 3f, tinyPaint)
+            canvas.drawText("图鉴", (paperLeftX + paperRightX) / 2f, (paperTopY + paperBottomY) / 2f + 3f, tinyPaint)
 
             canvas.restore()
 

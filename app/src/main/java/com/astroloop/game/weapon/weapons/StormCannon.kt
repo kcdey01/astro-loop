@@ -14,7 +14,7 @@ import com.astroloop.game.tuning.KnobsWeapons
 
 class StormCannon : Weapon(
     id = "storm_cannon",
-    name = "Storm Cannon"
+    name = "风暴炮"
 ) {
     override val knobs = KnobsWeapons.stormCannon
 
